@@ -196,13 +196,13 @@
                 });
             });
 
-            $(".search-tag a").click(function(){
-                $(".search-tag .active-tag").removeClass("active-tag");
-                $(this).addClass("active-tag");
-            });
-
             $(document).on("pjax:end", function(){
                 $("#container").fadeIn(100);
+            });
+
+            $("#container").on("click", ".search-tag a", function(){
+                $(".search-tag .active-tag").removeClass("active-tag");
+                $(this).addClass("active-tag");
             });
         });
     </script>

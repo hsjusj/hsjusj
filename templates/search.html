@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+        <title>index</title>
+        <link href="/static/css/bootstrap.css" rel="stylesheet">
+        <style>
+            body {
+                background-color: #f7f7f7;
+            }
+            .header {
+                background-color:white;
+                border-color: #e7e7e7;
+                box-shadow:0 1px 5px rgba(0,0,0,.1);
+                left:0;
+            }
+            ul > li > a {
+                color:black !important;
+                margin:25px 15px !important;
+                padding:0 0 !important;
+            }
+            ul > li > a:hover {
+                color:#df4f33 !important;
+            }
+            .icon-bar {
+                background-color:black;
+            }
+            .post-list-item {
+                background-color:#f7f7f7;
+                width:100%;
+                min-height:160px;
+                padding:15px 12px 2px 15px;
+            }
+            .post-list-item:hover {
+                {#box-shadow:3px 3px 8px burlywood;#}
+            }
+            .title > a {
+                color:black;
+                font-size:2.2rem
+            }
+            .content {
+                margin-top:1.2rem;
+            }
+            .content > p {
+                color:#999;
+            }
+            .datetime {
+                color:#999;
+            }
+            .tag{
+                float:right;
+                margin-right:1.9rem;
+                position:absolute;
+                right:5%;
+                color:#FA6B6B;
+                font-weight:bold;
+            }
+            .datetime, .tag {
+                font-size:1.4rem;
+            }
+            .footer {
+                position:absolute; bottom:3%;
+                width:100%;
+            }
+            .search-box {
+                margin:10px 0 20px 0;
+            }
+            .search-box > input{
+                position:absolute;
+                left:10%;
+                top:0;
+
+                width:82%;
+                height:4.2rem;
+                font-size:1.8rem;
+                border:1px solid rgba(184,197,214,.2);
+                border-radius:1.9rem;
+                padding:0 4.0rem 0 1.9rem;
+                -webkit-box-shadow: 0 1px 4px rgba(0,0,0,.04);
+                box-shadow: 0 1px 4px rgba(0,0,0,.04);
+            }
+            .search-button {
+                margin-left:81%;
+                margin-top:3px;
+                cursor:pointer;
+            }
+            .search-button:hover {
+                color:#FA6B6B;
+            }
+            .search-tags {
+                margin-bottom:1.4rem;
+            }
+            .search-tag > a{
+                text-decoration:none;
+                color:black;
+                padding:0.8rem 1.0rem;
+                margin:0.8rem 1.2rem 1.0rem 0;
+                border-radius:18px;
+                display:inline-block;
+                background-color:white;
+                -webkit-box-shadow: 0 1px 4px rgba(0,0,0,.04);
+                box-shadow: 0 1px 4px rgba(0,0,0,.04);
+            }
+            .search-tag > a:hover {
+                color:#eb5055;
+            }
+            .active-tag {
+                color:white !important;
+                background-color:#FA6B6B !important;
+            }
+        </style>
+    </head>
+    <body>
+        <!--导航-->
+        <header class="navbar navbar-static-top header">
+            <div class="container">
+                <!--缩放按钮-->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" aria-controls="bs-navbar" data-target="#bs-navbar" aria-expanded="false">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <!--菜单-->
+                <nav id="bs-navbar" class="collapse navbar-collapse" aria-expanded="false" style="margin-right:75px">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a class="home"><strong>Home</strong></a>
+                        </li>
+                        <li>
+                            <a href="#"><strong>Archives</strong></a>
+                        </li>
+                        <li>
+                            <a href="#"><strong>About</strong></a>
+                        </li>
+                        <li>
+                            <a class="search"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!--body-->
+        <div class="container-fulid">
+            <div class="row">
+                <div id="container" class="col-md-offset-3 col-md-6 col-xs-12">
+                    <div class="search-block">
+                        <div class="search-box text-center">
+                            <input type="text" placeholder="Search..."/>
+                            <span class="glyphicon glyphicon-search search-button" aria-hidden="true"></span>
+                        </div>
+                        <div class="search-tag text-center">
+                            <a href="#">Javascript (14)</a>
+                            <a href="#">PHP (17)</a>
+                            <a href="#">C (12)</a>
+                            <a href="#">C++ (18)</a>
+                            <a href="#">GO (13)</a>
+                            <a href="#">Nginx (5)</a>
+                            <a href="#">Python (9)</a>
+                            <a href="#">Html (17)</a>
+                            <a href="#">c# (7)</a>
+                            <a href="#">C++ (18)</a>
+                            <a href="#">GO (13)</a>
+                            <a href="#">Nginx (5)</a>
+                            <a href="#">Python (9)</a>
+                            <a href="#">Html (17)</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <script src="/static/js/jquery-1.12.4.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/jquery.pjax.js"></script>
+    <script>
+        $(function(){
+            $(".home").click(function(){
+                $("#container").hide();
+                $.pjax({
+                    url:"{% url 'home' %}",
+                    type:"POST",
+                    cache:true,
+                    storage:true,
+                    container:"#container"
+                })
+            });
+
+            $(".search").click(function(){
+                $("#container").hide();
+                $.pjax({
+                    url:"{% url 'search' %}",
+                    type:"POST",
+                    cache:true,
+                    storage:true,
+                    container:"#container"
+                });
+            });
+
+            $(".search-tag a").click(function(){
+                $(".search-tag .active-tag").removeClass("active-tag");
+                $(this).addClass("active-tag");
+            });
+
+            $(document).on("pjax:end", function(){
+                $("#container").fadeIn(100);
+            });
+        });
+    </script>
+    </body>
+</html>

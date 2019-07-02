@@ -8,30 +8,36 @@ def test(request):
     return HttpResponse("TEST")
 
 def home(request):
-    if request.META.get("HTTP_X_PJAX", False):
+    if request.META.get('HTTP_X_PJAX', False):
         articles = models.Articles.objects.all()
         return TemplateResponse(request, 'response/home_response.html', {'articles':articles})
-    elif request.method == "GET":
+    elif request.method == 'GET':
         articles = models.Articles.objects.all()
         return render(request, 'home.html', {'articles':articles})
 
 def search(request):
-    if request.META.get("HTTP_X_PJAX", False):
+    if request.META.get('HTTP_X_PJAX', False):
         tags = models.Tags.objects.all()
         return TemplateResponse(request, 'response/search_response.html', {'tags':tags})
-    elif request.method == "GET":
+    elif request.method == 'GET':
         tags = models.Tags.objects.all()
         return render(request, 'search.html', {'tags':tags})
 
 def search_tag(request):
-    tag_name = request.POST.get("tag-name")
+    tag_name = request.POST.get('tag-name')
     print(tag_name)
     articlestotag = models.ArticlesToTags.objects.filter(tag__tag_name=tag_name)
     articles = []
     for article in articlestotag:
         articles.append(article.article)
         print(article.article)
-    return TemplateResponse(request, "response/tag_response.html", {'articles':articles})
+    return TemplateResponse(request, 'response/search_result_response.html', {'articles':articles})
+
+def search_title(request):
+    key_word = request.POST.get('key-word')
+    print(key_word)
+    articles = models.Articles.objects.filter(title__icontains=key_word)
+    return TemplateResponse(request, 'response/search_result_response.html', {'articles':articles})
 
 def orm(reuqust):
     models.Articles.objects.create(title='jvav&nginx', content='java&nginx')

@@ -220,6 +220,21 @@
                     }
                 })
             });
+
+            $("#container").on("click", ".search-box span", function(){
+                $(".active-tag").removeClass("active-tag");
+                $("#search-block-container").hide();
+                $.ajax({
+                    url:{% url 'search_title' %},
+                    type:"POST",
+                    data:{"key-word":$(".search-title").val()},
+                    success:function(data){
+                        $("#search-block-container").children().remove();
+                        $("#search-block-container").append(data);
+                        $("#search-block-container").fadeIn(200);
+                    }
+                })
+            })
         });
     </script>
     </body>

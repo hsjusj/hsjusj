@@ -23,7 +23,7 @@ def search(request):
         tags = models.Tags.objects.all()
         return render(request, 'search.html', {'tags':tags})
 
-def tag(request):
+def search_tag(request):
     tag_name = request.POST.get("tag-name")
     print(tag_name)
     articlestotag = models.ArticlesToTags.objects.filter(tag__tag_name=tag_name)

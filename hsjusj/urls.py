@@ -24,7 +24,7 @@ urlpatterns = [
     path('test/', views.test, name='test'),
     path('home/', views.home, name='home'),
     path('search/', views.search, name='search'),
-    path('tag/', views.tag, name='tag'),
+    path('search_tag/', views.search_tag, name='search_tag'),
 
     path('orm/', views.orm, name='orm'),
 ]

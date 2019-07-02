@@ -197,7 +197,7 @@
                 $(this).addClass("active-tag");
                 $("#search-block-container").hide();
                 $.ajax({
-                    url:"{% url 'tag' %}",
+                    url:"{% url 'search_tag' %}",
                     type:"POST",
                     data:{"tag-name":$(this).attr("tag-name")},
                     success:function(data){

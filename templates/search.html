@@ -53,16 +53,13 @@
             .tag{
                 float:right;
                 margin-right:1.9rem;
-                position:absolute;
-                right:5%;
-                color:#FA6B6B;
                 font-weight:bold;
+                color:#999;
             }
             .datetime, .tag {
                 font-size:1.4rem;
             }
             .footer {
-                position:absolute; bottom:3%;
                 width:100%;
             }
             .search-box {
@@ -94,6 +91,7 @@
                 margin-bottom:1.4rem;
             }
             .search-tag > a{
+                cursor:pointer;
                 text-decoration:none;
                 color:black;
                 padding:0.8rem 1.0rem;
@@ -154,22 +152,12 @@
                             <span class="glyphicon glyphicon-search search-button" aria-hidden="true"></span>
                         </div>
                         <div class="search-tag text-center">
-                            <a href="#">Javascript (14)</a>
-                            <a href="#">PHP (17)</a>
-                            <a href="#">C (12)</a>
-                            <a href="#">C++ (18)</a>
-                            <a href="#">GO (13)</a>
-                            <a href="#">Nginx (5)</a>
-                            <a href="#">Python (9)</a>
-                            <a href="#">Html (17)</a>
-                            <a href="#">c# (7)</a>
-                            <a href="#">C++ (18)</a>
-                            <a href="#">GO (13)</a>
-                            <a href="#">Nginx (5)</a>
-                            <a href="#">Python (9)</a>
-                            <a href="#">Html (17)</a>
+                            {% for tag in tags %}
+                                <a tag-name="{{ tag.tag_name }}">{{ tag.tag_name }} ({{ tag.articlestotags_set.count }})</a>
+                            {% endfor %}
                         </div>
                     </div>
+                    <div id="search-block-container"></div>
                 </div>
             </div>
         </div>
@@ -201,13 +189,24 @@
             });
 
             $(document).on("pjax:end", function(){
-                $("#container").fadeIn(100);
+                $("#container").fadeIn(200);
             });
-        });
 
-        $("#container").on("click", ".search-tag a", function(){
-            $(".search-tag .active-tag").removeClass("active-tag");
-            $(this).addClass("active-tag");
+            $("#container").on("click", ".search-tag a", function(){
+                $(".search-tag .active-tag").removeClass("active-tag");
+                $(this).addClass("active-tag");
+                $("#search-block-container").hide();
+                $.ajax({
+                    url:"{% url 'tag' %}",
+                    type:"POST",
+                    data:{"tag-name":$(this).attr("tag-name")},
+                    success:function(data){
+                        $("#search-block-container").children().remove();
+                        $("#search-block-container").append(data);
+                        $("#search-block-container").fadeIn(200);
+                    }
+                })
+            });
         });
     </script>
     </body>

@@ -2,9 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4df8ee9c-1efb-4acf-9556-71c1952c27ae" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/templates/response/tag_response.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hsjusj/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/hsjusj/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home_response.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/response/home_response.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/search.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/search_response.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/search_response.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/search_response.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/response/search_response.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,11 +53,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/hsjusj/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="424">
+              <caret line="27" selection-start-line="27" selection-end-line="27" />
+              <folding>
+                <element signature="e#630#662#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/blog/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="20" column="46" lean-forward="true" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="46" />
+            <state relative-caret-position="424">
+              <caret line="32" column="30" lean-forward="true" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
               <folding>
                 <element signature="e#0#49#0" expanded="true" />
               </folding>
@@ -60,28 +78,37 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/home.html">
+        <entry file="file://$PROJECT_DIR$/templates/response/tag_response.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="202" selection-start-line="202" selection-end-line="205" selection-end-column="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/search.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="209" column="43" lean-forward="true" selection-start-line="209" selection-start-column="43" selection-end-line="209" selection-end-column="43" />
+            <state>
+              <caret column="23" lean-forward="true" selection-start-column="23" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/search_response.html">
+        <entry file="file://$PROJECT_DIR$/templates/home.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="292">
+              <caret line="213" column="32" lean-forward="true" selection-start-line="213" selection-start-column="32" selection-end-line="213" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/search.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="146">
+              <caret line="197" column="52" lean-forward="true" selection-start-line="197" selection-start-column="52" selection-end-line="197" selection-end-column="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/response/search_response.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="154">
-              <caret line="7" column="32" lean-forward="true" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
+              <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -108,21 +135,24 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/blog/models.py" />
-        <option value="$PROJECT_DIR$/hsjusj/urls.py" />
         <option value="$PROJECT_DIR$/hsjusj/settings.py" />
         <option value="$PROJECT_DIR$/templates/home_response.html" />
-        <option value="$PROJECT_DIR$/blog/views.py" />
         <option value="$PROJECT_DIR$/templates/search_response.html" />
+        <option value="$PROJECT_DIR$/templates/response/home_response.html" />
+        <option value="$PROJECT_DIR$/templates/response/tag_response.html" />
+        <option value="$PROJECT_DIR$/templates/response/search_response.html" />
         <option value="$PROJECT_DIR$/templates/home.html" />
         <option value="$PROJECT_DIR$/templates/search.html" />
+        <option value="$PROJECT_DIR$/blog/views.py" />
+        <option value="$PROJECT_DIR$/hsjusj/urls.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="67" />
-    <option name="y" value="25" />
-    <option name="width" value="1853" />
-    <option name="height" value="1055" />
+    <option name="x" value="174" />
+    <option name="y" value="27" />
+    <option name="width" value="1657" />
+    <option name="height" value="941" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -130,6 +160,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -157,11 +188,16 @@
               <item name="hsjusj" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="hsjusj" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hsjusj" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="response" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -173,6 +209,11 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates/response" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -223,12 +264,13 @@
       <option name="presentableId" value="Default" />
       <updated>1561894496551</updated>
       <workItem from="1561894499871" duration="4606000" />
-      <workItem from="1561950467935" duration="15786000" />
+      <workItem from="1561950467935" duration="19218000" />
+      <workItem from="1562060069295" duration="11337000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20392000" />
+    <option name="totallyTimeSpent" value="35161000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -243,7 +285,7 @@
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18212104" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14380899" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -264,7 +306,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="right" id="Database" order="4" weight="0.13548028" />
+      <window_info anchor="right" id="Database" order="4" weight="0.07940033" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -273,33 +315,6 @@
   <component name="editorHistoryManager">
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/4dbf8fe0-822b-4d8c-81ec-ef68d207a43e/console.sql">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="das://ffad624a-679a-4ecf-8bb3-1b6a66deb99e/schema/main/table/blog_articlestotags">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="d27587f3-04d1-4f49-aa13-0ab9bd9b67bb">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://ffad624a-679a-4ecf-8bb3-1b6a66deb99e/schema/main/table/blog_articles">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="d27587f3-04d1-4f49-aa13-0ab9bd9b67bb">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://ffad624a-679a-4ecf-8bb3-1b6a66deb99e/schema/main/table/blog_tags">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="d27587f3-04d1-4f49-aa13-0ab9bd9b67bb">
-          <filtering>
-            <filter text="" />
-          </filtering>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/blog/models.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -315,51 +330,85 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hsjusj/urls.py">
+    <entry file="das://ffad624a-679a-4ecf-8bb3-1b6a66deb99e/schema/main/table/blog_tags">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="9ef72820-51ca-482b-9abb-d0dd59903a8d">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://ffad624a-679a-4ecf-8bb3-1b6a66deb99e/schema/main/table/blog_articlestotags">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="9ef72820-51ca-482b-9abb-d0dd59903a8d">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://ffad624a-679a-4ecf-8bb3-1b6a66deb99e/schema/main/table/blog_articles">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="9ef72820-51ca-482b-9abb-d0dd59903a8d">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/response/home_response.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="21" column="36" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
-          <folding>
-            <element signature="e#630#662#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="132">
+          <caret line="6" column="33" lean-forward="true" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/response/search_response.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/search.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="197" column="52" lean-forward="true" selection-start-line="197" selection-start-column="52" selection-end-line="197" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="213" column="32" lean-forward="true" selection-start-line="213" selection-start-column="32" selection-end-line="213" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/response/tag_response.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="23" lean-forward="true" selection-start-column="23" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/blog/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="20" column="46" lean-forward="true" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="46" />
+        <state relative-caret-position="424">
+          <caret line="32" column="30" lean-forward="true" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
           <folding>
             <element signature="e#0#49#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/home_response.html">
+    <entry file="file://$PROJECT_DIR$/hsjusj/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="32" lean-forward="true" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/search_response.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="32" lean-forward="true" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="202" selection-start-line="202" selection-end-line="205" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/search.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="209" column="43" lean-forward="true" selection-start-line="209" selection-start-column="43" selection-end-line="209" selection-end-column="43" />
+        <state relative-caret-position="424">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+          <folding>
+            <element signature="e#630#662#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

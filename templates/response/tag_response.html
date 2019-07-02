@@ -1,0 +1,18 @@
+<div class="post-list">
+    {% for article in articles %}
+        <div class="post-list-item">
+            <div class="title">
+                <a href="#">{{ article.title }}</a>
+            </div>
+            <div class="content">
+                <p>{{ article.content }}</p>
+            </div>
+            <div class="footer">
+                <span class="datetime">{{ article.create_datetime | date:'Y-m-d H:i:s' }}</span>
+                {% for articletotags in article.articlestotags_set.all %}
+                    <span class="tag hidden-xs">#{{ articletotags.tag.tag_name }}</span>
+                {% endfor %}
+            </div>
+        </div>
+    {% endfor %}
+</div>

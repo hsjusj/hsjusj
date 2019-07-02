@@ -8,23 +8,35 @@ def test(request):
     return HttpResponse("TEST")
 
 def home(request):
-    print(request.META.get("HTTP_X_PJAX", False))
     if request.META.get("HTTP_X_PJAX", False):
         articles = models.Articles.objects.all()
-        return TemplateResponse(request, 'home_response.html', {'articles':articles})
+        return TemplateResponse(request, 'response/home_response.html', {'articles':articles})
     elif request.method == "GET":
         articles = models.Articles.objects.all()
         return render(request, 'home.html', {'articles':articles})
 
 def search(request):
-    # print(request.META.get("HTTP_X_PJAX"))
     if request.META.get("HTTP_X_PJAX", False):
-        return TemplateResponse(request, 'search_response.html')
+        tags = models.Tags.objects.all()
+        return TemplateResponse(request, 'response/search_response.html', {'tags':tags})
     elif request.method == "GET":
-        return render(request, 'search.html')
+        tags = models.Tags.objects.all()
+        return render(request, 'search.html', {'tags':tags})
+
+def tag(request):
+    tag_name = request.POST.get("tag-name")
+    print(tag_name)
+    articlestotag = models.ArticlesToTags.objects.filter(tag__tag_name=tag_name)
+    articles = []
+    for article in articlestotag:
+        articles.append(article.article)
+        print(article.article)
+    return TemplateResponse(request, "response/tag_response.html", {'articles':articles})
 
 def orm(reuqust):
-    # models.Articles.objects.create(title='git远程提交', content='git remote add origin git@github.com:hsjusj/hsjusj.git')
-    # models.Tags.objects.create(tag_name='github')
-    # models.ArticlesToTags.objects.create(article_id=1, tag_id=1)
+    models.Articles.objects.create(title='jvav&nginx', content='java&nginx')
+    models.Tags.objects.create(tag_name='java')
+    models.Tags.objects.create(tag_name='nginx')
+    models.ArticlesToTags.objects.create(article_id=2, tag_id=2)
+    models.ArticlesToTags.objects.create(article_id=2, tag_id=3)
     return HttpResponse('ORM')

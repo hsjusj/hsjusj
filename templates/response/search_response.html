@@ -1,0 +1,12 @@
+<div class="search-block">
+    <div class="search-box text-center">
+        <input type="text" placeholder="Search..."/>
+        <span class="glyphicon glyphicon-search search-button" aria-hidden="true"></span>
+    </div>
+    <div class="search-tag text-center">
+        {% for tag in tags %}
+            <a tag-name="{{ tag.tag_name }}">{{ tag.tag_name }} ({{ tag.articlestotags_set.count }})</a>
+        {% endfor %}
+    </div>
+    <div id="search-block-container"></div>
+</div>

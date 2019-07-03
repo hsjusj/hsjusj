@@ -24,20 +24,21 @@ def search(request):
         return render(request, 'search.html', {'tags':tags})
 
 def search_tag(request):
-    tag_name = request.POST.get('tag-name')
-    print(tag_name)
-    articlestotag = models.ArticlesToTags.objects.filter(tag__tag_name=tag_name)
-    articles = []
-    for article in articlestotag:
-        articles.append(article.article)
-        print(article.article)
-    return TemplateResponse(request, 'response/search_result_response.html', {'articles':articles})
+    if request.method == "POST":
+        tag_name = request.POST.get('tag-name', None)
+        if tag_name:
+            articlestotag = models.ArticlesToTags.objects.filter(tag__tag_name=tag_name)
+            articles = []
+            for article in articlestotag:
+                articles.append(article.article)
+            return TemplateResponse(request, 'response/search_result_response.html', {'articles':articles})
 
 def search_title(request):
-    key_word = request.POST.get('key-word')
-    print(key_word)
-    articles = models.Articles.objects.filter(title__icontains=key_word)
-    return TemplateResponse(request, 'response/search_result_response.html', {'articles':articles})
+    if request.method == "POST":
+        key_word = request.POST.get('key-word')
+        print(key_word)
+        articles = models.Articles.objects.filter(title__icontains=key_word)
+        return TemplateResponse(request, 'response/search_result_response.html', {'articles':articles})
 
 def orm(reuqust):
     models.Articles.objects.create(title='jvav&nginx', content='java&nginx')

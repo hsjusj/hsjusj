@@ -28,11 +28,20 @@
             .icon-bar {
                 background-color:black;
             }
+            .post-list{
+                padding:0 0.7rem;
+            }
             .post-list-item {
-                background-color:#f7f7f7;
+                {#background-color:#f7f7f7;#}
+                background-color:#ffffff;
                 width:100%;
                 min-height:160px;
-                padding:15px 12px 2px 15px;
+                {#padding:15px 12px 2px 15px;#}
+                padding:18px 4px 5px 20px;
+                border-radius:30px;
+                margin-bottom:20px;
+                box-shadow:0 1px 4px rgba(0,0,0,.04);
+                position:relative;
             }
             .post-list-item:hover {
                 {#box-shadow:3px 3px 8px burlywood;#}
@@ -61,6 +70,9 @@
             }
             .footer {
                 width:100%;
+                position:absolute;
+                bottom:20px;
+                padding-right:3.0rem;
             }
             .search-box {
                 margin:10px 0 20px 0;
@@ -69,7 +81,6 @@
                 position:absolute;
                 left:10%;
                 top:0;
-
                 width:82%;
                 height:4.2rem;
                 font-size:1.8rem;
@@ -95,7 +106,7 @@
                 text-decoration:none;
                 color:black;
                 padding:0.8rem 1.0rem;
-                margin:0.8rem 1.2rem 1.0rem 0;
+                margin:0.8rem 1.2rem 2.4rem 0;
                 border-radius:18px;
                 display:inline-block;
                 background-color:white;
@@ -124,7 +135,7 @@
                     </button>
                 </div>
                 <!--菜单-->
-                <nav id="bs-navbar" class="collapse navbar-collapse" aria-expanded="false" style="margin-right:75px">
+                <nav id="bs-navbar" class="collapse navbar-collapse" aria-expanded="false">
                     <ul class="nav navbar-nav navbar-right">
                         <li>
                             <a class="home"><strong>Home</strong></a>

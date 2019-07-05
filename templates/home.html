@@ -7,6 +7,7 @@
         <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
         <title>index</title>
         <link href="/static/css/bootstrap.css" rel="stylesheet">
+        <link href="/static/editor.md/css/editormd.css" type="text/css" rel="stylesheet">
         <style>
             body {
                 background-color: #f7f7f7;
@@ -38,7 +39,7 @@
                 min-height:160px;
                 {#padding:15px 12px 2px 15px;#}
                 padding:18px 4px 5px 20px;
-                border-radius:30px;
+                border-radius:10px;
                 margin-bottom:20px;
                 box-shadow:0 1px 4px rgba(0,0,0,.04);
                 position:relative;
@@ -179,74 +180,82 @@
                 </div>
             </div>
         </div>
-    <script src="/static/js/jquery-1.12.4.js"></script>
-    <script src="/static/js/bootstrap.min.js"></script>
-    <script src="/static/js/jquery.pjax.js"></script>
-    <script>
-        $(function(){
-            $(".home").click(function(){
-                $("#container").hide();
-                $.pjax({
-                    url:"{% url 'home' %}",
-                    type:"POST",
-                    dateType:"html",
-                    cache:false,
-                    storage:false,
-                    container:"#container"
-                })
-            });
-
-            $(document).on("pjax:start", function(){
-
-            });
-
-            $(".search").click(function(){
-                $("#container").hide();
-                $.pjax({
-                    url:"{% url 'search' %}",
-                    type:"POST",
-                    dateType:"html",
-                    cache:false,
-                    storage:false,
-                    container:"#container"
+        <script src="/static/js/jquery-1.12.4.js"></script>
+        <script src="/static/js/bootstrap.min.js"></script>
+        <script src="/static/js/jquery.pjax.js"></script>
+        <script src="/static/editor.md/lib/marked.min.js"></script>
+        <script src="/static/editor.md/lib/prettify.min.js"></script>
+        <script src="/static/editor.md/lib/raphael.min.js"></script>
+        <script src="/static/editor.md/lib/underscore.min.js"></script>
+        <script src="/static/editor.md/lib/sequence-diagram.min.js"></script>
+        <script src="/static/editor.md/lib/flowchart.min.js"></script>
+        <script src="/static/editor.md/lib/jquery.flowchart.min.js"></script>
+        <script src="/static/editor.md/src/editormd.js"></script>
+        <script>
+            $(function(){
+                $(".home").click(function(){
+                    $("#container").hide();
+                    $.pjax({
+                        url:"{% url 'home' %}",
+                        type:"POST",
+                        dateType:"html",
+                        cache:false,
+                        storage:false,
+                        container:"#container"
+                    })
                 });
-            });
 
-            $(document).on("pjax:end", function(){
-                $("#container").fadeIn(200);
-            });
+                $(document).on("pjax:start", function(){
 
-            $("#container").on("click", ".search-tag a", function(){
-                $(".search-tag .active-tag").removeClass("active-tag");
-                $(this).addClass("active-tag");
-                $("#search-block-container").hide();
-                $.ajax({
-                    url:"{% url 'search_tag' %}",
-                    type:"POST",
-                    data:{"tag-name":$(this).attr("tag-name")},
-                    success:function(data){
-                        $("#search-block-container").children().remove();
-                        $("#search-block-container").append(data);
-                        $("#search-block-container").fadeIn(200);
-                    }
+                });
+
+                $(".search").click(function(){
+                    $("#container").hide();
+                    $.pjax({
+                        url:"{% url 'search' %}",
+                        type:"POST",
+                        dateType:"html",
+                        cache:false,
+                        storage:false,
+                        container:"#container"
+                    });
+                });
+
+                $(document).on("pjax:end", function(){
+                    $("#container").fadeIn(200);
+                });
+
+                $("#container").on("click", ".search-tag a", function(){
+                    $(".search-tag .active-tag").removeClass("active-tag");
+                    $(this).addClass("active-tag");
+                    $("#search-block-container").hide();
+                    $.ajax({
+                        url:"{% url 'search_tag' %}",
+                        type:"POST",
+                        data:{"tag-name":$(this).attr("tag-name")},
+                        success:function(data){
+                            $("#search-block-container").children().remove();
+                            $("#search-block-container").append(data);
+                            $("#search-block-container").fadeIn(200);
+                        }
+                    })
+                });
+
+                $("#container").on("click", ".search-box span", function(){
+                    $(".active-tag").removeClass("active-tag");
+                    $("#search-block-container").hide();
+                    $.ajax({
+                        url:{% url 'search_title' %},
+                        type:"POST",
+                        data:{"key-word":$(".search-title").val()},
+                        success:function(data){
+                            $("#search-block-container").children().remove();
+                            $("#search-block-container").append(data);
+                            $("#search-block-container").fadeIn(200);
+                        }
+                    })
                 })
             });
-
-            $("#container").on("click", ".search-box span", function(){
-                $(".active-tag").removeClass("active-tag");
-                $("#search-block-container").hide();
-                $.ajax({
-                    url:{% url 'search_title' %},
-                    type:"POST",
-                    data:{"key-word":$(".search-title").val()},
-                    success:function(data){
-                        $("#search-block-container").children().remove();
-                        $("#search-block-container").append(data);
-                        $("#search-block-container").fadeIn(200);
-                    }
-                })
-            })
-        });
-    </script>
+        </script>
     </body>
 </html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+    <link href="/static/css/bootstrap.css" rel="stylesheet">
+    <link href="/static/editor.md/css/editormd.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <form id="add-article">
+            <div class="form-group form-group-lg">
+                <input type="text" class="form-control" id="title" placeholder="Title">
+            </div>
+        </form>
+    </div>
+    <div id="layout"  class="editor">
+        <div id="test-editormd" >
+            <textarea></textarea>
+        </div>
+    </div>
+    <script src="/static/js/jquery-1.12.4.js"></script>
+    <script src="/static/editor.md/src/editormd.js"></script>
+    <script>
+        $(function() {
+            var testEditor;
+            testEditor = editormd("test-editormd", {
+                 placeholder:'本编辑器支持Markdown编辑，左边编写，右边预览',  //默认显示的文字，这里就不解释了
+                 width: "90%",
+                 height: 640,
+                 syncScrolling: "single",
+                 path: "/static/editor.md/lib/",   //你的path路径（原资源文件中lib包在我们项目中所放的位置）
+                 theme: "dark",//工具栏主题
+                 previewTheme: "dark",//预览主题
+                 editorTheme: "pastel-on-dark",//编辑主题
+                 saveHTMLToTextarea: true,
+                 emoji: false,
+                 taskList: true,
+                 tocm: true,         // Using [TOCM]
+                 tex: true,                   // 开启科学公式TeX语言支持，默认关闭
+                 flowChart: true,             // 开启流程图支持，默认关闭
+                 sequenceDiagram: true,       // 开启时序/序列图支持，默认关闭,
+                 toolbarIcons : function() {  //自定义工具栏，后面有详细介绍
+                     return editormd.toolbarModes['full']; // full, simple, mini
+                  },
+                //启动本地图片上传功能
+                imageUpload: true,
+                imageFormats   : ["jpg", "jpeg", "gif", "png", "bmp", "webp"],
+                {#imageUploadURL : "{% url 'app02_upload' %}" //文件提交请求路径#}
+            });
+        })
+    </script>
+</body>
+</html>

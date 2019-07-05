@@ -15,6 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, re_path
+from django.views.static import serve
+from hsjusj.settings import MEDIA_ROOT
 
 from blog import views
 
@@ -26,6 +28,12 @@ urlpatterns = [
     path('search/', views.search, name='search'),
     path('search_tag/', views.search_tag, name='search_tag'),
     path('search_title/', views.search_title, name='search_title'),
+    path('write/', views.write, name='write'),
+    path('upload_img/', views.upload_img, name='upload_img'),
+
+    re_path('media/(?P<path>.*)/$', serve, {'document_root':MEDIA_ROOT}),
+
+    path('selected/', views.selected),
 
     path('orm/', views.orm, name='orm'),
 ]

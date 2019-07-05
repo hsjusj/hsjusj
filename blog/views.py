@@ -40,6 +40,19 @@ def search_title(request):
         articles = models.Articles.objects.filter(title__icontains=key_word)
         return TemplateResponse(request, 'response/search_result_response.html', {'articles':articles})
 
+def write(request):
+    return render(request, 'write.html')
+
+def upload_img(requset):
+    img_obj = requset.FILES.get("", None)
+    if img_obj:
+        with open('media/' + img_obj.name, 'wb') as f:
+            for item in img_obj.chunks():
+                f.write(item)
+
+def selected(request):
+    return render(request, 'utils/selected.html')
+
 def orm(reuqust):
     models.Articles.objects.create(title='jvav&nginx', content='java&nginx')
     models.Tags.objects.create(tag_name='java')

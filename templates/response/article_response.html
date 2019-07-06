@@ -1,0 +1,16 @@
+<div>
+    <h1 style="padding-left:1.8rem;">{{ article.title }}</h1>
+    <div id="editormd-view">
+        <textarea style="display:none;" name="test-editormd-markdown-doc">{{ article.content }}</textarea>
+    </div>
+</div>
+<script>
+    EditormdView = editormd.markdownToHTML("editormd-view", {
+        htmlDecode      : "style,script,iframe",  // you can filter tags decode
+        emoji           : true,
+        taskList        : true,
+        tex             : true,  // 默认不解析
+        flowChart       : true,  // 默认不解析
+        sequenceDiagram : true,  // 默认不解析
+    });
+</script>

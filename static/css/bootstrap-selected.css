@@ -1,0 +1,57 @@
+.selected{
+    position:relative;
+    margin:2.0rem 0;
+}
+.selected-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 200px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    font-size: 14px;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+}
+.selected-menu > li{
+    /*margin-left:1.0rem;*/
+    padding:7px 12px 7px 12px;
+    cursor:pointer;
+}
+.selected-menu > li:hover {
+    background-color: #f5f5f5;
+}
+.selected-menu a {
+    outline:none;
+    text-decoration:none;
+    padding:2px 8px 2px 8px;
+    color:black;
+}
+.add-tags-btn {
+    margin-left:0.3rem;
+    cursor:pointer;
+}
+
+.del-tags-btn {
+    margin-left:3.0rem;
+    cursor:pointer;
+}
+
+.add-tag {
+    display:inline-block;
+    margin:0 10px 15px 10px;
+}
+.remove-tag{
+    margin-left:10px;
+    cursor:pointer;
+}

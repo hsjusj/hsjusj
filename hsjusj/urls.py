@@ -25,11 +25,13 @@ urlpatterns = [
 
     path('test/', views.test, name='test'),
     path('home/', views.home, name='home'),
+    re_path('article/(?P<aid>\d+)/', views.article_info, name='article_info'),
     path('search/', views.search, name='search'),
     path('search_tag/', views.search_tag, name='search_tag'),
     path('search_title/', views.search_title, name='search_title'),
     path('write/', views.write, name='write'),
     path('upload_img/', views.upload_img, name='upload_img'),
+    path('submit/', views.submit, name='submit'),
 
     re_path('media/(?P<path>.*)/$', serve, {'document_root':MEDIA_ROOT}),
 

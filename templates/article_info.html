@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -39,7 +39,7 @@
                 min-height:160px;
                 {#padding:15px 12px 2px 15px;#}
                 padding:18px 4px 5px 20px;
-                border-radius:30px;
+                border-radius:10px;
                 margin-bottom:20px;
                 box-shadow:0 1px 4px rgba(0,0,0,.04);
                 position:relative;
@@ -139,7 +139,7 @@
                 <nav id="bs-navbar" class="collapse navbar-collapse" aria-expanded="false">
                     <ul class="nav navbar-nav navbar-right">
                         <li>
-                            <a class="home"><strong>Home</strong></a>
+                            <a class="home" ><strong>Home</strong></a>
                         </li>
                         <li>
                             <a href="#"><strong>Archives</strong></a>
@@ -158,104 +158,113 @@
         <div class="container-fulid">
             <div class="row">
                 <div id="container" class="col-md-offset-3 col-md-6 col-xs-12">
-                    <div class="search-block">
-                        <div class="search-box text-center">
-                            <input class="search-title" type="text" placeholder="Search..."/>
-                            <span class="glyphicon glyphicon-search search-button" aria-hidden="true"></span>
-                        </div>
-                        <div class="search-tag text-center">
-                            {% for tag in tags %}
-                                <a tag-name="{{ tag.tag_name }}">{{ tag.tag_name }} ({{ tag.articlestotags_set.count }})</a>
-                            {% endfor %}
+                    <div>
+                        <h1 style="padding-left:1.8rem;">{{ article.title }}</h1>
+                        <div id="editormd-view">
+                            <textarea style="display:none;" name="test-editormd-markdown-doc">{{ article.content }}</textarea>
                         </div>
                     </div>
-                    <div id="search-block-container"></div>
                 </div>
             </div>
         </div>
-    <script src="/static/js/jquery-1.12.4.js"></script>
-    <script src="/static/js/bootstrap.min.js"></script>
-    <script src="/static/js/jquery.pjax.js"></script>
-    <script src="/static/editor.md/lib/marked.min.js"></script>
-    <script src="/static/editor.md/lib/prettify.min.js"></script>
-    <script src="/static/editor.md/lib/raphael.min.js"></script>
-    <script src="/static/editor.md/lib/underscore.min.js"></script>
-    <script src="/static/editor.md/lib/sequence-diagram.min.js"></script>
-    <script src="/static/editor.md/lib/flowchart.min.js"></script>
-    <script src="/static/editor.md/lib/jquery.flowchart.min.js"></script>
-    <script src="/static/editor.md/src/editormd.js"></script>
-    <script>
-        $(function(){
-            $(".home").click(function(){
-                $("#container").hide();
-                $.pjax({
-                    url:"{% url 'home' %}",
-                    type:"POST",
-                    cache:true,
-                    storage:true,
-                    container:"#container"
-                })
-            });
+        <script src="/static/js/jquery-1.12.4.js"></script>
+        <script src="/static/js/bootstrap.min.js"></script>
+        <script src="/static/js/jquery.pjax.js"></script>
+        <script src="/static/editor.md/lib/marked.min.js"></script>
+        <script src="/static/editor.md/lib/prettify.min.js"></script>
+        <script src="/static/editor.md/lib/raphael.min.js"></script>
+        <script src="/static/editor.md/lib/underscore.min.js"></script>
+        <script src="/static/editor.md/lib/sequence-diagram.min.js"></script>
+        <script src="/static/editor.md/lib/flowchart.min.js"></script>
+        <script src="/static/editor.md/lib/jquery.flowchart.min.js"></script>
+        <script src="/static/editor.md/src/editormd.js"></script>
+        <script>
+            $(function(){
+                $(document).on("pjax:end", function(){
+                    $("#container").fadeIn(200);
+                });
 
-            $(".search").click(function(){
-                $("#container").hide();
-                $.pjax({
-                    url:"{% url 'search' %}",
-                    type:"POST",
-                    cache:true,
-                    storage:true,
-                    container:"#container"
+                $(".home").click(function(){
+                    $("#container").hide();
+                    $.pjax({
+                        url:"{% url 'home' %}",
+                        type:"POST",
+                        dateType:"html",
+                        cache:true,
+                        storage:true,
+                        container:"#container"
+                    })
+                });
+
+                $(document).on("pjax:start", function(){
+
+                });
+
+                $(".search").click(function(){
+                    $("#container").hide();
+                    $.pjax({
+                        url:"{% url 'search' %}",
+                        type:"POST",
+                        dateType:"html",
+                        cache:true,
+                        storage:true,
+                        container:"#container"
+                    });
+                });
+
+                $("#container").on("click", ".post-list-item .title a", function(){
+                    $("#container").hide();
+                    var url = $(this).attr("addr");
+                    $.pjax({
+                        url:url,
+                        type:"POST",
+                        dateType:"html",
+                        cache:true,
+                        storage:true,
+                        container:"#container"
+                    })
+                });
+
+                $("#container").on("click", ".search-tag a", function(){
+                    $(".search-tag .active-tag").removeClass("active-tag");
+                    $(this).addClass("active-tag");
+                    $("#search-block-container").hide();
+                    $.ajax({
+                        url:"{% url 'search_tag' %}",
+                        type:"POST",
+                        data:{"tag-name":$(this).attr("tag-name")},
+                        success:function(data){
+                            $("#search-block-container").children().remove();
+                            $("#search-block-container").append(data);
+                            $("#search-block-container").fadeIn(200);
+                        }
+                    })
+                });
+
+                $("#container").on("click", ".search-box span", function(){
+                    $(".active-tag").removeClass("active-tag");
+                    $("#search-block-container").hide();
+                    $.ajax({
+                        url:{% url 'search_title' %},
+                        type:"POST",
+                        data:{"key-word":$(".search-title").val()},
+                        success:function(data){
+                            $("#search-block-container").children().remove();
+                            $("#search-block-container").append(data);
+                            $("#search-block-container").fadeIn(200);
+                        }
+                    })
+                });
+
+                EditormdView = editormd.markdownToHTML("editormd-view", {
+                    htmlDecode      : "style,script,iframe",  // you can filter tags decode
+                    emoji           : true,
+                    taskList        : true,
+                    tex             : true,  // 默认不解析
+                    flowChart       : true,  // 默认不解析
+                    sequenceDiagram : true,  // 默认不解析
                 });
             });
-
-            $("#container").on("click", ".post-list-item .title a", function(){
-                $("#container").hide();
-                var url = $(this).attr("addr");
-                $.pjax({
-                    url:url,
-                    type:"POST",
-                    dateType:"html",
-                    cache:true,
-                    storage:true,
-                    container:"#container"
-                })
-            });
-
-            $(document).on("pjax:end", function(){
-                $("#container").fadeIn(200);
-            });
-
-            $("#container").on("click", ".search-tag a", function(){
-                $(".search-tag .active-tag").removeClass("active-tag");
-                $(this).addClass("active-tag");
-                $("#search-block-container").hide();
-                $.ajax({
-                    url:"{% url 'search_tag' %}",
-                    type:"POST",
-                    data:{"tag-name":$(this).attr("tag-name")},
-                    success:function(data){
-                        $("#search-block-container").children().remove();
-                        $("#search-block-container").append(data);
-                        $("#search-block-container").fadeIn(200);
-                    }
-                })
-            });
-
-            $("#container").on("click", ".search-box span", function(){
-                $(".active-tag").removeClass("active-tag");
-                $("#search-block-container").hide();
-                $.ajax({
-                    url:{% url 'search_title' %},
-                    type:"POST",
-                    data:{"key-word":$(".search-title").val()},
-                    success:function(data){
-                        $("#search-block-container").children().remove();
-                        $("#search-block-container").append(data);
-                        $("#search-block-container").fadeIn(200);
-                    }
-                })
-            })
-        });
-    </script>
+        </script>
     </body>
 </html>

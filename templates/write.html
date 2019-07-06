@@ -7,22 +7,36 @@
     <title>Title</title>
     <link href="/static/css/bootstrap.css" rel="stylesheet">
     <link href="/static/editor.md/css/editormd.css" type="text/css" rel="stylesheet">
+    <link href="/static/css/bootstrap-selected.css" type="text/css" rel="stylesheet">
 </head>
 <body>
     <div class="container">
         <form id="add-article">
             <div class="form-group form-group-lg">
-                <input type="text" class="form-control" id="title" placeholder="Title">
+                <input type="text" class="form-control" id="title" style="margin-top:1.5rem;" placeholder="Title">
+            </div>
+            <div class="selected">
+                <button type="button" class="selected-btn btn btn-default">TAG <span class="caret"></span></button>
+                <ul class="selected-menu">
+                    {% for tag in tags %}
+                        <li tid="{{ tag.tid }}" class="selected-tag">{{ tag.tag_name }}</li>
+                    {% endfor %}
+                    <li><span class="add-tags-btn glyphicon glyphicon-plus"></span><span class="del-tags-btn glyphicon glyphicon-minus"></span></li>
+                </ul>
             </div>
         </form>
     </div>
     <div id="layout"  class="editor">
-        <div id="test-editormd" >
+        <div id="test-editormd">
             <textarea></textarea>
         </div>
     </div>
+    <div class="container">
+        <button id="submit" type="button" class="center-block btn-block btn btn-primary btn-lg">发表</button>
+    </div>
     <script src="/static/js/jquery-1.12.4.js"></script>
     <script src="/static/editor.md/src/editormd.js"></script>
+    <script src="/static/js/bootstrap-selected.js"></script>
     <script>
         $(function() {
             var testEditor;
@@ -48,9 +62,41 @@
                 //启动本地图片上传功能
                 imageUpload: true,
                 imageFormats   : ["jpg", "jpeg", "gif", "png", "bmp", "webp"],
-                {#imageUploadURL : "{% url 'app02_upload' %}" //文件提交请求路径#}
+                imageUploadURL : "{% url 'upload_img' %}" //文件提交请求路径
             });
-        })
+            $("#submit").click(function(){
+                var title = $("#title").val();
+                var content = $('.editormd-markdown-textarea').val();
+                var tags_dom = $(".selected-active");
+                var tids = Array();
+                var new_tags = Array();
+                var new_tags_dom = $(".selected-menu li input");
+                for (var i = 0; i < tags_dom.length; i++){
+                    tids[i] = tags_dom.eq(i).attr("tid");
+                }
+                for (var i = 0, k = 0; i < new_tags_dom.length; i++){
+                    var val = new_tags_dom.eq(i).val();
+                    if (val != ""){
+                        new_tags[k++] = val;
+                    }
+                }
+                if (title == ""){
+                    alert("标题不能为空");
+                }else if (content == ""){
+                    alert("内容不能为空");
+                }else if (!tids.length && !new_tags.length){
+                    alert("请选择标签");
+                }
+                $.ajax({
+                    url:"{% url 'submit' %}",
+                    type:"POST",
+                    data:{"title":title, "content":content, "tids":tids, "new_tags":new_tags},
+                    success:function(data){
+                        $(location).attr("href", "{% url 'home' %}");
+                    }
+                })
+            });
+        });
     </script>
 </body>
 </html>

@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
         <title>index</title>
-        <link href="/static/css/bootstrap.css" rel="stylesheet">
         <link href="/static/editor.md/css/editormd.css" type="text/css" rel="stylesheet">
+        <link href="/static/css/bootstrap.css" rel="stylesheet">
         <style>
             body {
                 background-color: #f7f7f7;
@@ -162,7 +162,7 @@
                         {% for article in articles %}
                             <div class="post-list-item">
                                 <div class="title">
-                                    <a href="#">{{ article.title }}</a>
+                                    <a addr="{% url 'article_info' article.aid %}">{{ article.title }}</a>
                                 </div>
                                 <div class="content">
                                     <p>{{ article.content }}</p>
@@ -176,7 +176,6 @@
                             </div>
                         {% endfor %}
                     </div>
-                    <div id="search-block-container"></div>
                 </div>
             </div>
         </div>
@@ -193,14 +192,18 @@
         <script src="/static/editor.md/src/editormd.js"></script>
         <script>
             $(function(){
+                $(document).on("pjax:end", function(){
+                    $("#container").fadeIn(200);
+                });
+
                 $(".home").click(function(){
                     $("#container").hide();
                     $.pjax({
                         url:"{% url 'home' %}",
                         type:"POST",
                         dateType:"html",
-                        cache:false,
-                        storage:false,
+                        cache:true,
+                        storage:true,
                         container:"#container"
                     })
                 });
@@ -215,14 +218,23 @@
                         url:"{% url 'search' %}",
                         type:"POST",
                         dateType:"html",
-                        cache:false,
-                        storage:false,
+                        cache:true,
+                        storage:true,
                         container:"#container"
                     });
                 });
 
-                $(document).on("pjax:end", function(){
-                    $("#container").fadeIn(200);
+                $("#container").on("click", ".post-list-item .title a", function(){
+                    $("#container").hide();
+                    var url = $(this).attr("addr");
+                    $.pjax({
+                        url:url,
+                        type:"POST",
+                        dateType:"html",
+                        cache:true,
+                        storage:true,
+                        container:"#container"
+                    })
                 });
 
                 $("#container").on("click", ".search-tag a", function(){
@@ -254,7 +266,7 @@
                             $("#search-block-container").fadeIn(200);
                         }
                     })
-                })
+                });
             });
         </script>
     </body>

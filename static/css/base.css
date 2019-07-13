@@ -1,0 +1,23 @@
+body {
+    background-color: #f7f7f7;
+}
+.header {
+    background-color:white;
+    border-color: #e7e7e7;
+    box-shadow:0 1px 5px rgba(0,0,0,.1);
+    left:0;
+}
+#bs-navbar ul > li > a {
+    color:black !important;
+    margin:25px 15px !important;
+    padding:0 0 !important;
+}
+#bs-navbar ul > li > a:hover {
+    color:#df4f33 !important;
+}
+.icon-bar {
+    background-color:black;
+}
+#bs-navbar li strong, .search > span{
+    cursor:pointer;
+}

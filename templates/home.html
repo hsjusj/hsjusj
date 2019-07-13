@@ -7,28 +7,10 @@
         <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
         <title>index</title>
         <link href="/static/editor.md/css/editormd.css" type="text/css" rel="stylesheet">
-        <link href="/static/css/bootstrap.css" rel="stylesheet">
+        <link href="/static/css/bootstrap.css" type="text/css" rel="stylesheet">
+        <link href="/static/css/base.css" type="text/css" rel="stylesheet">
+        <link href="/static/css/archives.css" type="text/css" rel="stylesheet">
         <style>
-            body {
-                background-color: #f7f7f7;
-            }
-            .header {
-                background-color:white;
-                border-color: #e7e7e7;
-                box-shadow:0 1px 5px rgba(0,0,0,.1);
-                left:0;
-            }
-            ul > li > a {
-                color:black !important;
-                margin:25px 15px !important;
-                padding:0 0 !important;
-            }
-            ul > li > a:hover {
-                color:#df4f33 !important;
-            }
-            .icon-bar {
-                background-color:black;
-            }
             .post-list{
                 padding:0 0.7rem;
             }
@@ -49,7 +31,8 @@
             }
             .title > a {
                 color:black;
-                font-size:2.2rem
+                font-size:2.2rem;
+                cursor:pointer;
             }
             .content {
                 margin-top:1.2rem;
@@ -139,10 +122,10 @@
                 <nav id="bs-navbar" class="collapse navbar-collapse" aria-expanded="false">
                     <ul class="nav navbar-nav navbar-right">
                         <li>
-                            <a class="home" ><strong>Home</strong></a>
+                            <a class="home"><strong>Home</strong></a>
                         </li>
                         <li>
-                            <a href="#"><strong>Archives</strong></a>
+                            <a class="archives"><strong>Archives</strong></a>
                         </li>
                         <li>
                             <a href="#"><strong>About</strong></a>
@@ -155,9 +138,9 @@
             </div>
         </header>
         <!--body-->
-        <div class="container-fulid">
+        <div class="container">
             <div class="row">
-                <div id="container" class="col-md-offset-3 col-md-6 col-xs-12">
+                <div id="container" class="col-md-offset-1 col-md-10 col-xs-12">
                     <div class="post-list">
                         {% for article in articles %}
                             <div class="post-list-item">
@@ -208,6 +191,18 @@
                     })
                 });
 
+                $(".archives").click(function(){
+                    $("#container").hide();
+                    $.pjax({
+                        url:"{% url 'archives' %}",
+                        type:"POST",
+                        dateType:"html",
+                        cache:true,
+                        storage:true,
+                        container:"#container"
+                    })
+                });
+
                 $(document).on("pjax:start", function(){
 
                 });
@@ -224,7 +219,7 @@
                     });
                 });
 
-                $("#container").on("click", ".post-list-item .title a", function(){
+                $("#container").on("click", ".title a", function(){
                     $("#container").hide();
                     var url = $(this).attr("addr");
                     $.pjax({

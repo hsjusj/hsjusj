@@ -28,6 +28,13 @@ def article_info(request, aid):
             return render(request, 'article_info.html', {'article':article})
     return render(request, '404.html')
 
+def archives(request):
+    if request.META.get('HTTP_X_PJAX', False):
+        articles = models.Articles.objects.all()
+        return TemplateResponse(request, 'response/archives_response.html')
+    elif request.method == "GET":
+        return render(request, 'archives.html')
+
 def search(request):
     if request.META.get('HTTP_X_PJAX', False):
         tags = models.Tags.objects.all()

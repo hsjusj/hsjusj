@@ -26,6 +26,7 @@ urlpatterns = [
     path('test/', views.test, name='test'),
     path('home/', views.home, name='home'),
     re_path('article/(?P<aid>\d+)/', views.article_info, name='article_info'),
+    path('archives/', views.archives, name='archives'),
     path('search/', views.search, name='search'),
     path('search_tag/', views.search_tag, name='search_tag'),
     path('search_title/', views.search_title, name='search_title'),

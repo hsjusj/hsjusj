@@ -25,7 +25,7 @@ def article_info(request, aid):
     elif request.method == "GET":
         article = models.Articles.objects.filter(aid=aid).first()
         if article:
-            return render(request, 'article_info.html', {'article':article})
+            return render(request, 'article.html', {'article':article})
     return render(request, '404.html')
 
 def archives(request):

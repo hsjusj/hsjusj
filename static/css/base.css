@@ -98,7 +98,7 @@ body {
     text-decoration:none;
     color:black;
     padding:0.8rem 1.0rem;
-    margin:0.8rem 1.2rem 2.4rem 0;
+    margin:0.8rem 1.2rem 0.8rem 0;
     border-radius:18px;
     display:inline-block;
     background-color:white;
@@ -111,4 +111,8 @@ body {
 .active-tag {
     color:white !important;
     background-color:#FA6B6B !important;
+}
+
+#search-block-container{
+    margin-top:1.5rem;
 }

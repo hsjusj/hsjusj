@@ -15,7 +15,7 @@ def home(request):
         return TemplateResponse(request, 'response/home_response.html', {'articles':articles})
     elif request.method == 'GET':
         articles = models.Articles.objects.all()
-        return render(request, 'home.html', {'articles':articles})
+        return render(request, 'view/home.html', {'articles':articles})
 
 def article_info(request, aid):
     if request.META.get('HTTP_X_PJAX', False):
@@ -25,7 +25,7 @@ def article_info(request, aid):
     elif request.method == "GET":
         article = models.Articles.objects.filter(aid=aid).first()
         if article:
-            return render(request, 'article.html', {'article':article})
+            return render(request, 'view/article.html', {'article':article})
     return render(request, '404.html')
 
 def archives(request):
@@ -33,7 +33,7 @@ def archives(request):
         articles = models.Articles.objects.all()
         return TemplateResponse(request, 'response/archives_response.html')
     elif request.method == "GET":
-        return render(request, 'archives.html')
+        return render(request, 'view/archives.html')
 
 def search(request):
     if request.META.get('HTTP_X_PJAX', False):
@@ -41,7 +41,7 @@ def search(request):
         return TemplateResponse(request, 'response/search_response.html', {'tags':tags})
     elif request.method == 'GET':
         tags = models.Tags.objects.all()
-        return render(request, 'search.html', {'tags':tags})
+        return render(request, 'view/search.html', {'tags':tags})
 
 def search_tag(request):
     if request.method == "POST":

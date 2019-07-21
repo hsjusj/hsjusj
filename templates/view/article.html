@@ -1,0 +1,12 @@
+{% extends "layout/base.html" %}
+
+{% block title %}view_article{% endblock %}
+
+{% block body %}
+    <div>
+        <h1 class="text-center" style="padding-left:1.8rem;">{{ article.title }}</h1>
+        <div id="editormd-view">
+            <textarea style="display:none;" name="test-editormd-markdown-doc">{{ article.content }}</textarea>
+        </div>
+    </div>
+{% endblock %}

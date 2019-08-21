@@ -519,7 +519,6 @@
       <change afterPath="$PROJECT_DIR$/static/editor.md/tests/marked-todo-list-test.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/static/editor.md/tests/qunit/qunit-1.16.0.css" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/static/editor.md/tests/qunit/qunit-1.16.0.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/editor.md" beforeDir="false" afterPath="$PROJECT_DIR$/static/editor.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -769,12 +768,12 @@
       <workItem from="1562668759025" duration="9970000" />
       <workItem from="1562992403297" duration="9193000" />
       <workItem from="1563680256182" duration="7517000" />
-      <workItem from="1566378717346" duration="1367000" />
+      <workItem from="1566378717346" duration="1630000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="105439000" />
+    <option name="totallyTimeSpent" value="105702000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">

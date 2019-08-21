@@ -121,6 +121,9 @@
                 });
 
                 $("#container").on("click", ".search-tag a", function(){
+                    if ($(this).hasClass("active-tag")){
+                        return;
+                    }
                     $(".search-tag .active-tag").removeClass("active-tag");
                     $(this).addClass("active-tag");
                     $("#search-block-container").hide();

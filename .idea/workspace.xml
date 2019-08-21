@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4df8ee9c-1efb-4acf-9556-71c1952c27ae" name="Default Changelist" comment="" />
+    <list default="true" id="4df8ee9c-1efb-4acf-9556-71c1952c27ae" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,10 +114,10 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="4">
     <option name="x" value="67" />
     <option name="y" value="25" />
-    <option name="width" value="1853" />
+    <option name="width" value="927" />
     <option name="height" value="1055" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -135,12 +137,6 @@
               <item name="hsjusj" type="b2602c69:ProjectViewProjectNode" />
               <item name="hsjusj" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hsjusj" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hsjusj" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="editor.md" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -255,12 +251,12 @@
       <workItem from="1562668759025" duration="9970000" />
       <workItem from="1562992403297" duration="9193000" />
       <workItem from="1563680256182" duration="7517000" />
-      <workItem from="1566378717346" duration="454000" />
+      <workItem from="1566378717346" duration="1124000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="104526000" />
+    <option name="totallyTimeSpent" value="105196000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -272,9 +268,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
+    <frame x="67" y="25" width="927" height="1055" extended-state="4" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15564202" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3207331" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />

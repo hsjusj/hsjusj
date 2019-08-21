@@ -36,6 +36,7 @@
     </div>
     <script src="/static/js/jquery-1.12.4.js"></script>
     <script src="/static/editor.md/src/editormd.js"></script>
+    <script src="/static/js/jquery.cookie.js"></script>
     <script src="/static/js/bootstrap-selected.js"></script>
     <script>
         $(function() {
@@ -82,15 +83,19 @@
                 }
                 if (title == ""){
                     alert("标题不能为空");
+                    return;
                 }else if (content == ""){
                     alert("内容不能为空");
+                    return;
                 }else if (!tids.length && !new_tags.length){
                     alert("请选择标签");
+                    return;
                 }
                 $.ajax({
                     url:"{% url 'submit' %}",
                     type:"POST",
                     data:{"title":title, "content":content, "tids":tids, "new_tags":new_tags},
+                    headers:{"X-CSRFtoken":$.cookie("csrftoken")},
                     success:function(data){
                         $(location).attr("href", "{% url 'home' %}");
                     }

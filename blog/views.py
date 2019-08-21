@@ -26,7 +26,7 @@ def article_info(request, aid):
         article = models.Articles.objects.filter(aid=aid).first()
         if article:
             return render(request, 'view/article.html', {'article':article})
-    return render(request, '404.html')
+    return render(request, 'backup/404.html')
 
 def archives(request):
     if request.META.get('HTTP_X_PJAX', False):

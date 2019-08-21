@@ -67,7 +67,7 @@ body {
     padding-right:3.0rem;
 }
 .search-box {
-    margin:10px 0 20px 0;
+    margin:4px 0 20px 0;
 }
 .search-box > input{
     position:absolute;
@@ -78,13 +78,13 @@ body {
     font-size:1.8rem;
     border:1px solid rgba(184,197,214,.2);
     border-radius:1.9rem;
-    padding:0 4.0rem 0 1.9rem;
+    padding:0 4.5rem 0 1.9rem;
     -webkit-box-shadow: 0 1px 4px rgba(0,0,0,.04);
     box-shadow: 0 1px 4px rgba(0,0,0,.04);
 }
 .search-button {
     margin-left:81%;
-    margin-top:3px;
+    margin-top:0;
     cursor:pointer;
 }
 .search-button:hover {

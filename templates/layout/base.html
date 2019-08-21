@@ -51,6 +51,7 @@
             </div>
         </div>
         <script src="/static/js/jquery-1.12.4.js"></script>
+        <script src="/static/js/jquery.cookie.js"></script>
         <script src="/static/js/bootstrap.min.js"></script>
         <script src="/static/js/jquery.pjax.js"></script>
         <script src="/static/editor.md/lib/marked.min.js"></script>
@@ -73,6 +74,7 @@
                         url:"{% url 'home' %}",
                         type:"POST",
                         dateType:"html",
+                        headers:{"X-CSRFtoken":$.cookie("csrftoken")},
                         cache:true,
                         storage:true,
                         container:"#container"
@@ -85,6 +87,7 @@
                         url:"{% url 'archives' %}",
                         type:"POST",
                         dateType:"html",
+                        headers:{"X-CSRFtoken":$.cookie("csrftoken")},
                         cache:true,
                         storage:true,
                         container:"#container"
@@ -101,6 +104,7 @@
                         url:"{% url 'search' %}",
                         type:"POST",
                         dateType:"html",
+                        headers:{"X-CSRFtoken":$.cookie("csrftoken")},
                         cache:true,
                         storage:true,
                         container:"#container"
@@ -114,6 +118,7 @@
                         url:url,
                         type:"POST",
                         dateType:"html",
+                        headers:{"X-CSRFtoken":$.cookie("csrftoken")},
                         cache:true,
                         storage:true,
                         container:"#container"
@@ -131,6 +136,7 @@
                         url:"{% url 'search_tag' %}",
                         type:"POST",
                         data:{"tag-name":$(this).attr("tag-name")},
+                        headers:{"X-CSRFtoken":$.cookie("csrftoken")},
                         success:function(data){
                             $("#search-block-container").children().remove();
                             $("#search-block-container").append(data);
@@ -146,6 +152,7 @@
                         url:{% url 'search_title' %},
                         type:"POST",
                         data:{"key-word":$(".search-title").val()},
+                        headers:{"X-CSRFtoken":$.cookie("csrftoken")},
                         success:function(data){
                             $("#search-block-container").children().remove();
                             $("#search-block-container").append(data);

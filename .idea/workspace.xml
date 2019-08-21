@@ -42,7 +42,13 @@
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/commit_test/fi.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -109,6 +115,7 @@
         <option value="$PROJECT_DIR$/templates/view/article.html" />
         <option value="$PROJECT_DIR$/templates/response/article_response.html" />
         <option value="$PROJECT_DIR$/static/css/base.css" />
+        <option value="$PROJECT_DIR$/commit_test/fi.py" />
       </list>
     </option>
   </component>
@@ -249,12 +256,12 @@
       <workItem from="1562668759025" duration="9970000" />
       <workItem from="1562992403297" duration="9193000" />
       <workItem from="1563680256182" duration="7517000" />
-      <workItem from="1566378717346" duration="1974000" />
+      <workItem from="1566378717346" duration="2241000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="106046000" />
+    <option name="totallyTimeSpent" value="106313000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -268,7 +275,7 @@
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15564202" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15564202" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -282,7 +289,7 @@
       <window_info anchor="bottom" id="TODO" order="8" weight="0.32930845" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32930845" />
       <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.24065934" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.24065934" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="13" weight="0.32930845" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -593,6 +600,9 @@
           <caret line="5" column="26" lean-forward="true" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commit_test/fi.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>

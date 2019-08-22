@@ -7,16 +7,96 @@
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
     <title>Title</title>
     <link href="/static/css/bootstrap.css" type="text/css" rel="stylesheet">
+    <link href="/static/css/media.css" type="text/css" rel="stylesheet">
+    <style>
+        .pwd{
+            height:50px;
+            width:50px;
+            display:inline;
+        }
+        .hide{
+            display:none;
+        }
+    </style>
 </head>
 <body>
-    <form method="POST" action="{% url 'login' %}">
-        {% csrf_token %}
-        <div class="form-group">
-            <input style="height:50px;" name="pwd" type="password" class="form-control" id="pwd">
-        </div>
-        <input type="submit" value="login">
-    </form>
+    <div class="login-container">
+        {% if not locked %}
+            <form id="data">
+                <div class="form-group">
+                    <input class="form-control pwd text-center" maxlength="1" style="font-size:24px;" type="text" class="pwd"/>
+                    <input class="form-control pwd text-center" maxlength="1" style="font-size:24px;" type="text" class="pwd"/>
+                    <input class="form-control pwd text-center" maxlength="1" style="font-size:24px;" type="text" class="pwd"/>
+                    <input class="form-control pwd text-center" maxlength="1" style="font-size:24px;" type="text" class="pwd"/>
+                    <input class="form-control pwd text-center" maxlength="1" style="font-size:24px;" type="text" class="pwd"/>
+                    <input class="form-control pwd text-center" maxlength="1" style="font-size:24px;" type="text" class="pwd"/>
+                </div>
+            </form>
+        {% else %}
+            <div class="lock-warning alert alert-danger text-center" role="alert">LOCKED</div>
+        {% endif %}
+        <div class="pwd-warning alert alert-danger hide text-center" role="alert"></div>
+    </div>
     <script src="/static/js/jquery-1.12.4.js"></script>
     <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/jquery.cookie.js"></script>
+    <script>
+        $(function(){
+            var index = 0;
+            var pwds = $(".pwd");
+            pwds.eq(0).focus();
+            pwds.keydown(function(){
+                var e = event || window.event || arguments.callee.caller.arguments[0];
+                if(e && (e.keyCode >= 48 && e.keyCode <= 90)){
+                    pwds.eq(index++).focus();
+                }else if(e && e.keyCode == 8){
+                    if (index <= 0){
+                        index = 0;
+                    }else if($(this).val() == ""){
+                        pwds.eq(--index).focus();
+                    }else{
+                        --index;
+                    }
+                }
+            });
+            pwds.keyup(function(){
+                //满六位可提交
+                if (index >= 6){
+                    ajaxSubmit();
+                    for (var i = 0; i < 6; i++){
+                        pwds.eq(i).val("");
+                    }
+                    pwds.eq(0).focus();
+                    index = 0;
+                }
+            });
+            function ajaxSubmit(){
+                var pwd = "";
+                for (var i = 0; i < 6; i++){
+                    pwd += $(".pwd").eq(i).val();
+                }
+                $.ajax({
+                    url:"{% url 'login' %}",
+                    type:"POST",
+                    data:{"pwd":pwd},
+                    headers:{"X-CSRFtoken":$.cookie("csrftoken")},
+                    success:function(obj){
+                        var res = JSON.parse(obj);
+                        //var msg = res.msg;
+                        if (res.status){
+                            window.location.href = "{% url 'index' %}";
+                        }
+                        else{
+                            if (res.count == 0){
+                                location.reload();
+                            }
+                            $(".pwd-warning").text("密码错误,剩余机会"+ res.count +"次");
+                            $(".pwd-warning").removeClass("hide");
+                        }
+                    }
+                })
+            }
+        });
+    </script>
 </body>
 </html>

@@ -5,4 +5,5 @@ from django.db import models
 class adm(models.Model):
     pwd = models.CharField(max_length=128)
     fail_count = models.IntegerField()
-    lock_datetime = models.DateTimeField()
+    is_locked = models.BooleanField()
+    lock_datetime = models.DateTimeField(null=True)

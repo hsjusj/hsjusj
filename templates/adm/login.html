@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Title</title>
+    <link href="/static/css/bootstrap.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <form method="POST" action="{% url 'login' %}">
+        {% csrf_token %}
+        <div class="form-group">
+            <input style="height:50px;" name="pwd" type="password" class="form-control" id="pwd">
+        </div>
+        <input type="submit" value="login">
+    </form>
+    <script src="/static/js/jquery-1.12.4.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+</body>
+</html>

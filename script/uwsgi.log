@@ -1,0 +1,1212 @@
+*** Starting uWSGI 2.0.18 (64bit) on [Tue Jul 23 00:09:35 2019] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-36) on 22 July 2019 15:20:45
+os: Linux-3.10.0-514.26.2.el7.x86_64 #1 SMP Tue Jul 4 15:04:05 UTC 2017
+nodename: izwz91qlosfzhw3marwp8bz
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /root/blog/hsjusj/script
+writing pidfile to /root/blog/hsjusj/script/uwsgi.pid
+detected binary path: /usr/local/python3/bin/uwsgi
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/blog/hsjusj/
+your processes number limit is 3896
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uWSGI http bound on :80 fd 3
+uwsgi socket 0 bound to UNIX address /root/blog/hsjusj/script/uwsgi.sock      # sock文件是由uwsgi.ini文件启动之后自动生成 fd 6
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.8 (default, Jul 22 2019, 22:10:06)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-36)]
+Python main interpreter initialized at 0x2a15240
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 486672 bytes (475 KB) for 5 cores
+*** Operational MODE: preforking ***
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 27592)
+spawned uWSGI worker 1 (pid: 27594, cores: 1)
+spawned uWSGI worker 2 (pid: 27595, cores: 1)
+spawned uWSGI worker 3 (pid: 27596, cores: 1)
+spawned uWSGI worker 4 (pid: 27597, cores: 1)
+spawned uWSGI worker 5 (pid: 27598, cores: 1)
+spawned uWSGI http 1 (pid: 27599)
+*** Starting uWSGI 2.0.18 (64bit) on [Tue Jul 23 00:10:46 2019] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-36) on 22 July 2019 15:20:45
+os: Linux-3.10.0-514.26.2.el7.x86_64 #1 SMP Tue Jul 4 15:04:05 UTC 2017
+nodename: izwz91qlosfzhw3marwp8bz
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /root/blog/hsjusj/script
+writing pidfile to /root/blog/hsjusj/script/uwsgi.pid
+detected binary path: /usr/local/python3/bin/uwsgi
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/blog/hsjusj/
+your processes number limit is 3896
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: enabled
+probably another instance of uWSGI is running on the same address (:80).
+bind(): Address already in use [core/socket.c line 769]
+*** Starting uWSGI 2.0.18 (64bit) on [Tue Jul 23 00:12:58 2019] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-36) on 22 July 2019 15:20:45
+os: Linux-3.10.0-514.26.2.el7.x86_64 #1 SMP Tue Jul 4 15:04:05 UTC 2017
+nodename: izwz91qlosfzhw3marwp8bz
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /root/blog/hsjusj/script
+writing pidfile to /root/blog/hsjusj/script/uwsgi.pid
+detected binary path: /usr/local/python3/bin/uwsgi
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/blog/hsjusj/
+your processes number limit is 3896
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: enabled
+probably another instance of uWSGI is running on the same address (:80).
+bind(): Address already in use [core/socket.c line 769]
+Tue Jul 23 00:16:10 2019 - uWSGI worker 2 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Jul 23 00:16:10 2019 - uWSGI worker 3 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Jul 23 00:16:10 2019 - uWSGI worker 4 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Jul 23 00:16:10 2019 - uWSGI worker 5 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Jul 23 00:16:10 2019 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+*** Starting uWSGI 2.0.18 (64bit) on [Tue Jul 23 00:16:28 2019] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-36) on 22 July 2019 15:20:45
+os: Linux-3.10.0-514.26.2.el7.x86_64 #1 SMP Tue Jul 4 15:04:05 UTC 2017
+nodename: izwz91qlosfzhw3marwp8bz
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /root/blog/hsjusj/script
+writing pidfile to /root/blog/hsjusj/script/uwsgi.pid
+detected binary path: /usr/local/python3/bin/uwsgi
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/blog/hsjusj/
+your processes number limit is 3896
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uWSGI http bound on :80 fd 3
+uwsgi socket 0 bound to UNIX address /root/blog/hsjusj/script/uwsgi.sock fd 6
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.8 (default, Jul 22 2019, 22:10:06)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-36)]
+Python main interpreter initialized at 0xfe7240
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 486672 bytes (475 KB) for 5 cores
+*** Operational MODE: preforking ***
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 27646)
+spawned uWSGI worker 1 (pid: 27648, cores: 1)
+spawned uWSGI worker 2 (pid: 27649, cores: 1)
+spawned uWSGI worker 3 (pid: 27650, cores: 1)
+spawned uWSGI worker 4 (pid: 27651, cores: 1)
+spawned uWSGI worker 5 (pid: 27652, cores: 1)
+spawned uWSGI http 1 (pid: 27653)
+gateway "uWSGI http 1" has been buried (pid: 27653)
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 27648)...
+Gracefully killing worker 2 (pid: 27649)...
+Gracefully killing worker 3 (pid: 27650)...
+Gracefully killing worker 4 (pid: 27651)...
+Gracefully killing worker 5 (pid: 27652)...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /root/blog/hsjusj/script
+closing all non-uwsgi socket fds > 2 (max_fd = 65535)...
+found fd 6 mapped to socket 0 (/root/blog/hsjusj/script/uwsgi.sock)
+running /usr/local/python3/bin/uwsgi
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.18 (64bit) on [Tue Jul 23 00:18:00 2019] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-36) on 22 July 2019 15:20:45
+os: Linux-3.10.0-514.26.2.el7.x86_64 #1 SMP Tue Jul 4 15:04:05 UTC 2017
+nodename: izwz91qlosfzhw3marwp8bz
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /root/blog/hsjusj/script
+detected binary path: /usr/local/python3/bin/uwsgi
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/blog/hsjusj/
+your processes number limit is 3896
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uWSGI http bound on :80 fd 3
+uwsgi socket 0 inherited UNIX address /root/blog/hsjusj/script/uwsgi.sock fd 6
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.8 (default, Jul 22 2019, 22:10:06)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-36)]
+Python main interpreter initialized at 0x22fd1c0
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 486672 bytes (475 KB) for 5 cores
+*** Operational MODE: preforking ***
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 27646)
+spawned uWSGI worker 1 (pid: 27661, cores: 1)
+spawned uWSGI worker 2 (pid: 27662, cores: 1)
+spawned uWSGI worker 3 (pid: 27663, cores: 1)
+spawned uWSGI worker 4 (pid: 27664, cores: 1)
+spawned uWSGI worker 5 (pid: 27665, cores: 1)
+spawned uWSGI http 1 (pid: 27666)
+Tue Jul 23 00:20:20 2019 - uWSGI worker 2 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Jul 23 00:20:20 2019 - uWSGI worker 3 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Jul 23 00:20:20 2019 - uWSGI worker 4 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Jul 23 00:20:20 2019 - uWSGI worker 5 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Jul 23 00:20:20 2019 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+*** Starting uWSGI 2.0.18 (64bit) on [Tue Jul 23 00:20:37 2019] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-36) on 22 July 2019 15:20:45
+os: Linux-3.10.0-514.26.2.el7.x86_64 #1 SMP Tue Jul 4 15:04:05 UTC 2017
+nodename: izwz91qlosfzhw3marwp8bz
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /root/blog/hsjusj/script
+writing pidfile to /root/blog/hsjusj/script/uwsgi.pid
+detected binary path: /usr/local/python3/bin/uwsgi
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/blog/hsjusj/
+your processes number limit is 3896
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uWSGI http bound on :80 fd 3
+uwsgi socket 0 bound to UNIX address /root/blog/hsjusj/script/uwsgi.sock fd 6
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.8 (default, Jul 22 2019, 22:10:06)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-36)]
+Python main interpreter initialized at 0x1a9f240
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 486672 bytes (475 KB) for 5 cores
+*** Operational MODE: preforking ***
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 27692)
+spawned uWSGI worker 1 (pid: 27694, cores: 1)
+spawned uWSGI worker 2 (pid: 27695, cores: 1)
+spawned uWSGI worker 3 (pid: 27696, cores: 1)
+spawned uWSGI worker 4 (pid: 27697, cores: 1)
+spawned uWSGI worker 5 (pid: 27698, cores: 1)
+spawned uWSGI http 1 (pid: 27699)
+gateway "uWSGI http 1" has been buried (pid: 27699)
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 27694)...
+Gracefully killing worker 2 (pid: 27695)...
+Gracefully killing worker 3 (pid: 27696)...
+Gracefully killing worker 4 (pid: 27697)...
+Gracefully killing worker 5 (pid: 27698)...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /root/blog/hsjusj/script
+closing all non-uwsgi socket fds > 2 (max_fd = 65535)...
+found fd 6 mapped to socket 0 (/root/blog/hsjusj/script/uwsgi.sock)
+running /usr/local/python3/bin/uwsgi
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.18 (64bit) on [Tue Jul 23 00:30:09 2019] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-36) on 22 July 2019 15:20:45
+os: Linux-3.10.0-514.26.2.el7.x86_64 #1 SMP Tue Jul 4 15:04:05 UTC 2017
+nodename: izwz91qlosfzhw3marwp8bz
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /root/blog/hsjusj/script
+detected binary path: /usr/local/python3/bin/uwsgi
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/blog/hsjusj/
+your processes number limit is 3896
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uWSGI http bound on :8000 fd 3
+uwsgi socket 0 inherited UNIX address /root/blog/hsjusj/script/uwsgi.sock fd 6
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.8 (default, Jul 22 2019, 22:10:06)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-36)]
+Python main interpreter initialized at 0x19e41c0
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 486672 bytes (475 KB) for 5 cores
+*** Operational MODE: preforking ***
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 27692)
+spawned uWSGI worker 1 (pid: 27793, cores: 1)
+spawned uWSGI worker 2 (pid: 27794, cores: 1)
+spawned uWSGI worker 3 (pid: 27795, cores: 1)
+spawned uWSGI worker 4 (pid: 27796, cores: 1)
+spawned uWSGI worker 5 (pid: 27797, cores: 1)
+spawned uWSGI http 1 (pid: 27798)
+--- no python application found, check your startup logs for errors ---
+[pid: 27794|app: -1|req: -1/1] 36.101.178.243 () {36 vars in 682 bytes} [Tue Jul 23 00:33:32 2019] GET /home/ => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 27795|app: -1|req: -1/2] 36.101.178.243 () {38 vars in 713 bytes} [Tue Jul 23 00:36:57 2019] GET /home/ => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+gateway "uWSGI http 1" has been buried (pid: 27798)
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 27793)...
+Gracefully killing worker 2 (pid: 27794)...
+Gracefully killing worker 3 (pid: 27795)...
+Gracefully killing worker 4 (pid: 27796)...
+Gracefully killing worker 5 (pid: 27797)...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /root/blog/hsjusj/script
+closing all non-uwsgi socket fds > 2 (max_fd = 65535)...
+found fd 6 mapped to socket 0 (/root/blog/hsjusj/script/uwsgi.sock)
+running /usr/local/python3/bin/uwsgi
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.18 (64bit) on [Tue Jul 23 00:43:12 2019] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-36) on 22 July 2019 15:20:45
+os: Linux-3.10.0-514.26.2.el7.x86_64 #1 SMP Tue Jul 4 15:04:05 UTC 2017
+nodename: izwz91qlosfzhw3marwp8bz
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /root/blog/hsjusj/script
+detected binary path: /usr/local/python3/bin/uwsgi
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/blog/hsjusj/
+your processes number limit is 3896
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uWSGI http bound on :8000 fd 3
+uwsgi socket 0 inherited UNIX address /root/blog/hsjusj/script/uwsgi.sock fd 6
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.8 (default, Jul 22 2019, 22:10:06)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-36)]
+Python main interpreter initialized at 0x1edd1c0
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 486672 bytes (475 KB) for 5 cores
+*** Operational MODE: preforking ***
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 27692)
+spawned uWSGI worker 1 (pid: 27848, cores: 1)
+spawned uWSGI worker 2 (pid: 27849, cores: 1)
+spawned uWSGI worker 3 (pid: 27850, cores: 1)
+spawned uWSGI worker 4 (pid: 27851, cores: 1)
+spawned uWSGI worker 5 (pid: 27852, cores: 1)
+spawned uWSGI http 1 (pid: 27853)
+--- no python application found, check your startup logs for errors ---
+[pid: 27849|app: -1|req: -1/1] 218.75.40.147 () {32 vars in 459 bytes} [Tue Jul 23 00:43:18 2019] CONNECT www.baidu.com:443 => generated 21 bytes in 0 msecs (HTTP/1.0 500) 2 headers in 83 bytes (0 switches on core 0)
+gateway "uWSGI http 1" has been buried (pid: 27853)
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 27848)...
+Gracefully killing worker 2 (pid: 27849)...
+Gracefully killing worker 3 (pid: 27850)...
+Gracefully killing worker 4 (pid: 27851)...
+Gracefully killing worker 5 (pid: 27852)...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /root/blog/hsjusj/script
+closing all non-uwsgi socket fds > 2 (max_fd = 65535)...
+found fd 6 mapped to socket 0 (/root/blog/hsjusj/script/uwsgi.sock)
+running /usr/local/python3/bin/uwsgi
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.18 (64bit) on [Tue Jul 23 00:50:22 2019] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-36) on 22 July 2019 15:20:45
+os: Linux-3.10.0-514.26.2.el7.x86_64 #1 SMP Tue Jul 4 15:04:05 UTC 2017
+nodename: izwz91qlosfzhw3marwp8bz
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /root/blog/hsjusj/script
+detected binary path: /usr/local/python3/bin/uwsgi
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/blog/hsjusj/
+your processes number limit is 3896
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uWSGI http bound on :8000 fd 3
+uwsgi socket 0 inherited UNIX address /root/blog/hsjusj/script/uwsgi.sock fd 6
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.8 (default, Jul 22 2019, 22:10:06)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-36)]
+Python main interpreter initialized at 0x14c51c0
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 486672 bytes (475 KB) for 5 cores
+*** Operational MODE: preforking ***
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 27692)
+spawned uWSGI worker 1 (pid: 27894, cores: 1)
+spawned uWSGI worker 2 (pid: 27895, cores: 1)
+spawned uWSGI worker 3 (pid: 27896, cores: 1)
+spawned uWSGI worker 4 (pid: 27897, cores: 1)
+spawned uWSGI worker 5 (pid: 27898, cores: 1)
+spawned uWSGI http 1 (pid: 27899)
+gateway "uWSGI http 1" has been buried (pid: 27899)
+...brutally killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /root/blog/hsjusj/script
+closing all non-uwsgi socket fds > 2 (max_fd = 65535)...
+found fd 6 mapped to socket 0 (/root/blog/hsjusj/script/uwsgi.sock)
+running /usr/local/python3/bin/uwsgi
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.18 (64bit) on [Tue Jul 23 00:59:58 2019] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-36) on 22 July 2019 15:20:45
+os: Linux-3.10.0-514.26.2.el7.x86_64 #1 SMP Tue Jul 4 15:04:05 UTC 2017
+nodename: izwz91qlosfzhw3marwp8bz
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /root/blog/hsjusj/script
+detected binary path: /usr/local/python3/bin/uwsgi
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/blog/hsjusj/
+your processes number limit is 3896
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uWSGI http bound on :8000 fd 3
+uwsgi socket 0 inherited UNIX address /root/blog/hsjusj/script/uwsgi.sock fd 6
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.8 (default, Jul 22 2019, 22:10:06)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-36)]
+Python main interpreter initialized at 0x1ede1c0
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 486672 bytes (475 KB) for 5 cores
+*** Operational MODE: preforking ***
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 27692)
+spawned uWSGI worker 1 (pid: 28154, cores: 1)
+spawned uWSGI worker 2 (pid: 28155, cores: 1)
+spawned uWSGI worker 3 (pid: 28156, cores: 1)
+spawned uWSGI worker 4 (pid: 28157, cores: 1)
+spawned uWSGI worker 5 (pid: 28158, cores: 1)
+spawned uWSGI http 1 (pid: 28159)
+*** Starting uWSGI 2.0.18 (64bit) on [Tue Jul 23 01:03:23 2019] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-36) on 22 July 2019 15:20:45
+os: Linux-3.10.0-514.26.2.el7.x86_64 #1 SMP Tue Jul 4 15:04:05 UTC 2017
+nodename: izwz91qlosfzhw3marwp8bz
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /root
+writing pidfile to /root/blog/hsjusj/script/uwsgi.pid
+detected binary path: /usr/local/python3/bin/uwsgi
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/blog/hsjusj/
+your processes number limit is 3896
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uWSGI http bound on :8000 fd 3
+uwsgi socket 0 bound to UNIX address /root/blog/hsjusj/script/uwsgi.sock fd 6
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.8 (default, Jul 22 2019, 22:10:06)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-36)]
+Python main interpreter initialized at 0x1ef8220
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 486672 bytes (475 KB) for 5 cores
+*** Operational MODE: preforking ***
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 2142)
+spawned uWSGI worker 1 (pid: 2144, cores: 1)
+spawned uWSGI worker 2 (pid: 2145, cores: 1)
+spawned uWSGI worker 3 (pid: 2146, cores: 1)
+spawned uWSGI worker 4 (pid: 2147, cores: 1)
+spawned uWSGI worker 5 (pid: 2148, cores: 1)
+spawned uWSGI http 1 (pid: 2149)
+--- no python application found, check your startup logs for errors ---
+[pid: 2147|app: -1|req: -1/1] 61.129.6.227 () {32 vars in 520 bytes} [Tue Jul 23 01:06:51 2019] GET /home => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2145|app: -1|req: -1/2] 101.251.242.238 () {34 vars in 553 bytes} [Tue Jul 23 02:03:29 2019] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2148|app: -1|req: -1/3] 129.211.37.193 () {30 vars in 494 bytes} [Tue Jul 23 03:37:35 2019] GET http://200019.ip138.com/ => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2144|app: -1|req: -1/4] 129.211.37.193 () {30 vars in 432 bytes} [Tue Jul 23 03:37:35 2019] CONNECT www.baidu.com:443 => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2146|app: -1|req: -1/5] 80.82.70.187 () {28 vars in 426 bytes} [Tue Jul 23 06:09:34 2019] GET http://www.baidu.com/cache/global/img/gs.gif => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2147|app: -1|req: -1/6] 36.101.184.6 () {42 vars in 743 bytes} [Tue Jul 23 12:18:18 2019] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2145|app: -1|req: -1/7] 109.111.154.110 () {32 vars in 468 bytes} [Tue Jul 23 12:20:03 2019] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2148|app: -1|req: -1/8] 36.101.184.6 () {42 vars in 743 bytes} [Tue Jul 23 12:44:21 2019] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2144|app: -1|req: -1/9] 36.101.184.6 () {42 vars in 743 bytes} [Tue Jul 23 12:44:22 2019] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2146|app: -1|req: -1/10] 36.101.184.6 () {42 vars in 743 bytes} [Tue Jul 23 12:44:22 2019] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (1 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2147|app: -1|req: -1/11] 71.6.143.90 () {34 vars in 393 bytes} [Tue Jul 23 12:50:50 2019] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (1 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2145|app: -1|req: -1/12] 36.101.184.6 () {42 vars in 743 bytes} [Tue Jul 23 12:50:58 2019] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2148|app: -1|req: -1/13] 36.101.184.6 () {42 vars in 743 bytes} [Tue Jul 23 12:50:59 2019] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2144|app: -1|req: -1/14] 36.101.184.6 () {42 vars in 743 bytes} [Tue Jul 23 13:02:08 2019] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2146|app: -1|req: -1/15] 36.101.184.6 () {42 vars in 743 bytes} [Tue Jul 23 13:02:08 2019] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2147|app: -1|req: -1/16] 36.101.184.6 () {40 vars in 720 bytes} [Tue Jul 23 13:02:11 2019] GET /home => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2145|app: -1|req: -1/17] 36.101.184.6 () {42 vars in 743 bytes} [Tue Jul 23 13:02:54 2019] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2148|app: -1|req: -1/18] 36.101.184.6 () {42 vars in 743 bytes} [Tue Jul 23 13:03:28 2019] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2144|app: -1|req: -1/19] 36.101.184.6 () {42 vars in 743 bytes} [Tue Jul 23 13:03:39 2019] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2146|app: -1|req: -1/20] 36.101.184.6 () {40 vars in 712 bytes} [Tue Jul 23 13:13:13 2019] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2147|app: -1|req: -1/21] 36.101.184.6 () {42 vars in 744 bytes} [Tue Jul 23 13:13:16 2019] GET /home => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2145|app: -1|req: -1/22] 36.101.184.6 () {40 vars in 728 bytes} [Tue Jul 23 13:13:33 2019] GET /404.html => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2148|app: -1|req: -1/23] 36.101.184.6 () {40 vars in 732 bytes} [Tue Jul 23 13:14:08 2019] GET /index.html => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2144|app: -1|req: -1/24] 36.101.184.6 () {40 vars in 712 bytes} [Tue Jul 23 13:17:18 2019] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2146|app: -1|req: -1/25] 36.101.184.6 () {40 vars in 658 bytes} [Tue Jul 23 13:17:18 2019] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2147|app: -1|req: -1/26] 36.101.184.6 () {40 vars in 720 bytes} [Tue Jul 23 13:17:53 2019] GET /home => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2145|app: -1|req: -1/27] 36.101.184.6 () {40 vars in 662 bytes} [Tue Jul 23 13:17:54 2019] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2148|app: -1|req: -1/28] 36.101.184.6 () {42 vars in 751 bytes} [Tue Jul 23 13:21:10 2019] GET /home => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (1 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2144|app: -1|req: -1/29] 36.101.184.6 () {44 vars in 715 bytes} [Tue Jul 23 13:21:10 2019] GET /favicon.ico => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (1 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2146|app: -1|req: -1/30] 36.101.184.6 () {42 vars in 751 bytes} [Tue Jul 23 13:27:10 2019] GET /home => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2147|app: -1|req: -1/31] 36.101.184.6 () {40 vars in 712 bytes} [Tue Jul 23 13:27:13 2019] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2145|app: -1|req: -1/32] 36.101.184.6 () {42 vars in 743 bytes} [Tue Jul 23 13:28:01 2019] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2148|app: -1|req: -1/33] 36.101.184.6 () {42 vars in 743 bytes} [Tue Jul 23 13:28:09 2019] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2144|app: -1|req: -1/34] 36.101.184.6 () {42 vars in 744 bytes} [Tue Jul 23 13:28:50 2019] GET /home => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 2146|app: -1|req: -1/35] 36.101.184.6 () {42 vars in 751 bytes} [Tue Jul 23 13:33:45 2019] GET /home => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (1 switches on core 0)
+gateway "uWSGI http 1" has been buried (pid: 2149)
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 2144)...
+Gracefully killing worker 2 (pid: 2145)...
+Gracefully killing worker 3 (pid: 2146)...
+Gracefully killing worker 4 (pid: 2147)...
+Gracefully killing worker 5 (pid: 2148)...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /root
+closing all non-uwsgi socket fds > 2 (max_fd = 65535)...
+found fd 6 mapped to socket 0 (/root/blog/hsjusj/script/uwsgi.sock)
+running /usr/local/python3/bin/uwsgi
+[uWSGI] getting INI configuration from /root/blog/hsjusj/script/uwsgi.ini
+*** Starting uWSGI 2.0.18 (64bit) on [Tue Jul 23 13:34:49 2019] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-36) on 22 July 2019 15:20:45
+os: Linux-3.10.0-514.26.2.el7.x86_64 #1 SMP Tue Jul 4 15:04:05 UTC 2017
+nodename: izwz91qlosfzhw3marwp8bz
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /root
+detected binary path: /usr/local/python3/bin/uwsgi
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/blog/hsjusj/
+your processes number limit is 3896
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uWSGI http bound on :8000 fd 3
+uwsgi socket 0 inherited UNIX address /root/blog/hsjusj/script/uwsgi.sock fd 6
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.8 (default, Jul 22 2019, 22:10:06)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-36)]
+Python main interpreter initialized at 0x25ff1b0
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 486672 bytes (475 KB) for 5 cores
+*** Operational MODE: preforking ***
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 2142)
+spawned uWSGI worker 1 (pid: 23268, cores: 1)
+spawned uWSGI worker 2 (pid: 23269, cores: 1)
+spawned uWSGI worker 3 (pid: 23270, cores: 1)
+spawned uWSGI worker 4 (pid: 23271, cores: 1)
+spawned uWSGI worker 5 (pid: 23272, cores: 1)
+spawned uWSGI http 1 (pid: 23273)
+--- no python application found, check your startup logs for errors ---
+[pid: 23270|app: -1|req: -1/1] 36.101.184.6 () {42 vars in 751 bytes} [Tue Jul 23 13:34:55 2019] GET /home => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (1 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 23271|app: -1|req: -1/2] 36.101.184.6 () {40 vars in 712 bytes} [Tue Jul 23 13:34:57 2019] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (1 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 23272|app: -1|req: -1/3] 36.101.184.6 () {42 vars in 743 bytes} [Tue Jul 23 13:48:52 2019] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 23269|app: -1|req: -1/4] 36.101.184.6 () {42 vars in 743 bytes} [Tue Jul 23 13:50:15 2019] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+*** Starting uWSGI 2.0.18 (64bit) on [Tue Jul 23 13:51:32 2019] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-36) on 22 July 2019 15:20:45
+os: Linux-3.10.0-514.26.2.el7.x86_64 #1 SMP Tue Jul 4 15:04:05 UTC 2017
+nodename: izwz91qlosfzhw3marwp8bz
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /root/blog/hsjusj/script
+writing pidfile to /root/blog/hsjusj/script/uwsgi.pid
+detected binary path: /usr/local/python3/bin/uwsgi
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/blog/hsjusj/
+your processes number limit is 3896
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: enabled
+probably another instance of uWSGI is running on the same address (:8000).
+bind(): Address already in use [core/socket.c line 769]
+--- no python application found, check your startup logs for errors ---
+[pid: 23268|app: -1|req: -1/5] 36.101.184.6 () {40 vars in 712 bytes} [Tue Jul 23 13:51:42 2019] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 23270|app: -1|req: -1/6] 36.101.184.6 () {42 vars in 743 bytes} [Tue Jul 23 13:55:09 2019] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 23271|app: -1|req: -1/7] 36.101.184.6 () {42 vars in 743 bytes} [Tue Jul 23 13:55:29 2019] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 23272|app: -1|req: -1/8] 36.101.184.6 () {42 vars in 743 bytes} [Tue Jul 23 14:01:56 2019] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 23269|app: -1|req: -1/9] 36.101.184.6 () {42 vars in 743 bytes} [Tue Jul 23 14:03:45 2019] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (1 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 23268|app: -1|req: -1/10] 36.101.184.6 () {42 vars in 743 bytes} [Tue Jul 23 14:17:00 2019] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+gateway "uWSGI http 1" has been buried (pid: 23273)
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 23268)...
+Gracefully killing worker 2 (pid: 23269)...
+Gracefully killing worker 3 (pid: 23270)...
+Gracefully killing worker 4 (pid: 23271)...
+Gracefully killing worker 5 (pid: 23272)...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /root
+closing all non-uwsgi socket fds > 2 (max_fd = 65535)...
+found fd 6 mapped to socket 0 (/root/blog/hsjusj/script/uwsgi.sock)
+running /usr/local/python3/bin/uwsgi
+[uWSGI] getting INI configuration from /root/blog/hsjusj/script/uwsgi.ini
+*** Starting uWSGI 2.0.18 (64bit) on [Tue Jul 23 14:27:58 2019] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-36) on 22 July 2019 15:20:45
+os: Linux-3.10.0-514.26.2.el7.x86_64 #1 SMP Tue Jul 4 15:04:05 UTC 2017
+nodename: izwz91qlosfzhw3marwp8bz
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /root
+detected binary path: /usr/local/python3/bin/uwsgi
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/blog/hsjusj/
+your processes number limit is 3896
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uWSGI http bound on :8000 fd 3
+uwsgi socket 0 inherited UNIX address /root/blog/hsjusj/script/uwsgi.sock fd 6
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.8 (default, Jul 22 2019, 22:10:06)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-36)]
+Python main interpreter initialized at 0x1754180
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 486672 bytes (475 KB) for 5 cores
+*** Operational MODE: preforking ***
+*** no app loaded. going in full dynamic mode ***
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 2142)
+spawned uWSGI worker 1 (pid: 23517, cores: 1)
+spawned uWSGI worker 2 (pid: 23518, cores: 1)
+spawned uWSGI worker 3 (pid: 23519, cores: 1)
+spawned uWSGI worker 4 (pid: 23520, cores: 1)
+spawned uWSGI worker 5 (pid: 23521, cores: 1)
+spawned uWSGI http 1 (pid: 23522)
+--- no python application found, check your startup logs for errors ---
+[pid: 23521|app: -1|req: -1/1] 36.101.184.6 () {42 vars in 743 bytes} [Tue Jul 23 14:28:04 2019] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 23518|app: -1|req: -1/2] 36.101.184.6 () {42 vars in 743 bytes} [Tue Jul 23 14:28:27 2019] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 23517|app: -1|req: -1/3] 36.101.184.6 () {42 vars in 743 bytes} [Tue Jul 23 14:29:13 2019] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+gateway "uWSGI http 1" has been buried (pid: 23522)
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 23517)...
+Gracefully killing worker 2 (pid: 23518)...
+Gracefully killing worker 3 (pid: 23519)...
+Gracefully killing worker 4 (pid: 23520)...
+Gracefully killing worker 5 (pid: 23521)...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /root
+closing all non-uwsgi socket fds > 2 (max_fd = 65535)...
+found fd 6 mapped to socket 0 (/root/blog/hsjusj/script/uwsgi.sock)
+running /usr/local/python3/bin/uwsgi
+[uWSGI] getting INI configuration from /root/blog/hsjusj/script/uwsgi.ini
+*** Starting uWSGI 2.0.18 (64bit) on [Tue Jul 23 14:36:09 2019] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-36) on 22 July 2019 15:20:45
+os: Linux-3.10.0-514.26.2.el7.x86_64 #1 SMP Tue Jul 4 15:04:05 UTC 2017
+nodename: izwz91qlosfzhw3marwp8bz
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /root
+detected binary path: /usr/local/python3/bin/uwsgi
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/blog/hsjusj/
+your processes number limit is 3896
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uWSGI http bound on :8000 fd 3
+uwsgi socket 0 inherited UNIX address /root/blog/hsjusj/script/uwsgi.sock fd 6
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.8 (default, Jul 22 2019, 22:10:06)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-36)]
+Python main interpreter initialized at 0x20521d0
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 486672 bytes (475 KB) for 5 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x20521d0 pid: 2142 (default app)
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 2142)
+spawned uWSGI worker 1 (pid: 23569, cores: 1)
+spawned uWSGI worker 2 (pid: 23570, cores: 1)
+spawned uWSGI worker 3 (pid: 23571, cores: 1)
+spawned uWSGI worker 4 (pid: 23572, cores: 1)
+spawned uWSGI worker 5 (pid: 23573, cores: 1)
+spawned uWSGI http 1 (pid: 23574)
+Not Found: /
+[pid: 23571|app: 0|req: 1/1] 36.101.184.6 () {42 vars in 743 bytes} [Tue Jul 23 14:36:12 2019] GET / => generated 3535 bytes in 53 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 23572|app: 0|req: 1/2] 36.101.184.6 () {42 vars in 744 bytes} [Tue Jul 23 14:36:17 2019] GET /home => generated 0 bytes in 7 msecs (HTTP/1.1 301) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 23570|app: 0|req: 1/3] 36.101.184.6 () {42 vars in 746 bytes} [Tue Jul 23 14:36:17 2019] GET /home/ => generated 10073 bytes in 122 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 23573|app: 0|req: 1/4] 36.101.184.6 () {52 vars in 918 bytes} [Tue Jul 23 14:36:39 2019] POST /article/1/ => generated 661 bytes in 37 msecs (HTTP/1.1 200) 3 headers in 109 bytes (2 switches on core 0)
+[pid: 23569|app: 0|req: 1/5] 36.101.184.6 () {52 vars in 918 bytes} [Tue Jul 23 14:36:42 2019] POST /article/5/ => generated 683 bytes in 23 msecs (HTTP/1.1 200) 3 headers in 109 bytes (1 switches on core 0)
+[pid: 23571|app: 0|req: 2/6] 36.101.184.6 () {40 vars in 692 bytes} [Tue Jul 23 14:36:42 2019] GET /media/8746188435541.jpg => generated 0 bytes in 0 msecs (HTTP/1.1 301) 3 headers in 130 bytes (1 switches on core 0)
+[pid: 23572|app: 0|req: 2/7] 36.101.184.6 () {40 vars in 694 bytes} [Tue Jul 23 14:36:42 2019] GET /media/8746188435541.jpg/ => generated 219889 bytes in 5 msecs via sendfile() (HTTP/1.1 200) 4 headers in 144 bytes (0 switches on core 0)
+[pid: 23570|app: 0|req: 2/8] 36.101.184.6 () {52 vars in 913 bytes} [Tue Jul 23 14:36:48 2019] POST /home/ => generated 2699 bytes in 13 msecs (HTTP/1.1 200) 3 headers in 110 bytes (2 switches on core 0)
+[pid: 23573|app: 0|req: 2/9] 36.101.184.6 () {52 vars in 918 bytes} [Tue Jul 23 14:36:49 2019] POST /article/1/ => generated 661 bytes in 3 msecs (HTTP/1.1 200) 3 headers in 109 bytes (1 switches on core 0)
+[pid: 23569|app: 0|req: 2/10] 36.101.184.6 () {52 vars in 918 bytes} [Tue Jul 23 14:36:52 2019] POST /article/5/ => generated 683 bytes in 3 msecs (HTTP/1.1 200) 3 headers in 109 bytes (1 switches on core 0)
+[pid: 23571|app: 0|req: 3/11] 36.101.184.6 () {52 vars in 912 bytes} [Tue Jul 23 14:37:23 2019] POST /search/ => generated 576 bytes in 28 msecs (HTTP/1.1 200) 3 headers in 109 bytes (1 switches on core 0)
+[pid: 23572|app: 0|req: 3/12] 36.101.184.6 () {48 vars in 849 bytes} [Tue Jul 23 14:37:24 2019] POST /search_tag/ => generated 1129 bytes in 29 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 23570|app: 0|req: 3/13] 36.101.184.6 () {48 vars in 849 bytes} [Tue Jul 23 14:37:24 2019] POST /search_tag/ => generated 583 bytes in 7 msecs (HTTP/1.1 200) 3 headers in 109 bytes (1 switches on core 0)
+[pid: 23573|app: 0|req: 3/14] 36.101.184.6 () {52 vars in 920 bytes} [Tue Jul 23 14:37:25 2019] POST /article/2/ => generated 620 bytes in 3 msecs (HTTP/1.1 200) 3 headers in 109 bytes (1 switches on core 0)
+[pid: 23569|app: 0|req: 3/15] 36.101.184.6 () {42 vars in 757 bytes} [Tue Jul 23 14:38:21 2019] GET /search/ => generated 7692 bytes in 16 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+Not Found: /
+[pid: 23571|app: 0|req: 4/16] 36.101.184.6 () {40 vars in 712 bytes} [Tue Jul 23 14:38:24 2019] GET / => generated 3535 bytes in 4 msecs (HTTP/1.1 404) 3 headers in 102 bytes (1 switches on core 0)
+gateway "uWSGI http 1" has been buried (pid: 23574)
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 23569)...
+Gracefully killing worker 2 (pid: 23570)...
+Gracefully killing worker 3 (pid: 23571)...
+Gracefully killing worker 4 (pid: 23572)...
+Gracefully killing worker 5 (pid: 23573)...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /root
+closing all non-uwsgi socket fds > 2 (max_fd = 65535)...
+found fd 6 mapped to socket 0 (/root/blog/hsjusj/script/uwsgi.sock)
+running /usr/local/python3/bin/uwsgi
+[uWSGI] getting INI configuration from /root/blog/hsjusj/script/uwsgi.ini
+*** Starting uWSGI 2.0.18 (64bit) on [Tue Jul 23 14:38:37 2019] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-36) on 22 July 2019 15:20:45
+os: Linux-3.10.0-514.26.2.el7.x86_64 #1 SMP Tue Jul 4 15:04:05 UTC 2017
+nodename: izwz91qlosfzhw3marwp8bz
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /root
+detected binary path: /usr/local/python3/bin/uwsgi
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/blog/hsjusj/
+your processes number limit is 3896
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uWSGI http bound on :8000 fd 3
+uwsgi socket 0 inherited UNIX address /root/blog/hsjusj/script/uwsgi.sock fd 6
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.8 (default, Jul 22 2019, 22:10:06)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-36)]
+Python main interpreter initialized at 0x21421d0
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 486672 bytes (475 KB) for 5 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x21421d0 pid: 2142 (default app)
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 2142)
+spawned uWSGI worker 1 (pid: 23586, cores: 1)
+spawned uWSGI worker 2 (pid: 23587, cores: 1)
+spawned uWSGI worker 3 (pid: 23588, cores: 1)
+spawned uWSGI worker 4 (pid: 23589, cores: 1)
+spawned uWSGI worker 5 (pid: 23590, cores: 1)
+spawned uWSGI http 1 (pid: 23591)
+[pid: 23588|app: 0|req: 1/1] 36.101.184.6 () {42 vars in 743 bytes} [Tue Jul 23 14:38:37 2019] GET / => generated 139 bytes in 57 msecs (HTTP/1.1 404) 3 headers in 116 bytes (1 switches on core 0)
+[pid: 23589|app: 0|req: 1/2] 36.101.184.6 () {42 vars in 746 bytes} [Tue Jul 23 14:38:41 2019] GET /home/ => generated 10073 bytes in 37 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 23587|app: 0|req: 1/3] 36.101.184.6 () {42 vars in 753 bytes} [Tue Jul 23 14:41:01 2019] GET /home/ => generated 10073 bytes in 42 msecs (HTTP/1.1 200) 3 headers in 111 bytes (2 switches on core 0)
+[pid: 23590|app: 0|req: 1/4] 36.101.184.6 () {52 vars in 912 bytes} [Tue Jul 23 14:41:04 2019] POST /search/ => generated 576 bytes in 28 msecs (HTTP/1.1 200) 3 headers in 109 bytes (1 switches on core 0)
+[pid: 23586|app: 0|req: 1/5] 36.101.184.6 () {52 vars in 918 bytes} [Tue Jul 23 14:41:04 2019] POST /archives/ => generated 2281 bytes in 41 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 23588|app: 0|req: 2/6] 36.101.184.6 () {52 vars in 940 bytes} [Tue Jul 23 14:41:07 2019] POST /archives/article/1/ => generated 661 bytes in 6 msecs (HTTP/1.1 200) 3 headers in 109 bytes (1 switches on core 0)
+[pid: 23589|app: 0|req: 2/7] 36.101.184.6 () {52 vars in 940 bytes} [Tue Jul 23 14:41:10 2019] POST /archives/article/5/ => generated 683 bytes in 3 msecs (HTTP/1.1 200) 3 headers in 109 bytes (1 switches on core 0)
+[pid: 23587|app: 0|req: 2/8] 36.101.184.6 () {52 vars in 912 bytes} [Tue Jul 23 14:41:13 2019] POST /home/ => generated 2699 bytes in 12 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 23590|app: 0|req: 2/9] 36.101.184.6 () {46 vars in 920 bytes} [Tue Jul 23 14:41:35 2019] GET /home/ => generated 10073 bytes in 20 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 23586|app: 0|req: 2/10] 14.17.3.65 () {38 vars in 631 bytes} [Tue Jul 23 14:41:35 2019] GET /home => generated 0 bytes in 1 msecs (HTTP/1.1 301) 3 headers in 111 bytes (2 switches on core 0)
+[pid: 23588|app: 0|req: 3/11] 14.17.3.65 () {40 vars in 675 bytes} [Tue Jul 23 14:41:35 2019] GET /home/ => generated 10073 bytes in 20 msecs (HTTP/1.1 200) 3 headers in 111 bytes (2 switches on core 0)
+[pid: 23589|app: 0|req: 3/12] 36.101.184.6 () {52 vars in 1024 bytes} [Tue Jul 23 14:41:43 2019] POST /search/ => generated 576 bytes in 6 msecs (HTTP/1.1 200) 3 headers in 109 bytes (2 switches on core 0)
+[pid: 23587|app: 0|req: 3/13] 36.101.184.6 () {48 vars in 961 bytes} [Tue Jul 23 14:41:59 2019] POST /search_tag/ => generated 1085 bytes in 9 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 23590|app: 0|req: 3/14] 36.101.184.6 () {48 vars in 961 bytes} [Tue Jul 23 14:42:00 2019] POST /search_tag/ => generated 1165 bytes in 9 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 23586|app: 0|req: 3/15] 36.101.184.6 () {48 vars in 961 bytes} [Tue Jul 23 14:42:00 2019] POST /search_tag/ => generated 583 bytes in 13 msecs (HTTP/1.1 200) 3 headers in 109 bytes (1 switches on core 0)
+[pid: 23588|app: 0|req: 4/16] 36.101.184.6 () {48 vars in 961 bytes} [Tue Jul 23 14:42:00 2019] POST /search_tag/ => generated 1129 bytes in 9 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 23589|app: 0|req: 4/17] 36.101.184.6 () {40 vars in 687 bytes} [Tue Jul 23 14:42:08 2019] GET /search/ => generated 7692 bytes in 6 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 23587|app: 0|req: 4/18] 36.101.184.6 () {52 vars in 918 bytes} [Tue Jul 23 14:42:17 2019] POST /article/5/ => generated 683 bytes in 3 msecs (HTTP/1.1 200) 3 headers in 109 bytes (1 switches on core 0)
+[pid: 23590|app: 0|req: 4/19] 36.101.184.6 () {52 vars in 916 bytes} [Tue Jul 23 14:42:28 2019] POST /archives/ => generated 2281 bytes in 3 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 23586|app: 0|req: 4/20] 36.101.184.6 () {52 vars in 912 bytes} [Tue Jul 23 14:42:53 2019] POST /search/ => generated 576 bytes in 6 msecs (HTTP/1.1 200) 3 headers in 109 bytes (1 switches on core 0)
+SIGINT/SIGQUIT received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 23591)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: pidfile removed.
+VACUUM WARNING: unix socket /root/blog/hsjusj/script/uwsgi.sock changed inode. Skip removal
+*** Starting uWSGI 2.0.18 (64bit) on [Tue Jul 23 14:44:34 2019] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-36) on 22 July 2019 15:20:45
+os: Linux-3.10.0-514.26.2.el7.x86_64 #1 SMP Tue Jul 4 15:04:05 UTC 2017
+nodename: izwz91qlosfzhw3marwp8bz
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /root/blog/hsjusj/script
+writing pidfile to /root/blog/hsjusj/script/uwsgi.pid
+detected binary path: /usr/local/python3/bin/uwsgi
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/blog/hsjusj/
+your processes number limit is 3896
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uWSGI http bound on :8000 fd 3
+uwsgi socket 0 bound to UNIX address /root/blog/hsjusj/script/uwsgi.sock fd 6
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.8 (default, Jul 22 2019, 22:10:06)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-36)]
+Python main interpreter initialized at 0x260c290
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 486672 bytes (475 KB) for 5 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x260c290 pid: 23639 (default app)
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 23639)
+spawned uWSGI worker 1 (pid: 23641, cores: 1)
+spawned uWSGI worker 2 (pid: 23642, cores: 1)
+spawned uWSGI worker 3 (pid: 23643, cores: 1)
+spawned uWSGI worker 4 (pid: 23644, cores: 1)
+spawned uWSGI worker 5 (pid: 23645, cores: 1)
+spawned uWSGI http 1 (pid: 23646)
+[pid: 23643|app: 0|req: 1/1] 36.101.184.6 () {42 vars in 757 bytes} [Tue Jul 23 14:44:35 2019] GET /search/ => generated 7692 bytes in 35 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+SIGINT/SIGQUIT received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 23646)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: pidfile removed.
+VACUUM: unix socket /root/blog/hsjusj/script/uwsgi.sock removed.
+*** Starting uWSGI 2.0.18 (64bit) on [Fri Aug 23 10:57:18 2019] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-36) on 22 July 2019 15:20:45
+os: Linux-3.10.0-514.26.2.el7.x86_64 #1 SMP Tue Jul 4 15:04:05 UTC 2017
+nodename: izwz91qlosfzhw3marwp8bz
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /root/blog/hsjusj/script
+writing pidfile to /root/blog/hsjusj/script/uwsgi.pid
+detected binary path: /usr/local/python3/bin/uwsgi
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/blog/hsjusj/
+your processes number limit is 3896
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uWSGI http bound on :8000 fd 3
+uwsgi socket 0 bound to UNIX address /root/blog/hsjusj/script/uwsgi.sock fd 6
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.8 (default, Jul 22 2019, 22:10:06)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-36)]
+Python main interpreter initialized at 0x2789580
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 486672 bytes (475 KB) for 5 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x2789580 pid: 12475 (default app)
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 12475)
+spawned uWSGI worker 1 (pid: 12477, cores: 1)
+spawned uWSGI worker 2 (pid: 12478, cores: 1)
+spawned uWSGI worker 3 (pid: 12479, cores: 1)
+spawned uWSGI worker 4 (pid: 12480, cores: 1)
+spawned uWSGI worker 5 (pid: 12481, cores: 1)
+spawned uWSGI http 1 (pid: 12482)
+[pid: 12479|app: 0|req: 1/1] 36.101.187.59 () {46 vars in 938 bytes} [Fri Aug 23 10:58:11 2019] GET /hsjusj/login/ => generated 4108 bytes in 36 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 12480|app: 0|req: 1/2] 36.101.187.59 () {46 vars in 938 bytes} [Fri Aug 23 10:59:19 2019] GET /hsjusj/login/ => generated 4108 bytes in 41 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 12478|app: 0|req: 1/3] 36.101.187.59 () {40 vars in 705 bytes} [Fri Aug 23 11:01:31 2019] GET / => generated 74 bytes in 22 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 12481|app: 0|req: 1/4] 36.101.187.59 () {40 vars in 713 bytes} [Fri Aug 23 11:01:36 2019] GET /home => generated 0 bytes in 9 msecs (HTTP/1.1 301) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 12477|app: 0|req: 1/5] 36.101.187.59 () {40 vars in 715 bytes} [Fri Aug 23 11:01:36 2019] GET /home/ => generated 13601 bytes in 60 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 12479|app: 0|req: 2/6] 36.101.187.59 () {52 vars in 911 bytes} [Fri Aug 23 11:01:43 2019] POST /article/7/ => generated 1386 bytes in 3 msecs (HTTP/1.1 403) 3 headers in 102 bytes (2 switches on core 0)
+[pid: 12480|app: 0|req: 2/7] 36.101.187.59 () {40 vars in 729 bytes} [Fri Aug 23 11:01:49 2019] GET /hsjusj/login => generated 0 bytes in 1 msecs (HTTP/1.1 301) 3 headers in 119 bytes (2 switches on core 0)
+[pid: 12478|app: 0|req: 2/8] 36.101.187.59 () {40 vars in 731 bytes} [Fri Aug 23 11:01:49 2019] GET /hsjusj/login/ => generated 4108 bytes in 12 msecs (HTTP/1.1 200) 3 headers in 110 bytes (2 switches on core 0)
+[pid: 12481|app: 0|req: 2/9] 36.101.187.59 () {48 vars in 852 bytes} [Fri Aug 23 11:02:10 2019] POST /hsjusj/login/ => generated 1386 bytes in 17 msecs (HTTP/1.1 403) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 12477|app: 0|req: 2/10] 151.217.26.42 () {34 vars in 395 bytes} [Fri Aug 23 11:04:54 2019] GET / => generated 74 bytes in 3 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 12479|app: 0|req: 3/11] 36.101.187.59 () {42 vars in 792 bytes} [Fri Aug 23 11:09:59 2019] GET /hsjusj/login/ => generated 4108 bytes in 3 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 12480|app: 0|req: 3/12] 36.101.187.59 () {48 vars in 882 bytes} [Fri Aug 23 11:10:12 2019] POST /hsjusj/login/ => generated 1386 bytes in 3 msecs (HTTP/1.1 403) 3 headers in 102 bytes (2 switches on core 0)
+[pid: 12478|app: 0|req: 3/13] 36.101.187.59 () {48 vars in 882 bytes} [Fri Aug 23 11:10:18 2019] POST /hsjusj/login/ => generated 1386 bytes in 2 msecs (HTTP/1.1 403) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 12481|app: 0|req: 3/14] 47.101.189.132 () {34 vars in 462 bytes} [Fri Aug 23 11:10:31 2019] GET / => generated 74 bytes in 2 msecs (HTTP/1.1 404) 3 headers in 100 bytes (1 switches on core 0)
+[pid: 12477|app: 0|req: 3/15] 36.101.187.59 () {40 vars in 715 bytes} [Fri Aug 23 11:11:49 2019] GET /home/ => generated 13601 bytes in 18 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 12479|app: 0|req: 4/16] 36.101.187.59 () {40 vars in 719 bytes} [Fri Aug 23 11:11:54 2019] GET /search/ => generated 8508 bytes in 11 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 12480|app: 0|req: 4/17] 36.101.187.59 () {48 vars in 842 bytes} [Fri Aug 23 11:11:55 2019] POST /search_tag/ => generated 1386 bytes in 2 msecs (HTTP/1.1 403) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 12478|app: 0|req: 4/18] 36.101.187.59 () {52 vars in 903 bytes} [Fri Aug 23 11:14:44 2019] POST /home/ => generated 1386 bytes in 2 msecs (HTTP/1.1 403) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 12481|app: 0|req: 4/19] 36.101.187.59 () {42 vars in 746 bytes} [Fri Aug 23 11:14:47 2019] GET /home/ => generated 13601 bytes in 30 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 12477|app: 0|req: 4/20] 36.101.187.59 () {52 vars in 901 bytes} [Fri Aug 23 11:14:48 2019] POST /home/ => generated 1386 bytes in 3 msecs (HTTP/1.1 403) 3 headers in 102 bytes (2 switches on core 0)
+[pid: 12479|app: 0|req: 5/21] 36.101.187.59 () {52 vars in 901 bytes} [Fri Aug 23 11:14:49 2019] POST /home/ => generated 1386 bytes in 2 msecs (HTTP/1.1 403) 3 headers in 102 bytes (2 switches on core 0)
+[pid: 12480|app: 0|req: 5/22] 36.101.187.59 () {52 vars in 901 bytes} [Fri Aug 23 11:14:49 2019] POST /home/ => generated 1386 bytes in 2 msecs (HTTP/1.1 403) 3 headers in 102 bytes (2 switches on core 0)
+[pid: 12478|app: 0|req: 5/23] 36.101.187.59 () {52 vars in 905 bytes} [Fri Aug 23 11:14:50 2019] POST /search/ => generated 1386 bytes in 2 msecs (HTTP/1.1 403) 3 headers in 102 bytes (2 switches on core 0)
+[pid: 12481|app: 0|req: 5/24] 36.101.187.59 () {52 vars in 907 bytes} [Fri Aug 23 11:14:51 2019] POST /search/ => generated 1386 bytes in 2 msecs (HTTP/1.1 403) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 12477|app: 0|req: 5/25] 36.101.187.59 () {52 vars in 903 bytes} [Fri Aug 23 11:14:54 2019] POST /home/ => generated 1386 bytes in 2 msecs (HTTP/1.1 403) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 12479|app: 0|req: 6/26] 36.101.187.59 () {52 vars in 901 bytes} [Fri Aug 23 11:14:54 2019] POST /home/ => generated 1386 bytes in 2 msecs (HTTP/1.1 403) 3 headers in 102 bytes (2 switches on core 0)
+[pid: 12480|app: 0|req: 6/27] 36.101.187.59 () {40 vars in 719 bytes} [Fri Aug 23 11:14:59 2019] GET /search/ => generated 8508 bytes in 12 msecs (HTTP/1.1 200) 3 headers in 110 bytes (2 switches on core 0)
+[pid: 12478|app: 0|req: 6/28] 36.101.187.59 () {52 vars in 907 bytes} [Fri Aug 23 11:15:01 2019] POST /search/ => generated 1386 bytes in 2 msecs (HTTP/1.1 403) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 12481|app: 0|req: 6/29] 36.101.187.59 () {52 vars in 907 bytes} [Fri Aug 23 11:15:02 2019] POST /search/ => generated 1386 bytes in 2 msecs (HTTP/1.1 403) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 12477|app: 0|req: 6/30] 36.101.187.59 () {52 vars in 903 bytes} [Fri Aug 23 11:15:03 2019] POST /home/ => generated 1386 bytes in 2 msecs (HTTP/1.1 403) 3 headers in 102 bytes (2 switches on core 0)
+gateway "uWSGI http 1" has been buried (pid: 12482)
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 12477)...
+Gracefully killing worker 2 (pid: 12478)...
+Gracefully killing worker 3 (pid: 12479)...
+Gracefully killing worker 4 (pid: 12480)...
+Gracefully killing worker 5 (pid: 12481)...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /root/blog/hsjusj/script
+closing all non-uwsgi socket fds > 2 (max_fd = 65535)...
+found fd 6 mapped to socket 0 (/root/blog/hsjusj/script/uwsgi.sock)
+running /usr/local/python3/bin/uwsgi
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.18 (64bit) on [Fri Aug 23 11:16:24 2019] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-36) on 22 July 2019 15:20:45
+os: Linux-3.10.0-514.26.2.el7.x86_64 #1 SMP Tue Jul 4 15:04:05 UTC 2017
+nodename: izwz91qlosfzhw3marwp8bz
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /root/blog/hsjusj/script
+detected binary path: /usr/local/python3/bin/uwsgi
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/blog/hsjusj/
+your processes number limit is 3896
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uWSGI http bound on :8000 fd 3
+uwsgi socket 0 inherited UNIX address /root/blog/hsjusj/script/uwsgi.sock fd 6
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.8 (default, Jul 22 2019, 22:10:06)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-36)]
+Python main interpreter initialized at 0x246d4a0
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 486672 bytes (475 KB) for 5 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x246d4a0 pid: 12475 (default app)
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 12475)
+spawned uWSGI worker 1 (pid: 12523, cores: 1)
+spawned uWSGI worker 2 (pid: 12524, cores: 1)
+spawned uWSGI worker 3 (pid: 12525, cores: 1)
+spawned uWSGI worker 4 (pid: 12526, cores: 1)
+spawned uWSGI worker 5 (pid: 12527, cores: 1)
+spawned uWSGI http 1 (pid: 12528)
+[pid: 12525|app: 0|req: 1/1] 36.101.187.59 () {42 vars in 746 bytes} [Fri Aug 23 11:16:28 2019] GET /home/ => generated 13602 bytes in 50 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 12524|app: 0|req: 1/2] 36.101.187.59 () {52 vars in 905 bytes} [Fri Aug 23 11:16:31 2019] POST /search/ => generated 1386 bytes in 21 msecs (HTTP/1.1 403) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 12526|app: 0|req: 1/3] 36.101.187.59 () {42 vars in 750 bytes} [Fri Aug 23 11:16:33 2019] GET /search/ => generated 8509 bytes in 40 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 12527|app: 0|req: 1/4] 36.101.187.59 () {52 vars in 903 bytes} [Fri Aug 23 11:16:34 2019] POST /home/ => generated 1386 bytes in 20 msecs (HTTP/1.1 403) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 12523|app: 0|req: 1/5] 36.101.187.59 () {52 vars in 901 bytes} [Fri Aug 23 11:16:39 2019] POST /home/ => generated 1386 bytes in 24 msecs (HTTP/1.1 403) 3 headers in 102 bytes (1 switches on core 0)
+SIGINT/SIGQUIT received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 12528)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: pidfile removed.
+VACUUM WARNING: unix socket /root/blog/hsjusj/script/uwsgi.sock changed inode. Skip removal
+*** Starting uWSGI 2.0.18 (64bit) on [Fri Aug 23 11:18:26 2019] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-36) on 22 July 2019 15:20:45
+os: Linux-3.10.0-514.26.2.el7.x86_64 #1 SMP Tue Jul 4 15:04:05 UTC 2017
+nodename: izwz91qlosfzhw3marwp8bz
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /root/blog/hsjusj/script
+writing pidfile to /root/blog/hsjusj/script/uwsgi.pid
+detected binary path: /usr/local/python3/bin/uwsgi
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/blog/hsjusj/
+your processes number limit is 3896
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uWSGI http bound on :8000 fd 3
+uwsgi socket 0 bound to UNIX address /root/blog/hsjusj/script/uwsgi.sock fd 6
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.8 (default, Jul 22 2019, 22:10:06)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-36)]
+Python main interpreter initialized at 0x21cf580
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 486672 bytes (475 KB) for 5 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x21cf580 pid: 12548 (default app)
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 12548)
+spawned uWSGI worker 1 (pid: 12550, cores: 1)
+spawned uWSGI worker 2 (pid: 12551, cores: 1)
+spawned uWSGI worker 3 (pid: 12552, cores: 1)
+spawned uWSGI worker 4 (pid: 12553, cores: 1)
+spawned uWSGI worker 5 (pid: 12554, cores: 1)
+spawned uWSGI http 1 (pid: 12555)
+[pid: 12552|app: 0|req: 1/1] 36.101.187.59 () {42 vars in 746 bytes} [Fri Aug 23 11:18:30 2019] GET /home/ => generated 13602 bytes in 51 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 12551|app: 0|req: 1/2] 36.101.187.59 () {42 vars in 746 bytes} [Fri Aug 23 11:18:30 2019] GET /home/ => generated 13602 bytes in 48 msecs (HTTP/1.1 200) 3 headers in 111 bytes (2 switches on core 0)
+[pid: 12553|app: 0|req: 1/3] 36.101.187.59 () {42 vars in 746 bytes} [Fri Aug 23 11:18:31 2019] GET /home/ => generated 13602 bytes in 48 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 12550|app: 0|req: 1/4] 36.101.187.59 () {42 vars in 746 bytes} [Fri Aug 23 11:18:31 2019] GET /home/ => generated 13602 bytes in 48 msecs (HTTP/1.1 200) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 12554|app: 0|req: 1/5] 36.101.187.59 () {40 vars in 719 bytes} [Fri Aug 23 11:18:45 2019] GET /search/ => generated 8509 bytes in 36 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 12552|app: 0|req: 2/6] 36.101.187.59 () {52 vars in 903 bytes} [Fri Aug 23 11:18:46 2019] POST /home/ => generated 1386 bytes in 3 msecs (HTTP/1.1 403) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 12551|app: 0|req: 2/7] 36.101.187.59 () {52 vars in 901 bytes} [Fri Aug 23 11:18:56 2019] POST /home/ => generated 1386 bytes in 3 msecs (HTTP/1.1 403) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 12553|app: 0|req: 2/8] 36.101.187.59 () {52 vars in 901 bytes} [Fri Aug 23 11:18:59 2019] POST /home/ => generated 1386 bytes in 3 msecs (HTTP/1.1 403) 3 headers in 102 bytes (1 switches on core 0)
+SIGINT/SIGQUIT received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 12555)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: pidfile removed.
+VACUUM: unix socket /root/blog/hsjusj/script/uwsgi.sock removed.
+*** Starting uWSGI 2.0.18 (64bit) on [Fri Aug 23 11:20:58 2019] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-36) on 22 July 2019 15:20:45
+os: Linux-3.10.0-514.26.2.el7.x86_64 #1 SMP Tue Jul 4 15:04:05 UTC 2017
+nodename: izwz91qlosfzhw3marwp8bz
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /root/blog/hsjusj/script
+writing pidfile to /root/blog/hsjusj/script/uwsgi.pid
+detected binary path: /usr/local/python3/bin/uwsgi
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/blog/hsjusj/
+your processes number limit is 3896
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uWSGI http bound on :8000 fd 3
+uwsgi socket 0 bound to UNIX address /root/blog/hsjusj/script/uwsgi.sock fd 6
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.6.8 (default, Jul 22 2019, 22:10:06)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-36)]
+Python main interpreter initialized at 0x1d10580
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 486672 bytes (475 KB) for 5 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x1d10580 pid: 12573 (default app)
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 12573)
+spawned uWSGI worker 1 (pid: 12575, cores: 1)
+spawned uWSGI worker 2 (pid: 12576, cores: 1)
+spawned uWSGI worker 3 (pid: 12577, cores: 1)
+spawned uWSGI worker 4 (pid: 12578, cores: 1)
+spawned uWSGI worker 5 (pid: 12579, cores: 1)
+spawned uWSGI http 1 (pid: 12580)
+[pid: 12576|app: 0|req: 1/1] 36.101.187.59 () {42 vars in 746 bytes} [Fri Aug 23 11:21:02 2019] GET /home/ => generated 13726 bytes in 51 msecs (HTTP/1.1 200) 5 headers in 293 bytes (1 switches on core 0)
+[pid: 12577|app: 0|req: 1/2] 36.101.187.59 () {44 vars in 835 bytes} [Fri Aug 23 11:21:03 2019] GET /home/ => generated 13726 bytes in 47 msecs (HTTP/1.1 200) 5 headers in 293 bytes (1 switches on core 0)
+[pid: 12575|app: 0|req: 1/3] 36.101.187.59 () {44 vars in 835 bytes} [Fri Aug 23 11:21:03 2019] GET /home/ => generated 13726 bytes in 46 msecs (HTTP/1.1 200) 5 headers in 293 bytes (1 switches on core 0)
+[pid: 12578|app: 0|req: 1/4] 36.101.187.59 () {44 vars in 835 bytes} [Fri Aug 23 11:21:04 2019] GET /home/ => generated 13726 bytes in 51 msecs (HTTP/1.1 200) 5 headers in 293 bytes (1 switches on core 0)
+[pid: 12579|app: 0|req: 1/5] 36.101.187.59 () {56 vars in 1074 bytes} [Fri Aug 23 11:21:05 2019] POST /home/ => generated 5286 bytes in 48 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 12576|app: 0|req: 2/6] 36.101.187.59 () {56 vars in 1078 bytes} [Fri Aug 23 11:21:06 2019] POST /search/ => generated 749 bytes in 10 msecs (HTTP/1.1 200) 3 headers in 109 bytes (1 switches on core 0)
+[pid: 12577|app: 0|req: 2/7] 36.101.187.59 () {56 vars in 1084 bytes} [Fri Aug 23 11:21:08 2019] POST /archives/ => generated 4773 bytes in 4 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 12575|app: 0|req: 2/8] 36.101.187.59 () {56 vars in 1082 bytes} [Fri Aug 23 11:23:20 2019] POST /search/ => generated 749 bytes in 9 msecs (HTTP/1.1 200) 3 headers in 109 bytes (1 switches on core 0)
+[pid: 12578|app: 0|req: 2/9] 36.101.187.59 () {44 vars in 839 bytes} [Fri Aug 23 11:23:20 2019] GET /search/ => generated 8633 bytes in 9 msecs (HTTP/1.1 200) 5 headers in 292 bytes (1 switches on core 0)
+[pid: 12579|app: 0|req: 2/10] 36.101.187.59 () {44 vars in 839 bytes} [Fri Aug 23 11:23:21 2019] GET /search/ => generated 8633 bytes in 10 msecs (HTTP/1.1 200) 5 headers in 292 bytes (2 switches on core 0)
+[pid: 12576|app: 0|req: 3/11] 36.101.187.59 () {52 vars in 1015 bytes} [Fri Aug 23 11:23:21 2019] POST /search_tag/ => generated 1129 bytes in 8 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 12577|app: 0|req: 3/12] 36.101.187.59 () {52 vars in 1015 bytes} [Fri Aug 23 11:23:22 2019] POST /search_tag/ => generated 583 bytes in 7 msecs (HTTP/1.1 200) 3 headers in 109 bytes (1 switches on core 0)
+[pid: 12575|app: 0|req: 3/13] 36.101.187.59 () {52 vars in 1015 bytes} [Fri Aug 23 11:23:22 2019] POST /search_tag/ => generated 1165 bytes in 10 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 12578|app: 0|req: 3/14] 36.101.187.59 () {52 vars in 1015 bytes} [Fri Aug 23 11:23:22 2019] POST /search_tag/ => generated 1085 bytes in 9 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+m
+[pid: 12579|app: 0|req: 3/15] 36.101.187.59 () {52 vars in 1019 bytes} [Fri Aug 23 11:23:25 2019] POST /search_title/ => generated 1085 bytes in 8 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 12576|app: 0|req: 4/16] 36.101.187.59 () {56 vars in 1076 bytes} [Fri Aug 23 11:23:27 2019] POST /home/ => generated 5286 bytes in 19 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 12577|app: 0|req: 4/17] 36.101.187.59 () {56 vars in 1078 bytes} [Fri Aug 23 11:23:28 2019] POST /search/ => generated 749 bytes in 9 msecs (HTTP/1.1 200) 3 headers in 109 bytes (1 switches on core 0)
+[pid: 12575|app: 0|req: 4/18] 36.101.187.59 () {46 vars in 938 bytes} [Fri Aug 23 11:23:50 2019] GET /hsjusj/login/ => generated 4108 bytes in 4 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 12578|app: 0|req: 4/19] 36.101.187.59 () {46 vars in 920 bytes} [Fri Aug 23 11:24:02 2019] GET /home => generated 0 bytes in 0 msecs (HTTP/1.1 301) 3 headers in 111 bytes (1 switches on core 0)
+[pid: 12579|app: 0|req: 4/20] 36.101.187.59 () {46 vars in 922 bytes} [Fri Aug 23 11:24:02 2019] GET /home/ => generated 13726 bytes in 19 msecs (HTTP/1.1 200) 5 headers in 293 bytes (1 switches on core 0)
+[pid: 12576|app: 0|req: 5/21] 163.177.90.152 () {38 vars in 635 bytes} [Fri Aug 23 11:24:02 2019] GET /home => generated 0 bytes in 0 msecs (HTTP/1.1 301) 3 headers in 111 bytes (2 switches on core 0)
+[pid: 12577|app: 0|req: 5/22] 163.177.90.152 () {40 vars in 679 bytes} [Fri Aug 23 11:24:02 2019] GET /home/ => generated 13726 bytes in 22 msecs (HTTP/1.1 200) 5 headers in 293 bytes (2 switches on core 0)
+[pid: 12575|app: 0|req: 5/23] 36.101.187.59 () {56 vars in 1199 bytes} [Fri Aug 23 11:24:05 2019] POST /search/ => generated 749 bytes in 8 msecs (HTTP/1.1 200) 3 headers in 109 bytes (2 switches on core 0)
+[pid: 12578|app: 0|req: 5/24] 36.101.187.59 () {52 vars in 1136 bytes} [Fri Aug 23 11:24:14 2019] POST /search_tag/ => generated 1165 bytes in 9 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 12579|app: 0|req: 5/25] 36.101.187.59 () {52 vars in 1136 bytes} [Fri Aug 23 11:24:15 2019] POST /search_tag/ => generated 1085 bytes in 8 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+[pid: 12576|app: 0|req: 6/26] 36.101.187.59 () {56 vars in 1207 bytes} [Fri Aug 23 11:24:17 2019] POST /article/5/ => generated 683 bytes in 4 msecs (HTTP/1.1 200) 3 headers in 109 bytes (1 switches on core 0)
+[pid: 12577|app: 0|req: 6/27] 36.101.187.59 () {42 vars in 917 bytes} [Fri Aug 23 11:24:17 2019] GET /media/8746188435541.jpg => generated 0 bytes in 0 msecs (HTTP/1.1 301) 3 headers in 130 bytes (1 switches on core 0)
+[pid: 12575|app: 0|req: 6/28] 36.101.187.59 () {42 vars in 919 bytes} [Fri Aug 23 11:24:17 2019] GET /media/8746188435541.jpg/ => generated 219889 bytes in 1 msecs via sendfile() (HTTP/1.1 200) 4 headers in 144 bytes (0 switches on core 0)
+[pid: 12578|app: 0|req: 6/29] 36.101.187.59 () {56 vars in 1200 bytes} [Fri Aug 23 11:24:28 2019] POST /home/ => generated 5286 bytes in 21 msecs (HTTP/1.1 200) 3 headers in 110 bytes (2 switches on core 0)
+[pid: 12579|app: 0|req: 6/30] 36.101.187.59 () {56 vars in 1203 bytes} [Fri Aug 23 11:24:29 2019] POST /archives/ => generated 4773 bytes in 3 msecs (HTTP/1.1 200) 3 headers in 110 bytes (1 switches on core 0)
+SIGINT/SIGQUIT received...killing workers...
+gateway "uWSGI http 1" has been buried (pid: 12580)
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: pidfile removed.
+VACUUM: unix socket /root/blog/hsjusj/script/uwsgi.sock removed.

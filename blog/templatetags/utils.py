@@ -9,7 +9,7 @@ def archives():
     articles = models.Articles.objects.all()
     prev = None
     archives_str = ''
-    for article in articles:
+    for article in reversed(articles):
         current = article.create_datetime.strftime("%Y-%m")
         if prev == current:
             pass

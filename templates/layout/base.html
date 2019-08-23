@@ -46,6 +46,7 @@
         <div class="container">
             <div class="row">
                 <div id="container" class="col-md-offset-1 col-md-10 col-xs-12">
+                {% csrf_token %}
                 {% block body %}{% endblock %}
                 </div>
             </div>
@@ -73,7 +74,7 @@
                     $.pjax({
                         url:"{% url 'home' %}",
                         type:"POST",
-                        dateType:"html",
+                        dataType:"html",
                         headers:{"X-CSRFtoken":$.cookie("csrftoken")},
                         cache:true,
                         storage:true,

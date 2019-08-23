@@ -29,6 +29,7 @@
     <div class="login-container">
         {% if not locked %}
             <form id="data">
+                {% csrf_token %}
                 <div class="form-group">
                     <input class="form-control pwd text-center" maxlength="1" style="font-size:24px;" type="text" class="pwd"/>
                     <input class="form-control pwd text-center" maxlength="1" style="font-size:24px;" type="text" class="pwd"/>

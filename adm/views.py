@@ -22,6 +22,7 @@ def login(request):
             #设置为当前时间
             models.adm.objects.filter(id=1).update(lock_datetime=time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time())))
             request.session['login'] = True
+            request.session.set_expiry(0)
             msg['status'] = True
             return HttpResponse(json.dumps(msg))
         else:
@@ -41,6 +42,7 @@ def login(request):
 
 def index(request):
     if request.session.get('login', None):
+        print(request.session.get('login', None))
         return render(request, 'adm/index.html')
     else:
         return redirect('/hsjusj/login')

@@ -1,24 +1,24 @@
 @media (max-width: 768px) {
   .login-container {
-    width: 317px;
+    width: 320px;
     margin: 40% auto 0 auto;
   }
 }
 @media (min-width: 768px) {
   .login-container {
-    width: 317px;
+    width: 320px;
     margin: 40% auto 0 auto;
   }
 }
 @media (min-width: 992px) {
   .login-container {
-    width: 317px;
+    width: 320px;
     margin: 40% auto 0 auto;
   }
 }
 @media (min-width: 1200px) {
   .login-container {
-    width: 317px;
+    width: 320px;
     margin: 10% auto 0 auto;
   }
 }

@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4df8ee9c-1efb-4acf-9556-71c1952c27ae" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/acc/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/view/acc/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/view/acc/signup.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/acc/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/acc/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/acc/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/acc/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hsjusj/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/hsjusj/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hsjusj/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/hsjusj/urls.py" afterDir="false" />
-    </list>
+    <list default="true" id="4df8ee9c-1efb-4acf-9556-71c1952c27ae" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -377,12 +367,12 @@
       <workItem from="1566451655717" duration="25762000" />
       <workItem from="1566526781924" duration="33372000" />
       <workItem from="1566571831285" duration="2527000" />
-      <workItem from="1566575668624" duration="162000" />
+      <workItem from="1566575668624" duration="437000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="177733000" />
+    <option name="totallyTimeSpent" value="178008000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -395,9 +385,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16453585" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16453585" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -411,7 +400,7 @@
       <window_info anchor="bottom" id="TODO" order="8" weight="0.32857144" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32857144" />
       <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.24175824" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.24175824" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="13" weight="0.32857144" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />

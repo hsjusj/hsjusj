@@ -82,10 +82,14 @@ body {
     -webkit-box-shadow: 0 1px 4px rgba(0,0,0,.04);
     box-shadow: 0 1px 4px rgba(0,0,0,.04);
 }
+.search-block .search-box a{
+    color:black;
+}
 .search-button {
-    margin-left:81%;
+    margin-left:80%;
     margin-top:0;
     cursor:pointer;
+    padding:14px;
 }
 .search-button:hover {
     color:#FA6B6B;

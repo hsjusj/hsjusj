@@ -39,4 +39,5 @@ urlpatterns = [
     path('orm/', views.orm, name='orm'),
 
     path('hsjusj/', include('adm.urls')),
+    path('acc/', include('acc.urls')),
 ]

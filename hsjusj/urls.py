@@ -30,9 +30,7 @@ urlpatterns = [
     path('search/', views.search, name='search'),
     path('search_tag/', views.search_tag, name='search_tag'),
     path('search_title/', views.search_title, name='search_title'),
-    path('write/', views.write, name='write'),
     path('upload_img/', views.upload_img, name='upload_img'),
-    path('submit/', views.submit, name='submit'),
 
     re_path('media/(?P<path>.*)/$', serve, {'document_root':MEDIA_ROOT}),
 

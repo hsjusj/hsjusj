@@ -91,7 +91,7 @@
                         var res = JSON.parse(obj);
                         //var msg = res.msg;
                         if (res.status){
-                            window.location.href = "{% url 'index' %}";
+                            window.location.href = "{% url 'tags_editor' %}";
                         }
                         else{
                             if (res.count == 0){

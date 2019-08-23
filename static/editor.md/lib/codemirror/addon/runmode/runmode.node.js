@@ -54,7 +54,7 @@ StringStream.prototype = {
       }
     } else {
       var match = this.string.slice(this.pos).match(pattern);
-      if (match && match.index > 0) return null;
+      if (match && match.tags_editor > 0) return null;
       if (match && consume !== false) this.pos += match[0].length;
       return match;
     }

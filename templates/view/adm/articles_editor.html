@@ -1,0 +1,27 @@
+{% extends "layout/adm_base.html" %}
+
+{% block body %}
+    <div class="articles-op">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>ARTICLE NAME</th>
+                    <th>OP</th>
+                </tr>
+            </thead>
+            <tbdoy>
+                {% for article in articles %}
+                    <tr>
+                        <td class="article-title">
+                            <a target="_blank" href="{% url 'article' article.aid %}">{{ article.title }}</a>
+                        </td>
+                        <td class="tag-op" aid="{{ article.aid }}">
+                            <a target="_blank" href="{% url 'article_editor' article.aid %}" class="article-editor">编辑</a>
+                            <a class="article-del">删除</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbdoy>
+        </table>
+    </div>
+{% endblock %}

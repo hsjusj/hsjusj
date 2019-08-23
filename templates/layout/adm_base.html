@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ADM</title>
+    <link href="/static/css/bootstrap.css" type="text/css" rel="stylesheet">
+    <link href="/static/css/adm.css" type="text/css" rel="stylesheet">
+    <link href="/static/css/base.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar navbar-static-top header">
+        <div class="container">
+            <!--缩放按钮-->
+            <div class="navbar-header">
+                <button id="navbar-button" type="button" class="navbar-toggle collapsed" data-toggle="collapse" aria-controls="bs-navbar" data-target="#bs-navbar" aria-expanded="false">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <!--菜单-->
+            <nav id="bs-navbar" class="collapse navbar-collapse" aria-expanded="false">
+                <ul class="nav navbar-nav navbar-right" style="margin-top:0;margin-bottom:0;">
+                    <li>
+                        <a class="Tags"><strong>Tags</strong></a>
+                    </li>
+                    <li>
+                        <a class="Articles"><strong>Articles</strong></a>
+                    </li>
+                    <li>
+                        <a class="Write"><strong>Write</strong></a>
+                    </li>
+                    <li>
+                        <a href="#"><strong>About</strong></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        {% csrf_token %}
+        {% block body %}
+        {% endblock %}
+    </div>
+
+    {% block add %}
+    {% endblock %}
+
+    <script src="/static/js/jquery-1.12.4.js"></script>
+    <script src="/static/js/jquery.cookie.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/editor.md/src/editormd.js"></script>
+    <script>
+        $(function(){
+            $(".tag-editor").click(function(){
+                var tid = $(this).parent().attr("tid");
+                $(".tag-editor-submit").attr("tid", tid);
+            });
+
+            $(".tag-editor-submit").click(function(){
+                if ($(".tag-editor-name").val() == ""){
+                    return;
+                }else{
+                    tag_editor_submit(this);
+                }
+            });
+
+            function tag_editor_submit(self){
+                var tid = $(self).attr("tid");
+                var new_tag_name = $(".tag-editor-name").val();
+                $.ajax({
+                    url:"{% url 'tag_editor' %}",
+                    type:"POST",
+                    data:{"tid":tid, "new_tag_name":new_tag_name},
+                    dateType:"json",
+                    headers:{"X-CSRFtoken":$.cookie("csrftoken")},
+                    success:function(obj){
+                        var res = JSON.parse(obj);
+                        if (res.status){
+                            location.reload();
+                        }
+                    }
+                })
+            }
+
+            $(".tag-del").click(function(){
+                var flag = confirm("是否删除");
+                if (flag){
+                    var tid = $(this).parent().attr("tid");
+                    $.ajax({
+                        url:"{% url 'tag_del' %}",
+                        type:"POST",
+                        data:{"tid":tid},
+                        dateType:"json",
+                        headers:{"X-CSRFtoken":$.cookie("csrftoken")},
+                        success:function(obj){
+                            var res = JSON.parse(obj);
+                            if (res.status){
+                                location.reload();
+                            }
+                        }
+                    })
+                }
+            });
+
+            $(".article-del").click(function(){
+                var flag = confirm("是否删除");
+                if(flag){
+                    var aid = $(this).parent().attr("aid");
+                    $.ajax({
+                        url:"{% url 'article_del' %}",
+                        type:"POST",
+                        data:{"aid":aid},
+                        dateType:"json",
+                        headers:{"X-CSRFtoken":$.cookie("csrftoken")},
+                        success:function(obj){
+                            var res = JSON.parse(obj);
+                            if (res.status){
+                                location.reload();
+                            }
+                        }
+                    })
+                }
+            })
+        });
+    </script>
+</body>
+</html>

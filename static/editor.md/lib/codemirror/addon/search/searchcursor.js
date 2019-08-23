@@ -34,8 +34,8 @@
             var newMatch = query.exec(line);
             if (!newMatch) break;
             match = newMatch;
-            start = match.index;
-            cutOff = match.index + (match[0].length || 1);
+            start = match.tags_editor;
+            cutOff = match.tags_editor + (match[0].length || 1);
             if (cutOff == line.length) break;
           }
           var matchLen = (match && match[0].length) || 0;

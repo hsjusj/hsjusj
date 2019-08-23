@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>EDITOR</title>
+    <link href="/static/css/bootstrap.css" rel="stylesheet">
+    <link href="/static/editor.md/css/editormd.css" type="text/css" rel="stylesheet">
+    <link href="/static/css/bootstrap-selected.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <form id="add-article">
+            <div class="form-group form-group-lg">
+                <input type="text" class="form-control" id="title" style="margin-top:1.5rem;" placeholder="Title">
+            </div>
+            <div class="selected">
+                <button type="button" class="selected-btn btn btn-default">TAG <span class="caret"></span></button>
+                <ul class="selected-menu">
+                    {% load adm_utils %}
+                    {% article_tag aid %}
+                    <li><span class="add-tags-btn glyphicon glyphicon-plus"></span><span class="del-tags-btn glyphicon glyphicon-minus"></span></li>
+                </ul>
+            </div>
+        </form>
+    </div>
+    <div id="layout"  class="editor">
+        <div id="test-editormd">
+            <textarea class="editormd-markdown-textarea" name="test-editormd-markdown-doc" style="display: none;">{{ article.content }}</textarea>
+        </div>
+    </div>
+    <div class="container">
+        <button id="submit" type="button" class="center-block btn-block btn btn-primary btn-lg">发表</button>
+    </div>
+    <script src="/static/js/jquery-1.12.4.js"></script>
+    <script src="/static/editor.md/src/editormd.js"></script>
+    <script src="/static/js/jquery.cookie.js"></script>
+    <script src="/static/js/bootstrap-selected.js"></script>
+    <script>
+        $(function() {
+            function init(){
+                $("#title").val("{{ article.title }}");
+                var tags_list = $(".selected-menu li");
+                for (var i = 0; i < tags_list.length; i++){
+                    if (tags_list.eq(i).hasClass("selected-active")){
+                        tags_list.eq(i).append($("<span style=\"float:right;\" class=\"glyphicon glyphicon-ok\" aria-hidden=\"true\"></span>"));
+                    }
+                }
+            }
+            init();
+            var testEditor;
+            testEditor = editormd("test-editormd", {
+                 placeholder:'本编辑器支持Markdown编辑，左边编写，右边预览',  //默认显示的文字，这里就不解释了
+                 width: "90%",
+                 height: 640,
+                 syncScrolling: "single",
+                 path: "/static/editor.md/lib/",   //你的path路径（原资源文件中lib包在我们项目中所放的位置）
+                 theme: "dark",//工具栏主题
+                 previewTheme: "dark",//预览主题
+                 editorTheme: "pastel-on-dark",//编辑主题
+                 saveHTMLToTextarea: true,
+                 emoji: false,
+                 taskList: true,
+                 tocm: true,         // Using [TOCM]
+                 tex: true,                   // 开启科学公式TeX语言支持，默认关闭
+                 flowChart: true,             // 开启流程图支持，默认关闭
+                 sequenceDiagram: true,       // 开启时序/序列图支持，默认关闭,
+                 toolbarIcons : function() {  //自定义工具栏，后面有详细介绍
+                     return editormd.toolbarModes['full']; // full, simple, mini
+                  },
+                //启动本地图片上传功能
+                imageUpload: true,
+                imageFormats   : ["jpg", "jpeg", "gif", "png", "bmp", "webp"],
+                imageUploadURL : "{% url 'upload_img' %}" //文件提交请求路径
+            });
+            $("#submit").click(function(){
+                var title = $("#title").val();
+                var content = $('.editormd-markdown-textarea').val();
+                var tags_dom = $(".selected-active");
+                var tids = Array();
+                var new_tags = Array();
+                var new_tags_dom = $(".selected-menu li input");
+                for (var i = 0; i < tags_dom.length; i++){
+                    tids[i] = tags_dom.eq(i).attr("tid");
+                }
+                for (var i = 0, k = 0; i < new_tags_dom.length; i++){
+                    var val = new_tags_dom.eq(i).val();
+                    if (val != ""){
+                        new_tags[k++] = val;
+                    }
+                }
+                if (title == ""){
+                    alert("标题不能为空");
+                    return;
+                }else if (content == ""){
+                    alert("内容不能为空");
+                    return;
+                }else if (!tids.length && !new_tags.length){
+                    alert("请选择标签");
+                    return;
+                }
+                console.log("title:"+title);
+                console.log("content:"+content);
+                console.log("tids:"+tids);
+                console.log("new_tags:"+new_tags);
+                $.ajax({
+                    url:"{% url 'article_editor' aid %}",
+                    type:"POST",
+                    data:{"title":title, "content":content, "tids":tids, "new_tags":new_tags},
+                    headers:{"X-CSRFtoken":$.cookie("csrftoken")},
+                    success:function(obj){
+                        var res = JSON.parse(obj);
+                        if (res.status){
+                            $(location).attr("href", "{% url 'article' aid %}");
+                        }
+                    }
+                })
+            });
+        });
+    </script>
+</body>
+</html>

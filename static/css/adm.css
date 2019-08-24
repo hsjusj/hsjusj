@@ -19,3 +19,9 @@
     display: inline;
     width:30%;
 }
+.code-del{
+    cursor:pointer;
+}
+.acc-block{
+    margin-bottom:50px;
+}

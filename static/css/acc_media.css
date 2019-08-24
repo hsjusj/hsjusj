@@ -1,0 +1,76 @@
+@media (max-width: 768px) {
+    body{
+        background:url('/media/web/m_background.jpg') no-repeat center center;
+        background-size:cover;
+        background-attachment:fixed;
+        width:100%;
+        height:auto;
+    }
+    .login-container {
+        width: 320px;
+        margin: 60% auto 0 auto;
+    }
+}
+@media (min-width: 768px) {
+    body{
+        background:url('/media/web/m_background.jpg') no-repeat center center;
+        background-size:cover;
+        background-attachment:fixed;
+        width:100%;
+        height:auto;
+    }
+    .login-container {
+        width: 320px;
+        margin: 40% auto 0 auto;
+    }
+}
+@media (min-width: 992px) {
+    body{
+        background:url('/media/web/m_background.jpg') no-repeat center center;
+        background-size:cover;
+        background-attachment:fixed;
+        width:100%;
+        height:auto;
+    }
+    .login-container {
+        width: 320px;
+        margin: 40% auto 0 auto;
+    }
+}
+@media (min-width: 1200px) {
+    body{
+        background:url('/media/web/background.jpg') no-repeat center center;
+        background-size:cover;
+        background-attachment:fixed;
+        width:100%;
+        height:auto;
+    }
+    .login-container {
+        width: 320px;
+        margin: 13% auto 0 auto;
+    }
+}
+
+.login-container input{
+    border-radius: 50px;
+    height:50px;
+    padding:0 30px;
+    font-size:17px;
+}
+
+.login-submit-btn, .signup-submit-btn{
+    width:160px;
+    height:50px;
+    border-radius:50px;
+}
+
+.to-signup-btn, .to-login-btn{
+    float:right;
+    margin-top:20px;
+    cursor:pointer;
+    padding:5px 0 10px 10px;
+}
+
+.hide {
+    display:none;
+}

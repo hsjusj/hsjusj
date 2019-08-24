@@ -2,9 +2,140 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome To ACC</title>
+    <link href="/static/css/bootstrap.css" type="text/css" rel="stylesheet">
+    <link href="/static/css/acc_media.css" type="text/css" rel="stylesheet">
 </head>
 <body>
-
+    {% csrf_token %}
+    <div class="login-container">
+        <div id="login-block">
+            <form id="login-form">
+                <div class="form-group">
+                    <input type="text" name="user" class="form-control" id="InputUserName" placeholder="账号">
+                </div>
+                <div class="form-group">
+                    <input type="password" name="pwd" class="form-control" id="InputPwd" placeholder="密码">
+                </div>
+                <div class="alert alert-warning login-warning hide" role="alert"></div>
+                <button type="button" class="btn btn-default login-submit-btn center-block">登录</button>
+                <a class="to-signup-btn">没有账号？点击注册</a>
+            </form>
+        </div>
+        <div id="signup-block" class="hide">
+            <form id="signup-form">
+                <div class="form-group">
+                    <input type="text" name="user" class="form-control" maxlength="16" id="SignupUserName" placeholder="账号">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="pwd" class="form-control" maxlength="20" id="SignupInputPwd" placeholder="密码">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" maxlength="20" id="AgainInputPwd" placeholder="确认密码">
+                </div>
+                <div class="form-group">
+                    <input type="text" name="code" class="form-control" id="SignupInputCode" placeholder="邀请码">
+                </div>
+                <div class="alert alert-warning signup-warning hide" role="alert"></div>
+                <button type="button" class="btn btn-default signup-submit-btn center-block">注册</button>
+                <a class="to-login-btn">返回</a>
+            </form>
+        </div>
+    </div>
+    <script src="/static/js/jquery-1.12.4.js"></script>
+    <script src="/static/js/jquery.cookie.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script>
+        $(function(){
+            $(".to-signup-btn").click(function(){
+                $("#login-block").addClass("hide");
+                $("#signup-block").removeClass("hide");
+            });
+            $(".to-login-btn").click(function(){
+                $("#login-block").removeClass("hide");
+                $("#signup-block").addClass("hide");
+            });
+            $(".login-submit-btn").click(function(){
+                if($("#InputUserName").val() == ""){
+                    $(".login-warning").removeClass("hide");
+                    $(".login-warning").text("账号不能为空");
+                    return;
+                }
+                if($("#InputPwd").val() == ""){
+                    $(".login-warning").text("密码不能为空");
+                    $(".login-warning").removeClass("hide");
+                    return;
+                }
+                $.ajax({
+                    url:"{% url 'acc_login' %}",
+                    type:"POST",
+                    data:$("#login-form").serialize(),
+                    headers:{"X-CSRFtoken":$.cookie("csrftoken")},
+                    success:function(obj){
+                        var res = JSON.parse(obj);
+                        if(res.status){
+                            location.href = "{% url 'acc_index' %}";
+                        }else{
+                            $(".login-warning").text("账号或密码错误");
+                            $(".login-warning").removeClass("hide");
+                        }
+                    }
+                })
+            });
+            $(".signup-submit-btn").click(function(){
+                var username = $("#SignupUserName").val();
+                var pwd = $("#SignupInputPwd").val();
+                var again_pwd = $("#AgainInputPwd").val();
+                var code = $("#SignupInputCode").val();
+                var username_reg = /^[A-Za-z0-9\u4E00-\u9FA5]+$/;
+                var pwd_reg = /\s+|[\u4E00-\u9FA5\uff00-\uffff]/;
+                if(!username_reg.test(username)){
+                    $(".signup-warning").text("用户名只能包含数字,字母或中文");
+                    $(".signup-warning").removeClass("hide");
+                    return;
+                }
+                if(pwd_reg.test(pwd)){
+                    $(".signup-warning").text("密码不能包含空格,中文以及全角字符");
+                    $(".signup-warning").removeClass("hide");
+                    return;
+                }
+                if(pwd == "" || pwd.length < 6){
+                    $(".signup-warning").text("密码不能为空且长度不得小于6位");
+                    $(".signup-warning").removeClass("hide");
+                    return;
+                }
+                if(pwd != again_pwd){
+                    $("#SignupInputPwd").val("");
+                    $("#AgainInputPwd").val("");
+                    $(".signup-warning").text("两次输入的密码不一致");
+                    $(".signup-warning").removeClass("hide");
+                    return;
+                }
+                if(code == ""){
+                    $(".signup-warning").text("邀请码不能为空");
+                    $(".signup-warning").removeClass("hide");
+                    return;
+                }
+                $.ajax({
+                    url:"{% url 'acc_signup' %}",
+                    type:"POST",
+                    headers:{"X-CSRFtoken":$.cookie("csrftoken")},
+                    data:$("#signup-form").serialize(),
+                    success:function(obj){
+                        var res = JSON.parse(obj);
+                        if (res.status){
+                            location.href="{% url 'acc_index' %}";
+                        }else{
+                            $("#SignupInputCode").val("");
+                            $(".signup-warning").text("邀请码不存在");
+                            $(".signup-warning").removeClass("hide");
+                        }
+                    }
+                })
+            })
+        });
+    </script>
 </body>
 </html>

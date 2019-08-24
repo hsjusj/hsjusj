@@ -33,7 +33,7 @@
                         <a href="{% url 'article_write' %}" target="_blank" class="Write"><strong>Write</strong></a>
                     </li>
                     <li>
-                        <a href="#"><strong>About</strong></a>
+                        <a class="Acc"><strong>ACC</strong></a>
                     </li>
                 </ul>
             </nav>
@@ -86,6 +86,19 @@
 
             $(".Write").click(function(){
 
+            });
+
+            $(".Acc").click(function(){
+                $("#container").hide();
+                $.pjax({
+                    url:"{% url 'hsjusj_acc' %}",
+                    type:"POST",
+                    dataType:"html",
+                    headers:{"X-CSRFtoken":$.cookie("csrftoken")},
+                    cache:true,
+                    storage:true,
+                    container:"#container"
+                })
             });
 
             $("#container").on("click", ".tag-op .tag-editor", function(){
@@ -157,6 +170,36 @@
                         }
                     })
                 }
+            });
+
+            $("#container").on("click", ".add-code", function(){
+                $.ajax({
+                    url:"{% url 'code_add' %}",
+                    type:"POST",
+                    headers:{"X-CSRFtoken":$.cookie("csrftoken")},
+                    success:function(obj){
+                        var res = JSON.parse(obj);
+                        if(res.status){
+                            location.reload();
+                        }
+                    }
+                })
+            });
+
+            $("#container").on("click", ".code-del", function(){
+                var id = $(this).parent().attr("id");
+                $.ajax({
+                    url:"{% url 'code_del' %}",
+                    type:"POST",
+                    data:{"id":id},
+                    headers:{"X-CSRFtoken":$.cookie("csrftoken")},
+                    success:function(obj){
+                        var res = JSON.parse(obj);
+                        if(res.status){
+                            location.reload();
+                        }
+                    }
+                })
             });
 
             $("#bs-navbar ul li a").click(function(){

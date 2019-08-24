@@ -1,0 +1,54 @@
+<div class="acc-block">
+    <h3>邀请码管理</h3>
+    <div class="codes-op">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th class="text-center">CODE</th>
+                    <th class="text-center">OP</th>
+                </tr>
+            </thead>
+            <tbdoy>
+                {% for registercode in registercodes %}
+                    <tr>
+                        <td>{{ forloop.counter }}</td>
+                        <td class="text-center">{{ registercode.code }}</td>
+                        <td class="code-op text-center" id="{{ registercode.id }}">
+                            <a class="code-del">删除</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbdoy>
+        </table>
+        <input class="btn btn-default add-code" type="button" value="ADD CODE">
+    </div>
+</div>
+<div class="acc-block">
+    <h3>用户管理</h3>
+    <div class="users-op">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>USER</th>
+                    <th class="text-center">MONEY</th>
+                    <th class="text-center">OP</th>
+                    <th class="text-center">最后登录日期</th>
+                </tr>
+            </thead>
+            <tbdoy>
+                {% for user in users %}
+                <tr>
+                    <td>{{ user.user }}</td>
+                    <td class="text-center">{{ user.money }}</td>
+                    <td class="code-op text-center" uid="{{ user.uid }}">
+                        <a class="code-del">查看</a>
+                        <a class="">更新</a>
+                    </td>
+                    <td class="text-center">{{ user.final_login | date:"Y-m-d H:i:s"}}</td>
+                </tr>
+                {% endfor %}
+            </tbdoy>
+        </table>
+    </div>
+</div>

@@ -4,10 +4,10 @@ from django.db import models
 
 class User(models.Model):
     uid = models.AutoField(primary_key=True)
-    user_name = models.CharField(max_length=12)
+    user = models.CharField(max_length=18)
     pwd = models.CharField(max_length=32)
     money = models.FloatField()
-    final_login = models.DateTimeField()
+    final_login = models.DateTimeField(null=True)
 
 class Request(models.Model):
     rid = models.AutoField(primary_key=True)
@@ -16,5 +16,4 @@ class Request(models.Model):
     request_datetime = models.DateTimeField(auto_now_add=True)
 
 class RegisterCode(models.Model):
-    code = models.CharField(max_length=20)
-    status = models.BooleanField()
+    code = models.CharField(max_length=20, db_index=True)

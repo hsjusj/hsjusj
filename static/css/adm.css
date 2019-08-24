@@ -1,7 +1,21 @@
+.tags-op .table thead tr th:first-child{
+    width:40%;
+}
+.articles-op .table thead tr th:first-child{
+    width:40%;
+}
 .tag-op a{
+    cursor:pointer;
+}
+.article-op a{
     cursor:pointer;
 }
 .article-title a{
     color:#333;
     text-decoration: none;
+}
+
+.articles-op .table tbody .tags-item{
+    display: inline;
+    width:30%;
 }

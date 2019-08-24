@@ -47,6 +47,9 @@ def tags_editor(request):
         if request.method == 'GET':
             tags = Tags.objects.all()
             return render(request, 'view/adm/tags_editor.html', {'tags':tags})
+        elif request.method == 'POST':
+            tags = Tags.objects.all()
+            return TemplateResponse(request, 'response/adm/tags_editor_response.html', {'tags':tags})
     else:
         return redirect('/hsjusj/login')
 
@@ -74,6 +77,9 @@ def articles_editor(request):
         if request.method == 'GET':
             articles = Articles.objects.all()
             return render(request, 'view/adm/articles_editor.html', {'articles':articles})
+        elif request.method == "POST":
+            articles = Articles.objects.all()
+            return render(request, 'response/adm/articles_editor_response.html', {'articles':articles})
     else:
         return redirect('/hsjusj/login')
 

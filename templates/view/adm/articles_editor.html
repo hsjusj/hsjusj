@@ -6,7 +6,8 @@
             <thead>
                 <tr>
                     <th>ARTICLE NAME</th>
-                    <th>OP</th>
+                    <th>TAGS</th>
+                    <th class="text-center">OP</th>
                 </tr>
             </thead>
             <tbdoy>
@@ -15,7 +16,12 @@
                         <td class="article-title">
                             <a target="_blank" href="{% url 'article' article.aid %}">{{ article.title }}</a>
                         </td>
-                        <td class="tag-op" aid="{{ article.aid }}">
+                        <td>
+                            {% for articletotags in article.articlestotags_set.all %}
+                                <span class="tags-item">[{{ articletotags.tag.tag_name }}]</span>
+                            {% endfor %}
+                        </td>
+                        <td class="article-op text-center" aid="{{ article.aid }}">
                             <a target="_blank" href="{% url 'article_editor' article.aid %}" class="article-editor">编辑</a>
                             <a class="article-del">删除</a>
                         </td>

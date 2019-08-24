@@ -43,10 +43,10 @@
             </div>
         </header>
         <!--body-->
+        {% csrf_token %}
         <div class="container">
             <div class="row">
                 <div id="container" class="col-md-offset-1 col-md-10 col-xs-12">
-                {% csrf_token %}
                 {% block body %}{% endblock %}
                 </div>
             </div>
@@ -172,7 +172,9 @@
                 });
 
                 $("#bs-navbar ul li a").click(function(){
-                    $("#navbar-button").click();
+                    if ($("#bs-navbar").attr("aria-expanded") == "true"){
+                        $("#navbar-button").click();
+                    }
                 })
             });
         </script>

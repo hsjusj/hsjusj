@@ -44,6 +44,10 @@ body {
 }
 .content {
     margin-top:1.2rem;
+
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    overflow:hidden;
 }
 .content > p {
     color:#999;
@@ -119,4 +123,10 @@ body {
 
 #search-block-container{
     margin-top:1.5rem;
+}
+.article-tag{
+    margin: 0 0 2.0rem 0;
+}
+.article-tag span{
+    margin: 0 1.0rem;
 }

@@ -5,6 +5,8 @@
 {% block body %}
     <div>
         <h1 class="text-center" style="padding-bottom:2.0rem;">{{ article.title }}</h1>
+        <div class="article-tag">
+        </div>
         <div id="editormd-view">
             <textarea style="display:none;" name="test-editormd-markdown-doc">{{ article.content }}</textarea>
         </div>

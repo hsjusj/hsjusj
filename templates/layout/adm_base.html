@@ -30,7 +30,7 @@
                         <a class="Articles"><strong>Articles</strong></a>
                     </li>
                     <li>
-                        <a class="Write"><strong>Write</strong></a>
+                        <a href="{% url 'article_write' %}" target="_blank" class="Write"><strong>Write</strong></a>
                     </li>
                     <li>
                         <a href="#"><strong>About</strong></a>
@@ -39,27 +39,61 @@
             </nav>
         </div>
     </header>
+    {% csrf_token %}
     <div class="container">
-        {% csrf_token %}
-        {% block body %}
-        {% endblock %}
+        <div id="container">
+            {% block body %}
+            {% endblock %}
+        </div>
     </div>
-
-    {% block add %}
-    {% endblock %}
 
     <script src="/static/js/jquery-1.12.4.js"></script>
     <script src="/static/js/jquery.cookie.js"></script>
+    <script src="/static/js/jquery.pjax.js"></script>
     <script src="/static/js/bootstrap.min.js"></script>
     <script src="/static/editor.md/src/editormd.js"></script>
     <script>
         $(function(){
-            $(".tag-editor").click(function(){
+            $(document).on("pjax:end", function(){
+                $("#container").fadeIn(200);
+            });
+
+            $(".Tags").click(function(){
+                $("#container").hide();
+                $.pjax({
+                    url:"{% url 'tags_editor' %}",
+                    type:"POST",
+                    dataType:"html",
+                    headers:{"X-CSRFtoken":$.cookie("csrftoken")},
+                    cache:true,
+                    storage:true,
+                    container:"#container"
+                })
+            });
+
+            $(".Articles").click(function(){
+                $("#container").hide();
+                $.pjax({
+                    url:"{% url 'articles_editor' %}",
+                    type:"POST",
+                    dataType:"html",
+                    headers:{"X-CSRFtoken":$.cookie("csrftoken")},
+                    cache:true,
+                    storage:true,
+                    container:"#container"
+                })
+            });
+
+            $(".Write").click(function(){
+
+            });
+
+            $("#container").on("click", ".tag-op .tag-editor", function(){
                 var tid = $(this).parent().attr("tid");
                 $(".tag-editor-submit").attr("tid", tid);
             });
 
-            $(".tag-editor-submit").click(function(){
+            $("#container").on("click", ".tag-editor-submit", function(){
                 if ($(".tag-editor-name").val() == ""){
                     return;
                 }else{
@@ -79,13 +113,13 @@
                     success:function(obj){
                         var res = JSON.parse(obj);
                         if (res.status){
-                            location.reload();
+                            $(".Tags").click();
                         }
                     }
                 })
             }
 
-            $(".tag-del").click(function(){
+            $("#container").on("click", ".tag-op .tag-del", function(){
                 var flag = confirm("是否删除");
                 if (flag){
                     var tid = $(this).parent().attr("tid");
@@ -98,14 +132,14 @@
                         success:function(obj){
                             var res = JSON.parse(obj);
                             if (res.status){
-                                location.reload();
+                                $(".Tags").click();
                             }
                         }
                     })
                 }
             });
 
-            $(".article-del").click(function(){
+            $("#container").on("click", ".article-op .article-del", function(){
                 var flag = confirm("是否删除");
                 if(flag){
                     var aid = $(this).parent().attr("aid");
@@ -118,10 +152,16 @@
                         success:function(obj){
                             var res = JSON.parse(obj);
                             if (res.status){
-                                location.reload();
+                                $(".Articles").click();
                             }
                         }
                     })
+                }
+            });
+
+            $("#bs-navbar ul li a").click(function(){
+                if ($("#bs-navbar").attr("aria-expanded") == "true"){
+                    $("#navbar-button").click();
                 }
             })
         });

@@ -1,3 +1,4 @@
+#coding=utf-8
 from django.shortcuts import render, redirect, HttpResponse
 from django.template.response import TemplateResponse
 from adm import models
@@ -7,9 +8,11 @@ import json
 import time
 import datetime
 import random
+import re
 
 # Create your views here.
 
+#记得加session验证，如果有cookie直接跳转进首页
 def login(request):
     if request.method == 'GET':
         locked = None
@@ -56,14 +59,14 @@ def tags_editor(request):
         return redirect('/hsjusj/login')
 
 def tag_editor(request):
-    if request.method == 'POST':
-        if request.session.get('login', None):
+    if request.session.get('login', None):
+        if request.method == 'POST':
             tid = request.POST.get('tid', None)
             new_tag_name = request.POST.get('new_tag_name', None)
             Tags.objects.filter(tid=tid).update(tag_name=new_tag_name)
             return HttpResponse(json.dumps({'status':True}))
-        else:
-            return HttpResponse(json.dumps({'status':False}))
+    else:
+        return redirect("/hsjusj/login")
 
 def tag_del(request):
     if request.session.get('login', None):
@@ -73,6 +76,8 @@ def tag_del(request):
             return HttpResponse(json.dumps({'status':True}))
         else:
             return HttpResponse(json.dumps({'status':False}))
+    else:
+        return redirect("/hsjusj/login")
 
 def articles_editor(request):
     if request.session.get('login', None):
@@ -108,6 +113,8 @@ def article_editor(request, aid):
                     tag_obj = Tags.objects.create(tag_name=new_tag)
                     ArticlesToTags.objects.create(article_id=aid, tag_id=tag_obj.tid)
             return HttpResponse(json.dumps({'status':True}))
+    else:
+        return redirect("/hsjusj/login")
 
 def article_del(request):
     if request.session.get('login', None):
@@ -117,12 +124,16 @@ def article_del(request):
             return HttpResponse(json.dumps({'status':True}))
         else:
             return HttpResponse(json.dumps({'status':False}))
+    else:
+        return redirect("/hsjusj/login")
 
 def article_write(request):
     if request.session.get('login',None):
         if request.method == 'GET':
             tags = Tags.objects.all()
             return render(request, 'view/adm/write.html', {'tags': tags})
+    else:
+        return redirect("/hsjusj/login")
 
 def acc(request):
     if request.session.get('login', None):
@@ -135,6 +146,8 @@ def acc(request):
             users = User.objects.all()
             print("PJAX")
             return TemplateResponse(request, 'response/adm/acc_response.html', {'registercodes': registercodes, 'users': users})
+    else:
+        return redirect("/hsjusj/login")
 
 def code_add(request):
     if request.session.get('login', None):
@@ -151,6 +164,8 @@ def code_add(request):
                     status = False
                     RegisterCode.objects.create(code=code)
             return HttpResponse(json.dumps({'status':True}))
+    else:
+        return redirect("/hsjusj/login")
 
 def code_del(request):
     if request.session.get('login', None):
@@ -158,27 +173,48 @@ def code_del(request):
             id = request.POST.get('id')
             RegisterCode.objects.filter(id=id).delete()
             return HttpResponse(json.dumps({'status':True}))
+    else:
+        return redirect("/hsjusj/login")
+
+def upload_img(request):
+    if request.session.get('login', None):
+        img_obj = request.FILES.get("editormd-image-file", None)
+        if img_obj:
+            ret = re.match('.*(\..*)', img_obj.name)
+            if ret:
+                img_name = str(hash(img_obj)) + ret.group(1)
+            else:
+                img_name = img_obj.name
+            with open('media/articles_pic/' + img_name, 'wb') as f:
+                for item in img_obj.chunks():
+                    f.write(item)
+            return HttpResponse(json.dumps({'success':1, 'message':'上传成功', 'url':'/media/articles_pic/' + img_name}))
+    else:
+        return redirect("/hsjusj/login")
 
 def submit(request):
-    if request.method == "POST":
-        title = request.POST.get("title", None)
-        content = request.POST.get("content", None)
-        tids = request.POST.getlist("tids[]", None)
-        new_tags = request.POST.getlist("new_tags[]", None)
-        print("dict:", request.POST)
-        print("title:", title)
-        print("content:", content)
-        print("tids:", tids)
-        print("new_tags:", new_tags)
-        #new article----------------------------------
-        new_article = Articles.objects.create(title=title, content=content)
-        #new tag--------------------------------------
-        for new_tag in new_tags:
-            is_exist = Tags.objects.filter(tag_name=new_tag).exists()
-            if not is_exist:
-                tid = Tags.objects.create(tag_name=new_tag).tid
+    if request.session.get('login', None):
+        if request.method == "POST":
+            title = request.POST.get("title", None)
+            content = request.POST.get("content", None)
+            tids = request.POST.getlist("tids[]", None)
+            new_tags = request.POST.getlist("new_tags[]", None)
+            print("dict:", request.POST)
+            print("title:", title)
+            print("content:", content)
+            print("tids:", tids)
+            print("new_tags:", new_tags)
+            #new article----------------------------------
+            new_article = Articles.objects.create(title=title, content=content)
+            #new tag--------------------------------------
+            for new_tag in new_tags:
+                is_exist = Tags.objects.filter(tag_name=new_tag).exists()
+                if not is_exist:
+                    tid = Tags.objects.create(tag_name=new_tag).tid
+                    ArticlesToTags.objects.create(article_id=new_article.aid, tag_id=tid)
+            #tag--------------------------------------
+            for tid in tids:
                 ArticlesToTags.objects.create(article_id=new_article.aid, tag_id=tid)
-        #tag--------------------------------------
-        for tid in tids:
-            ArticlesToTags.objects.create(article_id=new_article.aid, tag_id=tid)
-        return HttpResponse("SUBMIT")
+            return HttpResponse("SUBMIT")
+    else:
+        return redirect("/hsjusj/login")

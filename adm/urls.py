@@ -14,6 +14,7 @@ urlpatterns = [
     path('article_del/', views.article_del, name='article_del'),
 
     path('article_write/', views.article_write, name='article_write'),
+    path('upload_img/', views.upload_img, name='upload_img'),
     path('submit/', views.submit, name='submit'),
 
     path('acc/', views.acc, name='hsjusj_acc'),

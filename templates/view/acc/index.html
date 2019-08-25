@@ -1,20 +1,73 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Index</title>
-    <link href="/static/css/bootstrap.css" type="text/css" rel="stylesheet">
-</head>
-<body>
-    <h1>{{ user_obj.uid }}</h1>
-    <h1>{{ user_obj.user }}</h1>
-    <h1>{{ user_obj.pwd }}</h1>
-    <h1>{{ user_obj.money }}</h1>
-    <h1>{{ user_obj.final_login | date:"Y-m-d H:i:s"}}</h1>
-    <script src="/static/js/jquery-1.12.4.js"></script>
-    <script src="/static/js/jquery.cookie.js"></script>
-    <script src="/static/js/bootstrap.min.js"></script>
-</body>
-</html>
+{% extends "layout/acc_base.html" %}
+
+{% block body %}
+    <h4>{{ user.user }}</h4>
+    <h4>{{ user.money }}</h4>
+    <div style="margin-top:10%;">
+        <input class="btn btn-default" data-toggle="modal" data-target="#myModal" type="button" value="申请">
+
+        <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">哔哔</h4>
+                </div>
+                <div class="modal-body">
+                    <form id="request-form">
+                        <div class="form-group">
+                            <label for="InputMoney">金额:</label>
+                            <input maxlength="6" class="form-control" name="money" id="InputMoney" placeholder="How much?(1块钱起)">
+                        </div>
+                        <div class="form-group">
+                            <label for="InputPs">备注(选填):</label>
+                            <input maxlength="32" class="form-control" name="ps" id="InputPs" placeholder="(选填)">
+                        </div>
+                        <div class="alert alert-warning money-warning hide" style="padding:15px;" role="alert">错误的格式</div>
+                        <div class="selected">
+                            <button type="button" name="type" class="selected-btn btn btn-default">类型<span class="caret"></span></button>
+                            <ul class="selected-menu">
+                                <li class="selected-single-tag" value="1">借</li>
+                                <li class="selected-single-tag" value="2">还</li>
+                            </ul>
+                        </div>
+                        <div class="alert alert-warning selected-warning hide" style="padding:15px;" role="alert">请选择</div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="cancel-btn btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary request-submit">提交</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="user-record">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th class="text-center">MONEY</th>
+                    <th class="text-center">TYPE</th>
+                    <th class="text-center">TIME</th>
+                </tr>
+            </thead>
+            <tbdoy>
+                {% for request in requests %}
+                     <tr>
+                        <td>{{ forloop.counter }}</td>
+                        <td class="text-center">{{ request.money }}</td>
+                         {% if request.request_type == 1 %}
+                             <td class="text-center">借</td>
+                         {% elif request.request_type == 2 %}
+                             <td class="text-center">还</td>
+                         {% endif %}
+                        <td class="text-center">{{ request.request_datetime|date:"Y-m-d H:i:s" }}</td>
+                     </tr>
+                {% endfor %}
+            </tbdoy>
+        </table>
+    </div>
+{% endblock %}

@@ -72,7 +72,7 @@
                 //启动本地图片上传功能
                 imageUpload: true,
                 imageFormats   : ["jpg", "jpeg", "gif", "png", "bmp", "webp"],
-                imageUploadURL : "{% url 'upload_img' %}" //文件提交请求路径
+                imageUploadURL : "{% url 'upload_img' %}", //文件提交请求路径
             });
             $("#submit").click(function(){
                 var title = $("#title").val();

@@ -60,19 +60,6 @@ def search_title(request):
         articles = models.Articles.objects.filter(title__icontains=key_word)
         return TemplateResponse(request, 'response/blog/search_result_response.html', {'articles':articles})
 
-def upload_img(requset):
-    img_obj = requset.FILES.get("editormd-image-file", None)
-    if img_obj:
-        ret = re.match('.*(\..*)', img_obj.name)
-        if ret:
-            img_name = str(hash(img_obj)) + ret.group(1)
-        else:
-            img_name = img_obj.name
-        with open('media/' + img_name, 'wb') as f:
-            for item in img_obj.chunks():
-                f.write(item)
-        return HttpResponse(json.dumps({'success':1, 'message':'上传成功', 'url':'/media/' + img_name}))
-
 
 def selected(request):
     return render(request, 'utils/selected.html')

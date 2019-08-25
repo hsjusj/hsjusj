@@ -7,6 +7,7 @@ class Articles(models.Model):
     title = models.CharField(max_length=32, db_index=True)
     content = models.TextField()
     create_datetime = models.DateTimeField(auto_now_add=True, db_index=True)
+    imgs = models.CharField(max_length=1024, null=True)
 
 class Tags(models.Model):
     tid = models.AutoField(primary_key=True)

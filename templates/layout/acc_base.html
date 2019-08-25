@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Index</title>
+    <link href="/static/css/bootstrap.css" type="text/css" rel="stylesheet">
+    <link href="/static/css/bootstrap-selected.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div id="container">
+            {% block body %}
+            {% endblock %}
+        </div>
+    </div>
+    <script src="/static/js/jquery-1.12.4.js"></script>
+    <script src="/static/js/jquery.cookie.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/bootstrap-selected.js"></script>
+    <script>
+        $(function(){
+            $("#container").on("click", ".selected-menu .selected-single-tag", function(){
+                if($(this).hasClass("selected-active")){
+                    $(this).removeClass("selected-active");
+                    $(this).find("span").remove();
+                    $(".selected-btn").html("类型<span class=\"caret\"></span>");
+                }else{
+                    var text = $(this).text();
+                    text += "<span class=\"caret\"></span>";
+                    $(".selected-menu .selected-active").find("span").remove();
+                    $(".selected-menu").children().removeClass("selected-active");
+                    $(this).append($("<span style=\"float:right;\" class=\"glyphicon glyphicon-ok\" aria-hidden=\"true\"></span>"));
+                    $(this).addClass("selected-active");
+                    $(".selected-btn").html(text);
+                    $(".selected-menu").css("display", "none");
+                }
+            });
+
+            $("#container").on("click", ".request-submit", function(){
+                var money = $("#InputMoney").val();
+                var money_reg = /^[1-9]{1}[0-9]+\.[0-9]{0,2}$|^[1-9]{1}\.[0-9]{0,2}$|^[1-9]{1}\d+$|^[1-9]{1}$/; //浮点数：N.N(且不能0开头)|整数:2位以上的整数,N(且不能0开头)|整数:1位整数，且不能0开头
+                if (money_reg.test(money)){
+
+                }else{
+                    $(".money-warning").removeClass("hide");
+                    return;
+                }
+                if($(".selected-active").length == 0){
+                    $(".selected-warning").removeClass("hide");
+                    return;
+                }
+                var request_type = $(".selected-menu .selected-active").eq(0).attr('value');
+                var ps = $("#InputPs").val();
+                $.ajax({
+                    url:"{% url 'acc_request_submit' %}",
+                    type:"POST",
+                    headers:{"X-CSRFtoken":$.cookie("csrftoken")},
+                    data:{"money":money, "request_type":request_type, "ps":ps},
+                    success:function(obj){
+                        $(".cancel-btn").click();
+                        $("#container .user-record").children().remove();
+                        $("#container .user-record").append(obj);
+                    }
+                })
+            });
+        })
+    </script>
+</body>
+</html>

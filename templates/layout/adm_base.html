@@ -104,11 +104,12 @@
             $("#container").on("click", ".tag-op .tag-editor", function(){
                 var tid = $(this).parent().attr("tid");
                 $(".tag-editor-submit").attr("tid", tid);
+                $(".tag-editor-name").val("");
             });
 
             $("#container").on("click", ".tag-editor-submit", function(){
                 if ($(".tag-editor-name").val() == ""){
-                    return;
+
                 }else{
                     tag_editor_submit(this);
                 }
@@ -126,7 +127,7 @@
                     success:function(obj){
                         var res = JSON.parse(obj);
                         if (res.status){
-                            $(".Tags").click();
+                            $(".tag-op[tid="+tid+"]").parent().children(".tag-name").text(new_tag_name);
                         }
                     }
                 })
@@ -135,6 +136,7 @@
             $("#container").on("click", ".tag-op .tag-del", function(){
                 var flag = confirm("是否删除");
                 if (flag){
+                    $(this).parent().parent().remove();
                     var tid = $(this).parent().attr("tid");
                     $.ajax({
                         url:"{% url 'tag_del' %}",
@@ -145,7 +147,7 @@
                         success:function(obj){
                             var res = JSON.parse(obj);
                             if (res.status){
-                                $(".Tags").click();
+
                             }
                         }
                     })

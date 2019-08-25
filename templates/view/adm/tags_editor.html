@@ -13,10 +13,10 @@
         <tbdoy>
             {% for tag in tags %}
                 <tr>
-                    <td>{{ tag.tag_name }}</td>
+                    <td class="tag-name">{{ tag.tag_name }}</td>
                     <td class="text-center">{{ tag.articlestotags_set.count }}</td>
                     <td class="tag-op text-center" tid="{{ tag.tid }}">
-                        <a class="tag-editor" data-toggle="modal" data-target=".bs-example-modal-sm">编辑</a>
+                        <a class="tag-editor" data-toggle="modal" data-target=".bs-modal-sm">编辑</a>
                         <a class="tag-del">删除</a>
                     </td>
                 </tr>
@@ -25,14 +25,14 @@
     </table>
 </div>
 
-<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
-    <div class="modal-dialog modal-sm" role="document">
+<div class="modal fade bs-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+    <div class="modal-dialog modal-sm" aria-hidden="true" role="document">
         <div class="modal-content">
             <div style="padding:20px 10px;" class="center-block">
-                <input class="form-control tag-editor-name text-center" maxlength="18" style="font-size:24px;" type="text" class="pwd"/>
+                <input class="form-control tag-editor-name text-center" maxlength="18" style="font-size:24px;" type="text"/>
             </div>
             <div style="margin-bottom:10px;">
-                <button class="btn btn-default center-block tag-editor-submit" type="submit">确定</button>
+                <button class="btn btn-default center-block tag-editor-submit " data-dismiss="modal" type="submit">确定</button>
             </div>
         </div>
     </div>

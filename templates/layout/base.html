@@ -3,9 +3,9 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
         <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-        <title>{% block title %}{% endblock %}</title>
+        <title>hsjusj blog</title>
         <link href="/static/editor.md/css/editormd.css" type="text/css" rel="stylesheet">
         <link href="/static/css/bootstrap.css" type="text/css" rel="stylesheet">
         <link href="/static/css/base.css" type="text/css" rel="stylesheet">
@@ -33,7 +33,7 @@
                             <a class="archives"><strong>Archives</strong></a>
                         </li>
                         <li>
-                            <a href="#"><strong>About</strong></a>
+                            <a class="about"><strong>About</strong></a>
                         </li>
                         <li>
                             <a class="search"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>
@@ -88,6 +88,18 @@
                         url:"{% url 'archives' %}",
                         type:"POST",
                         dateType:"html",
+                        headers:{"X-CSRFtoken":$.cookie("csrftoken")},
+                        cache:true,
+                        storage:true,
+                        container:"#container"
+                    })
+                });
+
+                $(".about").click(function(){
+                    $.pjax({
+                        url:"{% url 'about' %}",
+                        type:"POST",
+                        dataType:"html",
                         headers:{"X-CSRFtoken":$.cookie("csrftoken")},
                         cache:true,
                         storage:true,

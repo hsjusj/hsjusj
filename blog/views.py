@@ -64,10 +64,16 @@ def search_title(request):
 def selected(request):
     return render(request, 'utils/selected.html')
 
-def orm(reuqust):
-    models.Articles.objects.create(title='jvav&nginx', content='java&nginx')
-    models.Tags.objects.create(tag_name='java')
-    models.Tags.objects.create(tag_name='nginx')
-    models.ArticlesToTags.objects.create(article_id=2, tag_id=2)
-    models.ArticlesToTags.objects.create(article_id=2, tag_id=3)
-    return HttpResponse('ORM')
+def about(request):
+    if request.method == "POST":
+        return TemplateResponse(request, 'response/blog/about_response.html')
+    elif request.method == "GET":
+        return render(request, 'view/blog/about.html')
+
+# def orm(reuqust):
+#     models.Articles.objects.create(title='jvav&nginx', content='java&nginx')
+#     models.Tags.objects.create(tag_name='java')
+#     models.Tags.objects.create(tag_name='nginx')
+#     models.ArticlesToTags.objects.create(article_id=2, tag_id=2)
+#     models.ArticlesToTags.objects.create(article_id=2, tag_id=3)
+#     return HttpResponse('ORM')

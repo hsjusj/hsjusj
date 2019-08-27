@@ -23,8 +23,7 @@ def login(request):
     elif request.method == 'POST':
         msg = {}
         pwd = request.POST.get('pwd', None)
-        print("pwd", pwd)
-        if pwd == '123123':
+        if pwd == models.adm.objects.filter(id=1).first().pwd:
             models.adm.objects.filter(id=1).update(fail_count=0)
             #设置为当前时间
             models.adm.objects.filter(id=1).update(lock_datetime=time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time())))
@@ -41,7 +40,7 @@ def login(request):
                 models.adm.objects.filter(id=1).update(fail_count=0)
                 fail_count = 0
                 #锁60秒
-                lock_datetime = time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time() + 7))
+                lock_datetime = time.strftime('%Y-%m-%d %H:%M:%S',time.localtime(time.time() + 60))
                 models.adm.objects.filter(id=1).update(lock_datetime=lock_datetime)
             else:
                 models.adm.objects.filter(id=1).update(fail_count=fail_count)

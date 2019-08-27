@@ -1,22 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4df8ee9c-1efb-4acf-9556-71c1952c27ae" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/response/blog/about_response.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/view/blog/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/737b60b9-a11c-4173-973f-f29b9d6e21f0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adm/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/adm/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hsjusj/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/hsjusj/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/layout/acc_base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layout/acc_base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/layout/adm_base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layout/adm_base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/layout/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layout/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/view/acc/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/view/acc/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/view/adm/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/view/adm/login.html" afterDir="false" />
-    </list>
+    <list default="true" id="4df8ee9c-1efb-4acf-9556-71c1952c27ae" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,8 +70,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/adm/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="42" column="99" lean-forward="true" selection-start-line="42" selection-start-column="99" selection-end-line="42" selection-end-column="99" />
+            <state relative-caret-position="183">
+              <caret line="40" column="30" lean-forward="true" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -228,17 +213,12 @@
             <path>
               <item name="hsjusj" type="b2602c69:ProjectViewProjectNode" />
               <item name="hsjusj" type="462c0819:PsiDirectoryNode" />
-              <item name="adm" type="462c0819:PsiDirectoryNode" />
+              <item name="hsjusj" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="hsjusj" type="b2602c69:ProjectViewProjectNode" />
               <item name="hsjusj" type="462c0819:PsiDirectoryNode" />
-              <item name="blog" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hsjusj" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hsjusj" type="462c0819:PsiDirectoryNode" />
-              <item name="hsjusj" type="462c0819:PsiDirectoryNode" />
+              <item name="media" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="hsjusj" type="b2602c69:ProjectViewProjectNode" />
@@ -406,12 +386,12 @@
       <workItem from="1566730677956" duration="22529000" />
       <workItem from="1566790012765" duration="708000" />
       <workItem from="1566812911597" duration="866000" />
-      <workItem from="1566900266348" duration="3836000" />
+      <workItem from="1566900266348" duration="4118000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="250873000" />
+    <option name="totallyTimeSpent" value="251155000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -424,14 +404,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18010005" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18010005" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32857144" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.23406594" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.23406594" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -440,7 +419,7 @@
       <window_info anchor="bottom" id="TODO" order="8" weight="0.32857144" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32857144" />
       <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.24175824" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.24175824" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="13" weight="0.32857144" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -781,8 +760,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/adm/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="42" column="99" lean-forward="true" selection-start-line="42" selection-start-column="99" selection-end-line="42" selection-end-column="99" />
+        <state relative-caret-position="183">
+          <caret line="40" column="30" lean-forward="true" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
         </state>
       </provider>
     </entry>

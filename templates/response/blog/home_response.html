@@ -5,7 +5,7 @@
                 <a addr="{% url 'article' article.aid %}">{{ article.title }}</a>
             </div>
             <div class="content">
-                <p>{{ article.content }}</p>
+                <p>{{ article.content | slice:"100" }}</p>
             </div>
             <div class="footer">
                 <span class="datetime">{{ article.create_datetime | date:'Y-m-d H:i:s' }}</span>

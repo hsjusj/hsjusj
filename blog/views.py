@@ -6,9 +6,6 @@ import re
 
 # Create your views here.
 
-def test(request):
-    return HttpResponse("TEST")
-
 def home(request):
     if request.META.get('HTTP_X_PJAX', False):
         articles = models.Articles.objects.all()

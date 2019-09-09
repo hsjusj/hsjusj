@@ -22,8 +22,6 @@ from blog import views
 
 urlpatterns = [
     path('adm/', admin.site.urls),
-
-    path('test/', views.test, name='test'),
     #主页
     path('home/', views.home, name='home'),
     #文章详情页
@@ -46,10 +44,6 @@ urlpatterns = [
     #selected测试
     path('selected/', views.selected),
 
-    # path('orm/', views.orm, name='orm'),
-
     #adm app(后台)
     path('hsjusj/', include('adm.urls')),
-    #acc app
-    path('acc/', include('acc.urls')),
 ]

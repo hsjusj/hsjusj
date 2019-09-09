@@ -3,12 +3,7 @@ from django.shortcuts import render, redirect, HttpResponse
 from django.template.response import TemplateResponse
 from adm import models
 from blog.models import Articles, Tags, ArticlesToTags
-from acc.models import User, Request, RegisterCode
-import json
-import time
-import datetime
-import random
-import re
+import json, time, datetime, re
 
 # Create your views here.
 
@@ -131,47 +126,6 @@ def article_write(request):
         if request.method == 'GET':
             tags = Tags.objects.all()
             return render(request, 'view/adm/write.html', {'tags': tags})
-    else:
-        return redirect("/hsjusj/login")
-
-def acc(request):
-    if request.session.get('login', None):
-        if request.method == 'GET':
-            registercodes = RegisterCode.objects.all()
-            users = User.objects.all()
-            return render(request, 'view/adm/acc.html', {'registercodes':registercodes, 'users':users})
-        elif request.method == 'POST':
-            registercodes = RegisterCode.objects.all()
-            users = User.objects.all()
-            print("PJAX")
-            return TemplateResponse(request, 'response/adm/acc_response.html', {'registercodes': registercodes, 'users': users})
-    else:
-        return redirect("/hsjusj/login")
-
-def code_add(request):
-    if request.session.get('login', None):
-        if request.method == 'POST':
-            code = ''
-            l = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-            status = True
-            while status:
-                for i in range(0, 18):
-                    code += str(random.choice(l))
-                if RegisterCode.objects.filter(code=code).exists():
-                    continue
-                else:
-                    status = False
-                    RegisterCode.objects.create(code=code)
-            return HttpResponse(json.dumps({'status':True}))
-    else:
-        return redirect("/hsjusj/login")
-
-def code_del(request):
-    if request.session.get('login', None):
-        if request.method == 'POST':
-            id = request.POST.get('id')
-            RegisterCode.objects.filter(id=id).delete()
-            return HttpResponse(json.dumps({'status':True}))
     else:
         return redirect("/hsjusj/login")
 

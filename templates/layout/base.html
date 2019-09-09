@@ -6,8 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
         <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
         <title>hsjusj blog</title>
-        <link href="/static/editor.md/css/editormd.css" type="text/css" rel="stylesheet">
-        <link href="/static/css/bootstrap.css" type="text/css" rel="stylesheet">
+        <link href="/static/editor.md/css/editormd.min.css" type="text/css" rel="stylesheet">
+        <link href="/static/css/bootstrap.min.css" type="text/css" rel="stylesheet">
         <link href="/static/css/base.css" type="text/css" rel="stylesheet">
         <link href="/static/css/archives.css" type="text/css" rel="stylesheet">
     </head>
@@ -27,16 +27,16 @@
                 <nav id="bs-navbar" class="collapse navbar-collapse" aria-expanded="false">
                     <ul class="nav navbar-nav navbar-right" style="margin-top:0;margin-bottom:0;">
                         <li>
-                            <a class="home"><strong>Home</strong></a>
+                            <a id="home" class="home" url="{% url 'home' %}" ><strong>Home</strong></a>
                         </li>
                         <li>
-                            <a class="archives"><strong>Archives</strong></a>
+                            <a id="archives" class="archives" url="{% url 'archives' %}"><strong>Archives</strong></a>
                         </li>
                         <li>
-                            <a class="about"><strong>About</strong></a>
+                            <a id="about" class="about" url="{% url 'about' %}"><strong>About</strong></a>
                         </li>
                         <li>
-                            <a class="search"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>
+                            <a id="search" class="search" url="{% url 'search' %}"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>
                         </li>
                     </ul>
                 </nav>
@@ -51,10 +51,10 @@
                 </div>
             </div>
         </div>
-        <script src="/static/js/jquery-1.12.4.js"></script>
-        <script src="/static/js/jquery.cookie.js"></script>
+        <script src="/static/js/jquery-1.12.4.min.js"></script>
+        <script src="/static/js/jquery.cookie.min.js"></script>
         <script src="/static/js/bootstrap.min.js"></script>
-        <script src="/static/js/jquery.pjax.js"></script>
+        <script src="/static/js/jquery.pjax.min.js"></script>
         <script src="/static/editor.md/lib/marked.min.js"></script>
         <script src="/static/editor.md/lib/prettify.min.js"></script>
         <script src="/static/editor.md/lib/raphael.min.js"></script>
@@ -62,133 +62,7 @@
         <script src="/static/editor.md/lib/sequence-diagram.min.js"></script>
         <script src="/static/editor.md/lib/flowchart.min.js"></script>
         <script src="/static/editor.md/lib/jquery.flowchart.min.js"></script>
-        <script src="/static/editor.md/src/editormd.js"></script>
-        <script>
-            $(function(){
-                $(document).on("pjax:end", function(){
-                    $("#container").fadeIn(200);
-                });
-
-                $(".home").click(function(){
-                    $("#container").hide();
-                    $.pjax({
-                        url:"{% url 'home' %}",
-                        type:"POST",
-                        dataType:"html",
-                        headers:{"X-CSRFtoken":$.cookie("csrftoken")},
-                        cache:true,
-                        storage:true,
-                        container:"#container"
-                    })
-                });
-
-                $(".archives").click(function(){
-                    $("#container").hide();
-                    $.pjax({
-                        url:"{% url 'archives' %}",
-                        type:"POST",
-                        dateType:"html",
-                        headers:{"X-CSRFtoken":$.cookie("csrftoken")},
-                        cache:true,
-                        storage:true,
-                        container:"#container"
-                    })
-                });
-
-                $(".about").click(function(){
-                    $.pjax({
-                        url:"{% url 'about' %}",
-                        type:"POST",
-                        dataType:"html",
-                        headers:{"X-CSRFtoken":$.cookie("csrftoken")},
-                        cache:true,
-                        storage:true,
-                        container:"#container"
-                    })
-                });
-
-                $(document).on("pjax:start", function(){
-
-                });
-
-                $(".search").click(function(){
-                    $("#container").hide();
-                    $.pjax({
-                        url:"{% url 'search' %}",
-                        type:"POST",
-                        dateType:"html",
-                        headers:{"X-CSRFtoken":$.cookie("csrftoken")},
-                        cache:true,
-                        storage:true,
-                        container:"#container"
-                    });
-                });
-
-                $("#container").on("click", ".title a", function(){
-                    $("#container").hide();
-                    var url = $(this).attr("addr");
-                    $.pjax({
-                        url:url,
-                        type:"POST",
-                        dateType:"html",
-                        headers:{"X-CSRFtoken":$.cookie("csrftoken")},
-                        cache:true,
-                        storage:true,
-                        container:"#container"
-                    })
-                });
-
-                $("#container").on("click", ".search-tag a", function(){
-                    if ($(this).hasClass("active-tag")){
-                        return;
-                    }
-                    $(".search-tag .active-tag").removeClass("active-tag");
-                    $(this).addClass("active-tag");
-                    $("#search-block-container").hide();
-                    $.ajax({
-                        url:"{% url 'search_tag' %}",
-                        type:"POST",
-                        data:{"tag-name":$(this).attr("tag-name")},
-                        headers:{"X-CSRFtoken":$.cookie("csrftoken")},
-                        success:function(data){
-                            $("#search-block-container").children().remove();
-                            $("#search-block-container").append(data);
-                            $("#search-block-container").fadeIn(200);
-                        }
-                    })
-                });
-
-                $("#container").on("click", ".search-box span", function(){
-                    $(".active-tag").removeClass("active-tag");
-                    $("#search-block-container").hide();
-                    $.ajax({
-                        url:{% url 'search_title' %},
-                        type:"POST",
-                        data:{"key-word":$(".search-title").val()},
-                        headers:{"X-CSRFtoken":$.cookie("csrftoken")},
-                        success:function(data){
-                            $("#search-block-container").children().remove();
-                            $("#search-block-container").append(data);
-                            $("#search-block-container").fadeIn(200);
-                        }
-                    })
-                });
-
-                EditormdView = editormd.markdownToHTML("editormd-view", {
-                    htmlDecode      : "style,script,iframe",  // you can filter tags decode
-                    emoji           : true,
-                    taskList        : true,
-                    tex             : true,  // 默认不解析
-                    flowChart       : true,  // 默认不解析
-                    sequenceDiagram : true,  // 默认不解析
-                });
-
-                $("#bs-navbar ul li a").click(function(){
-                    if ($("#bs-navbar").attr("aria-expanded") == "true"){
-                        $("#navbar-button").click();
-                    }
-                })
-            });
-        </script>
+        <script src="/static/editor.md/editormd.min.js"></script>
+        <script src="/static/self_js/blog.min.js"></script>
     </body>
 </html>

@@ -7,13 +7,14 @@
         <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
         <title>hsjusj blog</title>
         <link href="/static/editor.md/css/editormd.min.css" type="text/css" rel="stylesheet">
-        <link href="/static/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+{#        <link href="/static/css/bootstrap.min.css" type="text/css" rel="stylesheet">#}
+        <link href="/static/css/bootstrap.css" type="text/css" rel="stylesheet">
         <link href="/static/css/base.css" type="text/css" rel="stylesheet">
         <link href="/static/css/archives.css" type="text/css" rel="stylesheet">
     </head>
     <body>
         <!--导航-->
-        <header class="navbar navbar-static-top header">
+        <header class="navbar navbar-static-top header navbar-fixed-top">
             <div class="container">
                 <!--缩放按钮-->
                 <div class="navbar-header">
@@ -44,7 +45,8 @@
         </header>
         <!--body-->
         {% csrf_token %}
-        <div class="container">
+        <!--mtop：导航栏与body的距离，写进了魔改的bootstrap.css里-->
+        <div class="container mtop">
             <div class="row">
                 <div id="container" class="col-md-offset-1 col-md-10 col-xs-12">
                 {% block body %}{% endblock %}

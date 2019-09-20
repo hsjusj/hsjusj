@@ -21,29 +21,13 @@ from hsjusj.settings import MEDIA_ROOT
 from blog import views
 
 urlpatterns = [
-    path('adm/', admin.site.urls),
-    #主页
-    path('home/', views.home, name='home'),
-    #文章详情页
-    re_path('article/(?P<aid>\d+)/', views.article_info, name='article'),
-    #归档页
-    path('archives/', views.archives, name='archives'),
-    #搜索页
-    path('search/', views.search, name='search'),
-    #处理标签筛选请求
-    path('search_tag/', views.search_tag, name='search_tag'),
-    #处理标题搜索请求
-    path('search_title/', views.search_title, name='search_title'),
+    path('admin/', admin.site.urls),
 
-    #about页
-    path('about/', views.about, name='about'),
+    # 资源地址
+    re_path('media/(?P<path>.*)/$', serve, {'document_root': MEDIA_ROOT}),
 
-    #资源地址
-    re_path('media/(?P<path>.*)/$', serve, {'document_root':MEDIA_ROOT}),
-
-    #selected测试
-    path('selected/', views.selected),
-
+    #博客主页
+    path('hsjusj/', include('blog.urls')),
     #adm app(后台)
-    path('hsjusj/', include('adm.urls')),
+    path('adm/', include('adm.urls')),
 ]

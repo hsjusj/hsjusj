@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>EDITOR</title>
-    <link href="/static/css/bootstrap.css" rel="stylesheet">
-    <link href="/static/editor.md/css/editormd.css" type="text/css" rel="stylesheet">
-    <link href="/static/css/bootstrap-selected.css" type="text/css" rel="stylesheet">
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+    <link href="{% static 'editor.md/css/editormd.css' %}" type="text/css" rel="stylesheet">
+    <link href="{% static 'css/bootstrap-selected.css' %}" type="text/css" rel="stylesheet">
 </head>
 <body>
     <div class="container">
@@ -33,10 +34,10 @@
     <div class="container">
         <button id="submit" type="button" class="center-block btn-block btn btn-primary btn-lg">发表</button>
     </div>
-    <script src="/static/js/jquery-1.12.4.js"></script>
-    <script src="/static/editor.md/src/editormd.js"></script>
-    <script src="/static/js/jquery.cookie.js"></script>
-    <script src="/static/js/bootstrap-selected.js"></script>
+    <script src="{% static 'js/jquery-1.12.4.js' %}"></script>
+    <script src="{% static 'editor.md/src/editormd.js' %}"></script>
+    <script src="{% static 'js/jquery.cookie.js' %}"></script>
+    <script src="{% static 'js/bootstrap-selected.js' %}"></script>
     <script>
         $(function() {
             function init(){

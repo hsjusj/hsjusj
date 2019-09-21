@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
     <title>ADM</title>
-    <link href="/static/css/bootstrap.css" type="text/css" rel="stylesheet">
-    <link href="/static/css/adm.css" type="text/css" rel="stylesheet">
-    <link href="/static/css/base.css" type="text/css" rel="stylesheet">
+    <link href="{% static 'css/bootstrap.css' %}" type="text/css" rel="stylesheet">
+    <link href="{% static 'css/adm.css' %}" type="text/css" rel="stylesheet">
+    <link href="{% static 'css/base.css' %}" type="text/css" rel="stylesheet">
 </head>
 <body>
     <header class="navbar navbar-static-top header">
@@ -47,11 +48,11 @@
         </div>
     </div>
 
-    <script src="/static/js/jquery-1.12.4.js"></script>
-    <script src="/static/js/jquery.cookie.js"></script>
-    <script src="/static/js/jquery.pjax.js"></script>
-    <script src="/static/js/bootstrap.min.js"></script>
-    <script src="/static/editor.md/src/editormd.js"></script>
+    <script src="{% static 'js/jquery-1.12.4.js' %}"></script>
+    <script src="{% static 'js/jquery.cookie.js' %}"></script>
+    <script src="{% static 'js/jquery.pjax.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'editor.md/src/editormd.js' %}"></script>
     <script>
         $(function(){
             $(document).on("pjax:end", function(){

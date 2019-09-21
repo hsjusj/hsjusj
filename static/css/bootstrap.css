@@ -1587,19 +1587,33 @@ pre code {
   margin-right: auto;
   margin-left: auto;
 }
+@media (max-width: 768px) {
+  .mtop {
+    margin-top:70px;
+  }
+}
 @media (min-width: 768px) {
   .container {
     width: 750px;
+  }
+  .mtop {
+    margin-top:100px;
   }
 }
 @media (min-width: 992px) {
   .container {
     width: 970px;
   }
+  .mtop {
+    margin-top:100px;
+  }
 }
 @media (min-width: 1200px) {
   .container {
     width: 970px;
+  }
+  .mtop {
+    margin-top:90px;
   }
 }
 .container-fluid {

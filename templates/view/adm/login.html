@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
     <title>Title</title>
-    <link href="/static/css/bootstrap.css" type="text/css" rel="stylesheet">
-    <link href="/static/css/media.css" type="text/css" rel="stylesheet">
+    <link href="{% static 'css/bootstrap.css' %}" type="text/css" rel="stylesheet">
+    <link href="{% static 'css/media.css' %}" type="text/css" rel="stylesheet">
     <style>
         .pwd{
             height:50px;
@@ -38,9 +39,9 @@
         {% endif %}
         <div class="pwd-warning alert alert-danger hide text-center" role="alert"></div>
     </div>
-    <script src="/static/js/jquery-1.12.4.js"></script>
-    <script src="/static/js/bootstrap.min.js"></script>
-    <script src="/static/js/jquery.cookie.js"></script>
+    <script src="{% static 'js/jquery-1.12.4.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/jquery.cookie.js' %}"></script>
     <script>
         $(function(){
             var index = 0;

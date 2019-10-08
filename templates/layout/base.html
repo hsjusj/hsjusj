@@ -28,16 +28,16 @@
                 <nav id="bs-navbar" class="collapse navbar-collapse" aria-expanded="false">
                     <ul class="nav navbar-nav navbar-right" style="margin-top:0;margin-bottom:0;">
                         <li>
-                            <a id="home" class="home" url="{% url 'home' %}" ><strong>Home</strong></a>
+                            <a id="home" class="home" url="{% url 'blog:home' %}" ><strong>Home</strong></a>
                         </li>
                         <li>
-                            <a id="archives" class="archives" url="{% url 'archives' %}"><strong>Archives</strong></a>
+                            <a id="archives" class="archives" url="{% url 'blog:archives' %}"><strong>Archives</strong></a>
                         </li>
                         <li>
-                            <a id="about" class="about" url="{% url 'about' %}"><strong>About</strong></a>
+                            <a id="about" class="about" url="{% url 'blog:about' %}"><strong>About</strong></a>
                         </li>
                         <li>
-                            <a id="search" class="search" url="{% url 'search' %}"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>
+                            <a id="search" class="search" url="{% url 'blog:search' %}"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>
                         </li>
                     </ul>
                 </nav>

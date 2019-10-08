@@ -5,10 +5,10 @@
         <div class="search-box text-center">
             <input class="search-title" type="text" placeholder="Search..."/>
             <a>
-                <span class="glyphicon glyphicon-search search-button" aria-hidden="true" url="{% url 'search_title' %}"></span>
+                <span class="glyphicon glyphicon-search search-button" aria-hidden="true" url="{% url 'blog:search_title' %}"></span>
             </a>
         </div>
-        <div class="search-tag text-center" url="{% url 'search_tag' %}" >
+        <div class="search-tag text-center" url="{% url 'blog:search_tag' %}" >
             {% for tag in tags %}
                 <a tag-name="{{ tag.tag_name }}">{{ tag.tag_name }} ({{ tag.articlestotags_set.count }})</a>
             {% endfor %}

@@ -50,7 +50,7 @@ def tags_editor(request):
             tags = Tags.objects.all()
             return TemplateResponse(request, 'response/adm/tags_editor_response.html', {'tags':tags})
     else:
-        return redirect('/hsjusj/login')
+        return redirect('/adm/login')
 
 def tag_editor(request):
     if request.session.get('login', None):
@@ -60,7 +60,7 @@ def tag_editor(request):
             Tags.objects.filter(tid=tid).update(tag_name=new_tag_name)
             return HttpResponse(json.dumps({'status':True}))
     else:
-        return redirect("/hsjusj/login")
+        return redirect("/adm/login")
 
 def tag_del(request):
     if request.session.get('login', None):
@@ -71,7 +71,7 @@ def tag_del(request):
         else:
             return HttpResponse(json.dumps({'status':False}))
     else:
-        return redirect("/hsjusj/login")
+        return redirect("/adm/login")
 
 def articles_editor(request):
     if request.session.get('login', None):
@@ -82,7 +82,7 @@ def articles_editor(request):
             articles = Articles.objects.all()
             return TemplateResponse(request, 'response/adm/articles_editor_response.html', {'articles':articles})
     else:
-        return redirect('/hsjusj/login')
+        return redirect('/adm/login')
 
 def article_editor(request, aid):
     if request.session.get('login', None):
@@ -108,7 +108,7 @@ def article_editor(request, aid):
                     ArticlesToTags.objects.create(article_id=aid, tag_id=tag_obj.tid)
             return HttpResponse(json.dumps({'status':True}))
     else:
-        return redirect("/hsjusj/login")
+        return redirect("/adm/login")
 
 def article_del(request):
     if request.session.get('login', None):
@@ -119,7 +119,7 @@ def article_del(request):
         else:
             return HttpResponse(json.dumps({'status':False}))
     else:
-        return redirect("/hsjusj/login")
+        return redirect("/adm/login")
 
 def article_write(request):
     if request.session.get('login',None):
@@ -127,7 +127,7 @@ def article_write(request):
             tags = Tags.objects.all()
             return render(request, 'view/adm/write.html', {'tags': tags})
     else:
-        return redirect("/hsjusj/login")
+        return redirect("/adm/login")
 
 def upload_img(request):
     if request.session.get('login', None):
@@ -141,9 +141,9 @@ def upload_img(request):
             with open('media/articles_pic/' + img_name, 'wb') as f:
                 for item in img_obj.chunks():
                     f.write(item)
-            return HttpResponse(json.dumps({'success':1, 'message':'上传成功', 'url':'/media/articles_pic/' + img_name}))
+            return HttpResponse(json.dumps({'success':1, 'message':'上传成功', 'url':'/hsjusj/media/articles_pic/' + img_name}))
     else:
-        return redirect("/hsjusj/login")
+        return redirect("/adm/login")
 
 def submit(request):
     if request.session.get('login', None):
@@ -170,4 +170,4 @@ def submit(request):
                 ArticlesToTags.objects.create(article_id=new_article.aid, tag_id=tid)
             return HttpResponse("SUBMIT")
     else:
-        return redirect("/hsjusj/login")
+        return redirect("/adm/login")

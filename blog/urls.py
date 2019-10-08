@@ -3,6 +3,7 @@ from . import views
 from django.views.static import serve
 from hsjusj.settings import MEDIA_ROOT
 
+app_name = 'blog'
 urlpatterns = [
     # 主页
     path('home/', views.home, name='home'),
@@ -21,5 +22,5 @@ urlpatterns = [
     path('about/', views.about, name='about'),
 
     # selected测试
-    path('selected/', views.selected),
+    # path('selected/', views.selected),
 ]

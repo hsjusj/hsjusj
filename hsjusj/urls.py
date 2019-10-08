@@ -27,7 +27,7 @@ urlpatterns = [
     re_path('media/(?P<path>.*)/$', serve, {'document_root': MEDIA_ROOT}),
 
     #博客主页
-    path('hsjusj/', include('blog.urls')),
+    path('hsjusj/', include('blog.urls', namespace='blog')),
     #adm app(后台)
     path('adm/', include('adm.urls')),
 ]

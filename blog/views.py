@@ -1,8 +1,7 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render
 from django.template.response import TemplateResponse
+from django.core.cache import cache
 from blog import models
-import json
-import re
 
 # Create your views here.
 
@@ -27,7 +26,6 @@ def article_info(request, aid):
 
 def archives(request):
     if request.META.get('HTTP_X_PJAX', False):
-        articles = models.Articles.objects.all()
         return TemplateResponse(request, 'response/blog/archives_response.html')
     elif request.method == "GET":
         return render(request, 'view/blog/archives.html')
@@ -57,20 +55,11 @@ def search_title(request):
         articles = models.Articles.objects.filter(title__icontains=key_word)
         return TemplateResponse(request, 'response/blog/search_result_response.html', {'articles':articles})
 
-
-def selected(request):
-    return render(request, 'utils/selected.html')
-
 def about(request):
     if request.method == "POST":
         return TemplateResponse(request, 'response/blog/about_response.html')
     elif request.method == "GET":
         return render(request, 'view/blog/about.html')
 
-# def orm(reuqust):
-#     models.Articles.objects.create(title='jvav&nginx', content='java&nginx')
-#     models.Tags.objects.create(tag_name='java')
-#     models.Tags.objects.create(tag_name='nginx')
-#     models.ArticlesToTags.objects.create(article_id=2, tag_id=2)
-#     models.ArticlesToTags.objects.create(article_id=2, tag_id=3)
-#     return HttpResponse('ORM')
+# def selected(request):
+#     return render(request, 'utils/selected.html')

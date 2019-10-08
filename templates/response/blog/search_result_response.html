@@ -2,7 +2,7 @@
     {% for article in articles reversed %}
         <div class="post-list-item">
             <div class="title">
-                <a addr="{% url 'article' article.aid %}">{{ article.title }}</a>
+                <a addr="{% url 'blog:article' article.aid %}">{{ article.title }}</a>
             </div>
             <div class="content">
                 <p>{{ article.content | slice:"100" }}</p>
